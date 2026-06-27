@@ -1,0 +1,6 @@
+# Progreso personal exportado desde la app (datos privados, no versionar)
+deutschquest-progreso*.json
+
+# Sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch Quest 2 · Aprende alemán</title>
+<style>
+  :root{
+    --bg:#0f1020;--panel:#1a1c33;--panel2:#23264a;--ink:#eef0ff;--muted:#9aa0c7;
+    --gold:#ffce3a;--red:#e4574c;--green:#34c98b;--blue:#5b8cff;--purple:#a06bff;--line:#2e3158;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:
+    radial-gradient(1200px 600px at 80% -10%,#26285033,transparent),
+    radial-gradient(900px 500px at -10% 110%,#3a1d4a33,transparent),var(--bg);color:var(--ink);min-height:100vh}
+  header{padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--line);
+    position:sticky;top:0;background:rgba(15,16,32,.9);backdrop-filter:blur(8px);z-index:20;flex-wrap:wrap}
+  .flag{display:inline-block;width:32px;height:21px;border-radius:4px;box-shadow:var(--shadow);
+    background:linear-gradient(#1a1a1a 0 33%,var(--red) 33% 66%,var(--gold) 66% 100%)}
+  .logo{font-weight:800;font-size:21px}
+  .stats{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+  .chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;
+    display:flex;align-items:center;gap:6px;white-space:nowrap}
+  .chip b{color:var(--gold)}
+  .bar{height:8px;background:var(--panel2);border-radius:999px;overflow:hidden;min-width:110px;flex:1}
+  .bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--green));width:0%}
+  nav{display:flex;gap:6px;padding:10px 20px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav button{background:transparent;border:1px solid transparent;color:var(--muted);padding:9px 14px;border-radius:10px;
+    cursor:pointer;font-size:14px;font-weight:600}
+  nav button.active{background:var(--panel);color:var(--ink);border-color:var(--line)}
+  main{max-width:760px;margin:0 auto;padding:22px 16px 90px}
+  h2{margin:6px 0 14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+  .mode{cursor:pointer;transition:transform .12s,border-color .12s}
+  .mode:hover{transform:translateY(-3px);border-color:var(--blue)}
+  .mode .emoji{font-size:30px}.mode h3{margin:8px 0 4px;font-size:17px}.mode p{margin:0;color:var(--muted);font-size:13px}
+  .mode .meta{margin-top:10px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
+  .btn{background:linear-gradient(90deg,var(--blue),#7a6bff);color:#fff;border:none;padding:12px 18px;border-radius:12px;
+    font-size:15px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
+  .btn.gold{background:linear-gradient(90deg,var(--gold),#ff9f1c);color:#241c00}
+  .btn.ghost{background:var(--panel);border:1px solid var(--line);color:var(--ink);box-shadow:none}
+  .btn.sm{padding:8px 12px;font-size:13px}
+  .btn:disabled{opacity:.4;cursor:not-allowed}
+  .qwrap{max-width:620px;margin:0 auto}
+  .qcount{color:var(--muted);font-size:13px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
+  .deckbadge{font-size:11px;padding:3px 9px;border-radius:999px;background:var(--panel2);color:var(--muted)}
+  .qtext{font-size:22px;font-weight:700;line-height:1.4;margin:10px 0 16px}
+  .qtext .gap{color:var(--gold)}
+  .trans{color:var(--muted);font-size:15px;font-weight:500}
+  .qhint{color:var(--muted);font-size:13px;margin-bottom:12px}
+  .opt{display:block;width:100%;text-align:left;background:var(--panel);border:1.5px solid var(--line);color:var(--ink);
+    padding:14px 16px;border-radius:12px;margin-bottom:10px;cursor:pointer;font-size:15px}
+  .opt:hover{border-color:var(--blue)}
+  .opt.correct{border-color:var(--green);background:#34c98b22}.opt.wrong{border-color:var(--red);background:#e4574c22}
+  .three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .three .opt{text-align:center;font-weight:700;font-size:18px;margin:0}
+  .cases{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+  .cases .opt{width:auto;flex:1;text-align:center;margin:0;font-size:14px;padding:11px}
+  input.fill{width:100%;padding:13px 15px;border-radius:12px;border:1.5px solid var(--line);background:var(--panel);
+    color:var(--ink);font-size:16px;margin-bottom:10px}
+  label.flbl{font-size:13px;color:var(--muted);display:block;margin-bottom:4px}
+  .explain{margin-top:14px;padding:12px 14px;border-radius:12px;background:var(--panel2);font-size:14px;line-height:1.55;
+    border-left:4px solid var(--blue)}
+  .explain.good{border-color:var(--green)}.explain.bad{border-color:var(--red)}
+  .explain .rule{display:block;margin-top:6px;color:var(--gold)}
+  .rowbtns{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;align-items:center}
+  .markbtn{margin-left:auto;background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:10px;
+    padding:9px 12px;cursor:pointer;font-size:14px}
+  .markbtn.on{color:var(--gold);border-color:var(--gold)}
+  .center{text-align:center}.big{font-size:46px;margin:8px 0}.muted{color:var(--muted)}
+  a.link{color:var(--blue);cursor:pointer}
+  .dash{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:16px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:13px;text-align:center}
+  .stat .n{font-size:26px;font-weight:800;color:var(--gold)}.stat .l{font-size:12px;color:var(--muted)}
+  .ach,.markrow{display:flex;gap:12px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:12px;
+    background:var(--panel);margin-bottom:10px}
+  .ach .ic{font-size:24px;width:40px;text-align:center}.ach.locked{opacity:.4}
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--panel);border:1px solid var(--gold);
+    padding:13px 20px;border-radius:14px;box-shadow:var(--shadow);font-weight:700;z-index:50;animation:pop .3s}
+  @keyframes pop{from{transform:translate(-50%,20px);opacity:0}to{transform:translate(-50%,0);opacity:1}}
+  @media(max-width:520px){.qtext{font-size:19px}.three .opt{font-size:16px}}
+  .help-overlay{position:fixed;inset:0;background:rgba(8,9,20,.7);backdrop-filter:blur(3px);z-index:60;
+    display:flex;align-items:center;justify-content:center;padding:16px}
+  .help-box{background:var(--panel);border:1px solid var(--line);border-radius:16px;max-width:760px;width:100%;
+    max-height:88vh;overflow:auto;padding:18px;box-shadow:var(--shadow)}
+  .help-box h3{margin:0 0 10px}
+  .help-box .closex{float:right;background:var(--panel2);border:1px solid var(--line);color:var(--ink);
+    border-radius:10px;padding:6px 12px;cursor:pointer}
+  table.decl{border-collapse:collapse;width:100%;font-size:13.5px;margin:8px 0}
+  table.decl th,table.decl td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+  table.decl th{background:var(--panel2);color:var(--ink)}
+  table.decl td:first-child{font-weight:700;color:var(--gold)}
+  table.decl .nom{background:#e457741a}.akk{background:#ffce3a14}.dat{background:#34c98b14}.gen{background:#a06bff1a}
+  .help-box p{font-size:14px;line-height:1.6;color:var(--ink)}
+  .help-box .muted{color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <span class="flag"></span><span class="logo">Deutsch&nbsp;Quest&nbsp;2</span>
+  <div class="stats">
+    <span class="chip">🔥<b id="hStreak">0</b></span>
+    <span class="chip">⭐ Niv.<b id="hLevel">1</b></span>
+    <span class="chip" style="min-width:180px">💎<b id="hXp">0</b><span class="bar"><i id="hBar"></i></span></span>
+  </div>
+</header>
+<nav>
+  <button data-tab="home" class="active">🏠 Inicio</button>
+  <button data-tab="play">🎮 Practicar</button>
+  <button data-tab="fails">🩹 Mis fallos</button>
+  <button data-tab="marks">📌 Mis cosas</button>
+  <button data-tab="ach">🏆 Logros</button>
+  <button data-tab="data">⚙️ Progreso</button>
+</nav>
+<main id="app"></main>
+<div id="toast"></div>
+<div id="help" class="help-overlay" style="display:none" onclick="if(event.target===this)closeHelp()"></div>
+<script>
+/* ===================== BASE DE DATOS ===================== */
+/* GÉNEROS: [artículo, palabra, traducción, regla] */
+const GENDERS=[
+ ["der","Montag","lunes","Días de la semana → der."],
+ ["der","Sommer","verano","Estaciones del año → der."],
+ ["der","Januar","enero","Meses → der."],
+ ["der","Norden","norte","Puntos cardinales → der."],
+ ["der","Regen","lluvia","Fenómenos meteorológicos → der (Regen, Wind, Schnee)."],
+ ["der","Wind","viento","Clima → der."],
+ ["der","Schnee","nieve","Clima → der."],
+ ["der","Wein","vino","Bebidas alcohólicas → der (excepción: das Bier)."],
+ ["der","Motor","motor","Termina en -or → der."],
+ ["der","Tourist","turista","Termina en -ist → der."],
+ ["der","Student","estudiante","Termina en -ent → der."],
+ ["der","Elefant","elefante","Termina en -ant → der."],
+ ["der","Frühling","primavera","Termina en -ling → der."],
+ ["der","Kapitalismus","capitalismo","Termina en -ismus → der."],
+ ["der","Ingenieur","ingeniero","Termina en -eur → der."],
+ ["der","Lehrer","profesor","Persona/profesión masc. en -er → der."],
+ ["der","Schlüssel","llave","Termina en -el → der (muchos, no todos)."],
+ ["der","Honig","miel","Termina en -ig → der."],
+ ["der","Teppich","alfombra","Termina en -ich → der."],
+ ["der","Vater","padre","Persona masculina → der."],
+ ["der","Arzt","médico","Profesión (persona masc.) → der."],
+ ["der","Mann","hombre","Persona masculina → der."],
+ ["der","Computer","ordenador","Extranjerismo en -er → der."],
+ ["der","BMW","BMW (coche)","Coches y marcas → der (excepción: das Auto)."],
+ ["der","Name","nombre","Masculino débil (declinación en -n); memorízalo."],
+ ["der","Tisch","mesa","Sin regla clara; memorízalo (muebles suelen ser der)."],
+ ["der","Stuhl","silla","Sin regla clara; memorízalo."],
+ ["der","Baum","árbol","Sin regla clara; memorízalo."],
+ ["der","Berg","montaña","Sin regla clara; memorízalo."],
+ ["der","Hund","perro","Sin regla; animal sin marca, se aprende aparte."],
+ ["der","Kopf","cabeza","Sin regla clara; memorízalo."],
+ ["der","Fuß","pie","Sin regla clara; memorízalo."],
+ ["der","Tag","día","Sin regla clara; memorízalo."],
+ ["der","Fluss","río","Sin regla clara; memorízalo."],
+ ["der","Apfel","manzana","EXCEPCIÓN: es fruta pero masculino; memorízalo (frutas suelen ser die)."],
+ ["der","Mond","luna","Sin regla clara; memorízalo (contraste: die Sonne)."],
+ ["der","Tod","muerte","Sin regla clara; memorízalo."],
+ ["der","Erfolg","éxito","Sin regla clara; memorízalo."],
+ ["die","Zeitung","periódico","Termina en -ung → die."],
+ ["die","Freiheit","libertad","Termina en -heit → die."],
+ ["die","Möglichkeit","posibilidad","Termina en -keit → die."],
+ ["die","Freundschaft","amistad","Termina en -schaft → die."],
+ ["die","Nation","nación","Termina en -ion → die."],
+ ["die","Information","información","Termina en -ion → die."],
+ ["die","Universität","universidad","Termina en -tät → die."],
+ ["die","Musik","música","Termina en -ik → die."],
+ ["die","Familie","familia","Termina en -ie → die."],
+ ["die","Lampe","lámpara","Termina en -e → die (regla 80-90%)."],
+ ["die","Sprache","idioma","Termina en -e → die."],
+ ["die","Bäckerei","panadería","Termina en -ei → die."],
+ ["die","Natur","naturaleza","Termina en -ur → die."],
+ ["die","Lehrerin","profesora","Termina en -in (femenino) → die."],
+ ["die","Distanz","distancia","Termina en -anz → die."],
+ ["die","Tendenz","tendencia","Termina en -enz → die."],
+ ["die","Schokolade","chocolate","Termina en -ade → die."],
+ ["die","Garage","garaje","Termina en -age → die."],
+ ["die","Lösung","solución","Termina en -ung → die."],
+ ["die","Gesundheit","salud","Termina en -heit → die."],
+ ["die","Frau","mujer","Persona femenina → die."],
+ ["die","Mutter","madre","Persona femenina → die (aunque acabe en -er)."],
+ ["die","Rose","rosa","Flores → die (+ -e)."],
+ ["die","Blume","flor","Flores → die."],
+ ["die","Banane","plátano","Frutas → die."],
+ ["die","Birne","pera","Frutas → die."],
+ ["die","Kirsche","cereza","Frutas → die."],
+ ["die","Sonne","sol","Termina en -e → die."],
+ ["die","Liebe","amor","Termina en -e → die."],
+ ["die","Reise","viaje","Termina en -e → die."],
+ ["die","Katze","gato/a","Termina en -e → die."],
+ ["die","Straße","calle","Termina en -e → die."],
+ ["die","Tür","puerta","Sin regla clara; memorízalo."],
+ ["die","Wand","pared","Sin regla clara; memorízalo."],
+ ["die","Uhr","reloj","Sin regla clara; memorízalo."],
+ ["die","Nacht","noche","Sin regla clara; memorízalo."],
+ ["die","Hand","mano","Sin regla clara; memorízalo."],
+ ["die","Stadt","ciudad","Sin regla clara; memorízalo."],
+ ["die","Welt","mundo","Sin regla clara; memorízalo."],
+ ["die","Zeit","tiempo","Sin regla clara; memorízalo."],
+ ["die","Arbeit","trabajo","Sin regla clara; memorízalo."],
+ ["die","Milch","leche","Sin regla; femenina 'porque sí' — memorízalo."],
+ ["die","Butter","mantequilla","EXCEPCIÓN: acaba en -er pero es die; memorízalo."],
+ ["das","Mädchen","chica","Termina en -chen (diminutivo) → das."],
+ ["das","Fräulein","señorita","Termina en -lein (diminutivo) → das."],
+ ["das","Dokument","documento","Termina en -ment → das."],
+ ["das","Museum","museo","Termina en -um → das."],
+ ["das","Datum","fecha","Termina en -um → das."],
+ ["das","Studium","estudios/carrera","Termina en -um → das."],
+ ["das","Zentrum","centro","Termina en -um → das."],
+ ["das","Eigentum","propiedad","Termina en -tum → das."],
+ ["das","Ballett","ballet","Termina en -ett → das."],
+ ["das","Ergebnis","resultado","Termina en -nis → das."],
+ ["das","Thema","tema","Termina en -ma → das."],
+ ["das","Gebäude","edificio","Empieza por Ge- → das."],
+ ["das","Auto","coche","Termina en -o (extranjerismo) → das."],
+ ["das","Handy","móvil","Extranjerismo en -y → das."],
+ ["das","Baby","bebé","Cría/joven (extranjerismo -y) → das."],
+ ["das","Essen","comida","Infinitivo sustantivado (-en) → das."],
+ ["das","Leben","vida","Infinitivo sustantivado → das."],
+ ["das","Gold","oro","Metales → das."],
+ ["das","Silber","plata","Metales → das."],
+ ["das","Eisen","hierro","Metales → das."],
+ ["das","Holz","madera","Materiales → das."],
+ ["das","Glas","vidrio","Materiales → das (excep. die Wolle, die Seide)."],
+ ["das","Deutsch","alemán (idioma)","Idiomas → das."],
+ ["das","Kind","niño","Ser joven; sin regla fuerte, memorízalo."],
+ ["das","Pferd","caballo","Sin regla clara; memorízalo."],
+ ["das","Haus","casa","Sin regla clara; memorízalo."],
+ ["das","Buch","libro","Sin regla clara; memorízalo."],
+ ["das","Bett","cama","Sin regla clara; memorízalo."],
+ ["das","Brot","pan","Sin regla clara; memorízalo."],
+ ["das","Jahr","año","Sin regla clara; memorízalo."],
+ ["das","Geld","dinero","Sin regla clara; memorízalo."],
+ ["das","Ohr","oreja","Sin regla clara; memorízalo."],
+ ["das","Auge","ojo","EXCEPCIÓN: acaba en -e pero es neutro; memorízalo."],
+ ["das","Fenster","ventana","EXCEPCIÓN: acaba en -er pero es das; memorízalo."],
+ ["das","Wasser","agua","EXCEPCIÓN: acaba en -er pero es das; memorízalo."],
+ ["das","Wetter","tiempo (clima)","EXCEPCIÓN: acaba en -er pero es das; memorízalo."],
+ ["das","Bier","cerveza","EXCEPCIÓN: alcohol pero neutro; memorízalo (alcohol suele ser der)."],
+ ["der","Winter","invierno","Estaciones → der."],
+ ["der","März","marzo","Meses → der."],
+ ["der","Westen","oeste","Puntos cardinales → der."],
+ ["der","Kaffee","café","Sin regla; bebida masculina, memorízalo."],
+ ["der","Tee","té","Sin regla clara; memorízalo."],
+ ["der","Saft","zumo","Sin regla clara; memorízalo."],
+ ["der","Zug","tren","Sin regla clara; memorízalo."],
+ ["der","Wagen","coche/vagón","Termina en -en → der."],
+ ["der","Garten","jardín","Termina en -en → der."],
+ ["der","Bahnhof","estación","Sin regla clara; memorízalo (Hof → der)."],
+ ["der","Flughafen","aeropuerto","Compuesto con der Hafen → der."],
+ ["der","Schrank","armario","Sin regla clara; memorízalo."],
+ ["der","Spiegel","espejo","Termina en -el → der."],
+ ["der","Vogel","pájaro","Termina en -el → der."],
+ ["der","Löffel","cuchara","Termina en -el → der."],
+ ["der","Anfang","comienzo","Sin regla clara; memorízalo."],
+ ["der","Film","película","Sin regla clara; memorízalo."],
+ ["der","Brief","carta","Sin regla clara; memorízalo."],
+ ["der","Stein","piedra","Sin regla clara; memorízalo."],
+ ["der","Schmerz","dolor","Sin regla clara; memorízalo."],
+ ["der","Beruf","profesión","Sin regla clara; memorízalo."],
+ ["der","Urlaub","vacaciones","Sin regla clara; memorízalo."],
+ ["der","Bruder","hermano","Persona masculina → der (aunque acabe en -er)."],
+ ["der","Sohn","hijo","Persona masculina → der."],
+ ["der","Freund","amigo","Persona masculina → der."],
+ ["der","Chef","jefe","Persona masculina → der."],
+ ["der","König","rey","Persona masculina → der."],
+ ["der","Soldat","soldado","Termina en -at (masc. débil) → der."],
+ ["der","Junge","chico","Persona masculina (masc. débil) → der."],
+ ["der","Käse","queso","EXCEPCIÓN: acaba en -e pero es der; memorízalo."],
+ ["die","Übung","ejercicio","Termina en -ung → die."],
+ ["die","Wohnung","vivienda","Termina en -ung → die."],
+ ["die","Meinung","opinión","Termina en -ung → die."],
+ ["die","Rechnung","cuenta/factura","Termina en -ung → die."],
+ ["die","Wahrheit","verdad","Termina en -heit → die."],
+ ["die","Kindheit","infancia","Termina en -heit → die."],
+ ["die","Schwierigkeit","dificultad","Termina en -keit → die."],
+ ["die","Mannschaft","equipo","Termina en -schaft → die."],
+ ["die","Diskussion","discusión","Termina en -ion → die."],
+ ["die","Religion","religión","Termina en -ion → die."],
+ ["die","Qualität","calidad","Termina en -tät → die."],
+ ["die","Realität","realidad","Termina en -tät → die."],
+ ["die","Politik","política","Termina en -ik → die."],
+ ["die","Technik","técnica","Termina en -ik → die."],
+ ["die","Geschichte","historia","Termina en -e → die."],
+ ["die","Karte","tarjeta/mapa","Termina en -e → die."],
+ ["die","Tasche","bolso","Termina en -e → die."],
+ ["die","Küche","cocina","Termina en -e → die."],
+ ["die","Schule","escuela","Termina en -e → die."],
+ ["die","Gruppe","grupo","Termina en -e → die."],
+ ["die","Brücke","puente","Termina en -e → die."],
+ ["die","Tasse","taza","Termina en -e → die."],
+ ["die","Flasche","botella","Termina en -e → die."],
+ ["die","Woche","semana","Termina en -e → die."],
+ ["die","Minute","minuto","Termina en -e → die."],
+ ["die","Stunde","hora","Termina en -e → die."],
+ ["die","Tochter","hija","Persona femenina → die (aunque acabe en -er)."],
+ ["die","Schwester","hermana","Persona femenina → die."],
+ ["die","Tante","tía","Persona femenina → die."],
+ ["die","Königin","reina","Termina en -in (femenino) → die."],
+ ["die","Insel","isla","EXCEPCIÓN: acaba en -el pero es die; memorízalo."],
+ ["die","Gabel","tenedor","EXCEPCIÓN: acaba en -el pero es die; memorízalo."],
+ ["das","Restaurant","restaurante","Extranjerismo → das."],
+ ["das","Hotel","hotel","Extranjerismo → das."],
+ ["das","Telefon","teléfono","Cultismo (griego) → das."],
+ ["das","Problem","problema","Cultismo en -em → das."],
+ ["das","System","sistema","Cultismo en -em → das."],
+ ["das","Programm","programa","Sin regla simple; neutro, memorízalo."],
+ ["das","Argument","argumento","Termina en -ment → das."],
+ ["das","Element","elemento","Termina en -ment → das."],
+ ["das","Experiment","experimento","Termina en -ment → das."],
+ ["das","Würstchen","salchicha","Termina en -chen (diminutivo) → das."],
+ ["das","Brötchen","panecillo","Termina en -chen → das."],
+ ["das","Tier","animal","Sin regla clara; memorízalo."],
+ ["das","Ei","huevo","Sin regla clara; memorízalo."],
+ ["das","Bild","cuadro/imagen","Sin regla clara; memorízalo."],
+ ["das","Wort","palabra","Sin regla clara; memorízalo."],
+ ["das","Land","país/tierra","Sin regla clara; memorízalo."],
+ ["das","Spiel","juego","Sin regla clara; memorízalo."],
+ ["das","Herz","corazón","Sin regla clara (neutro irregular); memorízalo."],
+ ["das","Gemüse","verdura","Empieza por Ge- → das."],
+ ["das","Gespräch","conversación","Empieza por Ge- → das."],
+ ["das","Geschäft","tienda/negocio","Empieza por Ge- → das."],
+ ["das","Fleisch","carne","Sin regla clara; memorízalo."],
+ ["das","Obst","fruta (colectivo)","Sin regla clara; memorízalo."],
+ ["das","Büro","oficina","Termina en -o (extranjerismo) → das."],
+ ["das","Kino","cine","Termina en -o → das."],
+ ["das","Foto","foto","Termina en -o → das."],
+ ["das","Radio","radio","Termina en -o → das."],
+ ["das","Papier","papel","EXCEPCIÓN: -ier suele ser der, pero es das; memorízalo."],
+ ["das","Klavier","piano","EXCEPCIÓN: -ier suele ser der, pero es das; memorízalo."],
+ ["der","Schmetterling","mariposa","Termina en -ling → der."],
+ ["der","Lehrling","aprendiz","Termina en -ling → der."],
+ ["der","Knopf","botón","Sin regla clara; memorízalo."],
+ ["der","Wunsch","deseo","Sin regla clara; memorízalo."],
+ ["der","Gedanke","pensamiento","Masc. débil (-ns en genitivo); memorízalo."],
+ ["der","Markt","mercado","Sin regla clara; memorízalo."],
+ ["der","Preis","precio","Sin regla clara; memorízalo."],
+ ["der","Kreis","círculo","Sin regla clara; memorízalo."],
+ ["der","Krieg","guerra","Sin regla clara; memorízalo."],
+ ["der","Frieden","paz","Termina en -en → der."],
+ ["der","Unterschied","diferencia","Sin regla clara; memorízalo."],
+ ["der","Vorteil","ventaja","Sin regla clara; memorízalo."],
+ ["der","Nachteil","desventaja","Sin regla clara; memorízalo."],
+ ["der","Zweifel","duda","Termina en -el → der."],
+ ["der","Geist","espíritu","Sin regla clara; memorízalo."],
+ ["der","Mut","valor/ánimo","Sin regla clara; memorízalo."],
+ ["der","Hunger","hambre","EXCEPCIÓN: masculino pese a -er; memorízalo."],
+ ["der","Reichtum","riqueza","EXCEPCIÓN: -tum suele ser das, pero der Reichtum/der Irrtum son der."],
+ ["der","Teller","plato","EXCEPCIÓN: -er masculino (objeto); memorízalo."],
+ ["der","Pullover","jersey","Extranjerismo en -er → der."],
+ ["der","Mantel","abrigo","Termina en -el → der."],
+ ["die","Vorsicht","precaución","Sin regla simple; femenino, memorízalo."],
+ ["die","Absicht","intención","Sin regla simple; femenino, memorízalo."],
+ ["die","Zukunft","futuro","Termina en -unft → die."],
+ ["die","Vernunft","razón/sensatez","Termina en -unft → die."],
+ ["die","Ankunft","llegada","Termina en -unft → die."],
+ ["die","Kunst","arte","Sin regla clara; memorízalo."],
+ ["die","Angst","miedo","Sin regla clara; memorízalo."],
+ ["die","Macht","poder","Sin regla clara; memorízalo."],
+ ["die","Kraft","fuerza","Sin regla clara; memorízalo."],
+ ["die","Luft","aire","Sin regla clara; memorízalo."],
+ ["die","Pflicht","deber/obligación","Sin regla clara; memorízalo."],
+ ["die","Antwort","respuesta","Sin regla clara; memorízalo."],
+ ["die","Erfahrung","experiencia","Termina en -ung → die."],
+ ["die","Erinnerung","recuerdo","Termina en -ung → die."],
+ ["die","Entscheidung","decisión","Termina en -ung → die."],
+ ["die","Bedeutung","significado","Termina en -ung → die."],
+ ["die","Bewegung","movimiento","Termina en -ung → die."],
+ ["die","Regierung","gobierno","Termina en -ung → die."],
+ ["die","Erklärung","explicación","Termina en -ung → die."],
+ ["die","Übersetzung","traducción","Termina en -ung → die."],
+ ["die","Geschwindigkeit","velocidad","Termina en -keit → die."],
+ ["die","Höflichkeit","cortesía","Termina en -keit → die."],
+ ["das","Beispiel","ejemplo","Sin regla clara; memorízalo."],
+ ["das","Ziel","meta/objetivo","Sin regla clara; memorízalo."],
+ ["das","Recht","derecho","Sin regla clara; memorízalo."],
+ ["das","Gesetz","ley","Sin regla clara; memorízalo."],
+ ["das","Mittel","medio/recurso","EXCEPCIÓN: -el neutro; memorízalo."],
+ ["das","Rätsel","enigma/acertijo","EXCEPCIÓN: -el neutro; memorízalo."],
+ ["das","Messer","cuchillo","EXCEPCIÓN: -er neutro; memorízalo."],
+ ["das","Zimmer","habitación","EXCEPCIÓN: -er neutro; memorízalo."],
+ ["das","Wunder","milagro","EXCEPCIÓN: -er neutro; memorízalo."],
+ ["das","Ufer","orilla","EXCEPCIÓN: -er neutro; memorízalo."],
+ ["das","Theater","teatro","EXCEPCIÓN: -er neutro (cultismo); memorízalo."],
+ ["das","Fieber","fiebre","EXCEPCIÓN: -er neutro; memorízalo."],
+ ["das","Verhältnis","relación/proporción","Termina en -nis → das."],
+ ["das","Geheimnis","secreto","Termina en -nis → das."],
+ ["das","Ereignis","acontecimiento","Termina en -nis → das."],
+ ["das","Bedürfnis","necesidad","Termina en -nis → das."],
+ ["das","Gefühl","sentimiento","Empieza por Ge- → das."],
+ ["das","Gewicht","peso","Empieza por Ge- → das."],
+ ["das","Getränk","bebida","Empieza por Ge- → das."],
+ ["das","Gedicht","poema","Empieza por Ge- → das."],
+ ["das","Gepäck","equipaje","Empieza por Ge- → das."],
+ ["das","Publikum","público","Termina en -um → das."],
+ ["das","Visum","visado","Termina en -um → das."],
+ ["der","Zusammenhang","conexión/contexto","Sin regla; memorízalo (-hang → der)."],
+ ["der","Anspruch","pretensión/derecho","Sin regla clara; memorízalo."],
+ ["der","Eindruck","impresión","Sin regla clara; memorízalo."],
+ ["der","Ausdruck","expresión","Sin regla clara; memorízalo."],
+ ["der","Einfluss","influencia","Sin regla clara; memorízalo."],
+ ["der","Verlust","pérdida","Sin regla clara; memorízalo."],
+ ["der","Zustand","estado","Sin regla clara; memorízalo."],
+ ["der","Umstand","circunstancia","Sin regla clara; memorízalo."],
+ ["der","Vorwurf","reproche","Sin regla clara; memorízalo."],
+ ["der","Beweis","prueba","Sin regla clara; memorízalo."],
+ ["der","Zweck","finalidad","Sin regla clara; memorízalo."],
+ ["der","Gewinn","beneficio/ganancia","Sin regla clara; memorízalo."],
+ ["der","Verstand","entendimiento","Sin regla clara; memorízalo."],
+ ["der","Stolz","orgullo","Sin regla clara; memorízalo."],
+ ["der","Fortschritt","progreso","Sin regla clara; memorízalo."],
+ ["der","Mangel","carencia/falta","Termina en -el → der."],
+ ["der","Begriff","concepto","Sin regla clara; memorízalo."],
+ ["der","Widerspruch","contradicción","Sin regla clara; memorízalo."],
+ ["der","Anlass","motivo/ocasión","Sin regla clara; memorízalo."],
+ ["der","Verdacht","sospecha","Sin regla clara; memorízalo."],
+ ["der","Aufenthalt","estancia","Sin regla clara; memorízalo."],
+ ["der","Antrag","solicitud","Sin regla clara; memorízalo."],
+ ["der","Vertrag","contrato","Sin regla clara; memorízalo."],
+ ["der","Auftrag","encargo","Sin regla clara; memorízalo."],
+ ["der","Beitrag","aportación/cuota","Sin regla clara; memorízalo."],
+ ["der","Betrag","importe","Sin regla clara; memorízalo."],
+ ["der","Realismus","realismo","Termina en -ismus → der."],
+ ["der","Optimismus","optimismo","Termina en -ismus → der."],
+ ["der","Mechanismus","mecanismo","Termina en -ismus → der."],
+ ["der","Aspekt","aspecto","Sin regla simple; masculino, memorízalo."],
+ ["der","Konflikt","conflicto","Sin regla simple; masculino, memorízalo."],
+ ["der","Faktor","factor","Termina en -or → der."],
+ ["der","Autor","autor","Termina en -or → der."],
+ ["der","Professor","profesor (univ.)","Termina en -or → der."],
+ ["der","Präsident","presidente","Termina en -ent (persona) → der."],
+ ["der","Patient","paciente","Termina en -ent → der."],
+ ["der","Journalist","periodista","Termina en -ist → der."],
+ ["der","Reiz","estímulo/atractivo","Sin regla clara; memorízalo."],
+ ["der","Anstieg","aumento/subida","Sin regla clara; memorízalo."],
+ ["der","Wohlstand","prosperidad/bienestar","Sin regla clara; memorízalo."],
+ ["die","Voraussetzung","requisito/condición previa","Termina en -ung → die."],
+ ["die","Verfügung","disposición","Termina en -ung → die."],
+ ["die","Verwaltung","administración","Termina en -ung → die."],
+ ["die","Vereinbarung","acuerdo","Termina en -ung → die."],
+ ["die","Verpflichtung","compromiso/obligación","Termina en -ung → die."],
+ ["die","Wahrnehmung","percepción","Termina en -ung → die."],
+ ["die","Auseinandersetzung","confrontación/debate","Termina en -ung → die."],
+ ["die","Beziehung","relación","Termina en -ung → die."],
+ ["die","Umgebung","entorno/alrededores","Termina en -ung → die."],
+ ["die","Forderung","exigencia","Termina en -ung → die."],
+ ["die","Entwicklung","desarrollo","Termina en -ung → die."],
+ ["die","Bedingung","condición","Termina en -ung → die."],
+ ["die","Einstellung","actitud/ajuste","Termina en -ung → die."],
+ ["die","Leistung","rendimiento/prestación","Termina en -ung → die."],
+ ["die","Spannung","tensión","Termina en -ung → die."],
+ ["die","Verantwortung","responsabilidad","Termina en -ung → die."],
+ ["die","Gerechtigkeit","justicia","Termina en -keit → die."],
+ ["die","Nachhaltigkeit","sostenibilidad","Termina en -keit → die."],
+ ["die","Aufmerksamkeit","atención","Termina en -keit → die."],
+ ["die","Tätigkeit","actividad","Termina en -keit → die."],
+ ["die","Notwendigkeit","necesidad","Termina en -keit → die."],
+ ["die","Persönlichkeit","personalidad","Termina en -keit → die."],
+ ["die","Gesellschaft","sociedad","Termina en -schaft → die."],
+ ["die","Wissenschaft","ciencia","Termina en -schaft → die."],
+ ["die","Eigenschaft","cualidad/propiedad","Termina en -schaft → die."],
+ ["die","Leidenschaft","pasión","Termina en -schaft → die."],
+ ["die","Mehrheit","mayoría","Termina en -heit → die."],
+ ["die","Minderheit","minoría","Termina en -heit → die."],
+ ["die","Sicherheit","seguridad","Termina en -heit → die."],
+ ["die","Gelegenheit","ocasión/oportunidad","Termina en -heit → die."],
+ ["die","Vergangenheit","pasado","Termina en -heit → die."],
+ ["die","Erkenntnis","conocimiento/hallazgo","EXCEPCIÓN: -nis aquí es femenino (die Erkenntnis)."],
+ ["die","Demokratie","democracia","Termina en -ie → die."],
+ ["die","Wirtschaft","economía","Termina en -schaft → die."],
+ ["die","Konkurrenz","competencia","Termina en -enz → die."],
+ ["das","Verständnis","comprensión","Termina en -nis → das."],
+ ["das","Bewusstsein","conciencia","Sin regla simple; neutro, memorízalo (-sein → das)."],
+ ["das","Verhalten","comportamiento","Infinitivo sustantivado (-en) → das."],
+ ["das","Vertrauen","confianza","Infinitivo sustantivado → das."],
+ ["das","Verfahren","procedimiento","Infinitivo sustantivado → das."],
+ ["das","Vermögen","patrimonio/capacidad","Infinitivo sustantivado → das."],
+ ["das","Einkommen","ingresos","Infinitivo sustantivado → das."],
+ ["das","Vorhaben","proyecto/plan","Infinitivo sustantivado → das."],
+ ["das","Gewissen","conciencia (moral)","Empieza por Ge- → das."],
+ ["das","Gerücht","rumor","Empieza por Ge- → das."],
+ ["das","Gleichgewicht","equilibrio","Empieza por Ge- → das."],
+ ["das","Phänomen","fenómeno","Cultismo (griego) → das."],
+ ["das","Prinzip","principio","Sin regla simple; neutro, memorízalo."],
+ ["das","Konzept","concepto/plan","Sin regla simple; neutro, memorízalo."],
+ ["das","Projekt","proyecto","Sin regla simple; neutro, memorízalo."],
+ ["das","Objekt","objeto","Sin regla simple; neutro, memorízalo."],
+ ["das","Produkt","producto","Sin regla simple; neutro, memorízalo."],
+ ["das","Risiko","riesgo","Termina en -o → das."],
+ ["das","Kapitel","capítulo","EXCEPCIÓN: -el neutro; memorízalo."],
+ ["das","Urteil","juicio/sentencia","Sin regla; -teil suele ser neutro (das Urteil)."],
+ ["das","Vorurteil","prejuicio","Compuesto de das Urteil → das."],
+ ["das","Mitglied","miembro","Sin regla clara; memorízalo."],
+ ["das","Wachstum","crecimiento","Termina en -tum → das."],
+ ["das","Ministerium","ministerio","Termina en -um → das."],
+ ["das","Stipendium","beca","Termina en -um → das."],
+ ["der","Arm","brazo","Sin regla clara; memorízalo."],
+ ["der","Finger","dedo","Sin regla clara; memorízalo."],
+ ["der","Zahn","diente","Sin regla clara; memorízalo."],
+ ["der","Hals","cuello/garganta","Sin regla clara; memorízalo."],
+ ["der","Rücken","espalda","Termina en -en → der."],
+ ["der","Bauch","barriga/vientre","Sin regla clara; memorízalo."],
+ ["der","Knochen","hueso","Termina en -en → der."],
+ ["der","Muskel","músculo","Termina en -el → der."],
+ ["der","Geschmack","sabor/gusto","Sin regla clara; memorízalo."],
+ ["der","Geruch","olor","EXCEPCIÓN: Ge- aquí es masculino (der Geruch)."],
+ ["der","Lärm","ruido","Sin regla clara; memorízalo."],
+ ["der","Ton","sonido/tono","Sin regla clara; memorízalo."],
+ ["der","Laden","tienda","Termina en -en → der."],
+ ["der","Keller","sótano","Termina en -er → der."],
+ ["der","Boden","suelo","Termina en -en → der."],
+ ["der","Vorhang","cortina","Sin regla clara; memorízalo (-hang → der)."],
+ ["der","Sessel","sillón","Termina en -el → der."],
+ ["der","Ofen","horno","Termina en -en → der."],
+ ["der","Herd","fogón/cocina","Sin regla clara; memorízalo."],
+ ["der","Kühlschrank","nevera","Compuesto con der Schrank → der."],
+ ["der","Wecker","despertador","Termina en -er → der."],
+ ["der","Bleistift","lápiz","Sin regla clara; memorízalo."],
+ ["der","Drucker","impresora","Termina en -er → der."],
+ ["der","Bildschirm","pantalla","Sin regla clara; memorízalo."],
+ ["der","Strom","corriente (eléctrica)","Sin regla clara; memorízalo."],
+ ["der","Strand","playa","Sin regla clara; memorízalo."],
+ ["der","Hügel","colina","Termina en -el → der."],
+ ["der","Gipfel","cima","Termina en -el → der."],
+ ["der","Himmel","cielo","Termina en -el → der."],
+ ["der","Stern","estrella","Sin regla clara; memorízalo."],
+ ["der","Planet","planeta","Termina en -et (masc. débil) → der."],
+ ["der","Hafen","puerto","Termina en -en → der."],
+ ["der","Verkehr","tráfico","Sin regla clara; memorízalo."],
+ ["der","Stau","atasco","Sin regla clara; memorízalo."],
+ ["der","Reifen","neumático","Termina en -en → der."],
+ ["der","Gürtel","cinturón","Termina en -el → der."],
+ ["der","Schuh","zapato","Sin regla clara; memorízalo."],
+ ["der","Anzug","traje","Sin regla clara; memorízalo."],
+ ["der","Koffer","maleta","Termina en -er → der."],
+ ["der","Ring","anillo","Sin regla clara; memorízalo."],
+ ["die","Nase","nariz","Termina en -e → die."],
+ ["die","Lippe","labio","Termina en -e → die."],
+ ["die","Zunge","lengua (órgano)","Termina en -e → die."],
+ ["die","Schulter","hombro","EXCEPCIÓN: femenino pese a -er; memorízalo."],
+ ["die","Haut","piel","Sin regla clara; memorízalo."],
+ ["die","Brust","pecho","Sin regla clara; memorízalo."],
+ ["die","Stirn","frente","Sin regla clara; memorízalo."],
+ ["die","Wange","mejilla","Termina en -e → die."],
+ ["die","Faust","puño","Sin regla clara; memorízalo."],
+ ["die","Ferse","talón","Termina en -e → die."],
+ ["die","Treppe","escalera","Termina en -e → die."],
+ ["die","Decke","techo/manta","Termina en -e → die."],
+ ["die","Schublade","cajón","Termina en -ade → die."],
+ ["die","Steckdose","enchufe","Termina en -e → die."],
+ ["die","Glühbirne","bombilla","Termina en -e → die."],
+ ["die","Waschmaschine","lavadora","Termina en -e → die."],
+ ["die","Heizung","calefacción","Termina en -ung → die."],
+ ["die","Klimaanlage","aire acondicionado","Termina en -age → die."],
+ ["die","Wiese","prado","Termina en -e → die."],
+ ["die","Quelle","fuente/manantial","Termina en -e → die."],
+ ["die","Höhle","cueva","Termina en -e → die."],
+ ["die","Küste","costa","Termina en -e → die."],
+ ["die","Wüste","desierto","Termina en -e → die."],
+ ["die","Ernte","cosecha","Termina en -e → die."],
+ ["die","Ratte","rata","Termina en -e → die."],
+ ["die","Schlange","serpiente/cola","Termina en -e → die."],
+ ["die","Mücke","mosquito","Termina en -e → die."],
+ ["die","Biene","abeja","Termina en -e → die."],
+ ["die","Spinne","araña","Termina en -e → die."],
+ ["die","Möwe","gaviota","Termina en -e → die."],
+ ["die","Jacke","chaqueta","Termina en -e → die."],
+ ["die","Hose","pantalón","Termina en -e → die."],
+ ["die","Mütze","gorro","Termina en -e → die."],
+ ["die","Brille","gafas","Termina en -e → die."],
+ ["die","Krawatte","corbata","Termina en -e → die."],
+ ["das","Knie","rodilla","Sin regla clara; memorízalo."],
+ ["das","Kinn","barbilla","Sin regla clara; memorízalo."],
+ ["das","Bein","pierna","Sin regla clara; memorízalo."],
+ ["das","Blut","sangre","Sin regla clara; memorízalo."],
+ ["das","Gehirn","cerebro","Empieza por Ge- → das."],
+ ["das","Skelett","esqueleto","Termina en -ett → das."],
+ ["das","Regal","estantería","Sin regla clara; memorízalo (-al → das)."],
+ ["das","Kissen","cojín/almohada","Termina en -en → das."],
+ ["das","Werkzeug","herramienta","Termina en -zeug → das."],
+ ["das","Spielzeug","juguete","Termina en -zeug → das."],
+ ["das","Flugzeug","avión","Termina en -zeug → das."],
+ ["das","Fahrzeug","vehículo","Termina en -zeug → das."],
+ ["das","Feuerzeug","mechero","Termina en -zeug → das."],
+ ["das","Gemälde","cuadro/pintura","Empieza por Ge- → das."],
+ ["das","Tal","valle","Sin regla clara; memorízalo."],
+ ["das","Meer","mar","Sin regla clara; memorízalo."],
+ ["das","Gras","hierba","Sin regla clara; memorízalo."],
+ ["das","Insekt","insecto","Sin regla clara; memorízalo."],
+ ["das","Nest","nido","Sin regla clara; memorízalo."],
+ ["das","Fell","pelaje","Sin regla clara; memorízalo."],
+ ["das","Horn","cuerno","Sin regla clara; memorízalo."],
+ ["das","Hemd","camisa","Sin regla clara; memorízalo."],
+ ["das","Kostüm","disfraz/traje","Sin regla clara; memorízalo."],
+ ["das","Juwel","joya","Sin regla clara; memorízalo."],
+ ["das","Zelt","tienda de campaña","Sin regla clara; memorízalo."]
+];
+/* PREPOSICIONES: [frase con ___, [acepta], caso(Akk/Dat/Gen), explicación] */
+const PREPS=[
+ ["Ich fahre ___ dem Bus zur Arbeit.",["mit"],"Dat","mit rige siempre DATIVO (medio/compañía)."],
+ ["Wir gehen ___ die Schule.",["in"],"Akk","Wechsel: Wohin? (dirección) → ACUSATIVO. in die Schule."],
+ ["Das Buch liegt ___ dem Tisch.",["auf"],"Dat","Wechsel: Wo? (ubicación) → DATIVO. auf dem Tisch."],
+ ["Ich hänge das Bild ___ die Wand.",["an"],"Akk","Wechsel: Wohin? → ACUSATIVO. an die Wand."],
+ ["Das Bild hängt ___ der Wand.",["an"],"Dat","Wechsel: Wo? → DATIVO. an der Wand."],
+ ["Die Katze sitzt ___ dem Tisch (debajo).",["unter"],"Dat","Wechsel: Wo? → DATIVO. unter dem Tisch."],
+ ["Ich warte ___ den Bus.",["auf"],"Akk","Verbo con prep.: warten auf + ACUSATIVO (esperar algo)."],
+ ["Sie interessiert sich ___ Musik.",["für"],"Akk","sich interessieren für + ACUSATIVO."],
+ ["Das Geschenk ist ___ dich.",["für"],"Akk","für rige siempre ACUSATIVO."],
+ ["Ich denke oft ___ dich.",["an"],"Akk","denken an + ACUSATIVO."],
+ ["Er hat Angst ___ Hunden.",["vor"],"Dat","Angst haben vor + DATIVO."],
+ ["Wir sprechen ___ das Wetter.",["über"],"Akk","sprechen über + ACUSATIVO."],
+ ["Ich erinnere mich ___ meine Kindheit.",["an"],"Akk","sich erinnern an + ACUSATIVO."],
+ ["Sie träumt ___ einem großen Haus.",["von"],"Dat","träumen von + DATIVO."],
+ ["Wir nehmen ___ dem Kurs teil.",["an"],"Dat","teilnehmen an + DATIVO."],
+ ["Der Preis hängt ___ der Qualität ab.",["von"],"Dat","abhängen von + DATIVO."],
+ ["Ich bitte dich ___ Hilfe.",["um"],"Akk","bitten um + ACUSATIVO."],
+ ["Sie kümmert sich ___ die Kinder.",["um"],"Akk","sich kümmern um + ACUSATIVO."],
+ ["Ich freue mich ___ das Wochenende (futuro).",["auf"],"Akk","sich freuen auf + ACUSATIVO (algo futuro)."],
+ ["Ich freue mich ___ dein Geschenk (ya recibido).",["über"],"Akk","sich freuen über + ACUSATIVO (presente/pasado)."],
+ ["Er glaubt ___ Gott.",["an"],"Akk","glauben an + ACUSATIVO."],
+ ["Ich beschäftige mich ___ dem Thema.",["mit"],"Dat","sich beschäftigen mit + DATIVO."],
+ ["Sie hat sich ___ ihn verliebt.",["in"],"Akk","sich verlieben in + ACUSATIVO."],
+ ["Wir entscheiden uns ___ das rote Auto.",["für"],"Akk","sich entscheiden für + ACUSATIVO."],
+ ["Er bewirbt sich ___ die Stelle.",["um"],"Akk","sich bewerben um + ACUSATIVO."],
+ ["Ich frage ___ dem Weg.",["nach"],"Dat","fragen nach + DATIVO."],
+ ["Das Buch gehört ___ meiner Schwester.",["—","kein"],"Dat","gehören + DATIVO (sin preposición); rige caso dativo."],
+ ["Ich komme ___ Spanien.",["aus"],"Dat","Origen (Woher) con países → aus + DATIVO."],
+ ["Ich wohne ___ meinen Eltern.",["bei"],"Dat","bei rige DATIVO (en casa de)."],
+ ["Wir fahren ___ Berlin.",["nach"],"Dat","nach + ciudad/país sin artículo (Wohin); rige DATIVO."],
+ ["Ich bin ___ Spanien.",["in"],"Dat","Wo? países sin artículo → in + DATIVO."],
+ ["Ich gehe ohne ___ Geld aus dem Haus.",["—","das"],"Akk","ohne rige siempre ACUSATIVO (ohne Geld)."],
+ ["Wir laufen ___ den Park.",["durch"],"Akk","durch rige siempre ACUSATIVO."],
+ ["Ich habe nichts ___ dich.",["gegen"],"Akk","gegen rige siempre ACUSATIVO."],
+ ["Wir treffen uns ___ 8 Uhr.",["um"],"Akk","um rige ACUSATIVO (hora exacta)."],
+ ["___ des Regens blieben wir zu Hause.",["trotz","wegen"],"Gen","trotz / wegen rigen GENITIVO."],
+ ["___ des Konzerts haben wir getanzt.",["während"],"Gen","während rige GENITIVO (durante)."],
+ ["Wir wohnen ___ der Stadt.",["außerhalb","innerhalb"],"Gen","außerhalb/innerhalb rigen GENITIVO."],
+ ["___ des schlechten Wetters gehen wir spazieren.",["trotz"],"Gen","trotz + GENITIVO (a pesar de)."],
+ ["Ich arbeite hier ___ 2020.",["seit"],"Dat","seit rige DATIVO (desde hace)."],
+ ["Das ist ein Geschenk ___ meiner Oma.",["von"],"Dat","von rige DATIVO (de / procedencia)."],
+ ["Ich gehe ___ Hause (a casa).",["nach"],"Dat","Expresión fija: nach Hause; nach rige DATIVO."],
+ ["Setz dich ___ mich (al lado).",["neben"],"Akk","Wechsel: Wohin? → ACUSATIVO. neben mich."],
+ ["Das Auto steht ___ dem Haus (delante).",["vor"],"Dat","Wechsel: Wo? → DATIVO. vor dem Haus."],
+ ["Wir sind ___ Freitag ins Kino gegangen.",["am"],"Dat","am (an+dem) para días → DATIVO."],
+ ["___ Sommer fahren wir ans Meer.",["im"],"Dat","im (in+dem) para estaciones/meses → DATIVO."],
+ ["Ich arbeite ___ Montag bis Freitag.",["von"],"Dat","von … bis; von rige DATIVO."],
+ ["Ich gewöhne mich ___ das Klima.",["an"],"Akk","sich gewöhnen an + ACUSATIVO."],
+ ["Er beschwert sich ___ den Lärm.",["über"],"Akk","sich beschweren über + ACUSATIVO."],
+ ["Sie sorgt ___ ihre Kinder.",["für"],"Akk","sorgen für + ACUSATIVO."],
+ ["Ich bedanke mich ___ das Geschenk.",["für"],"Akk","sich bedanken für + ACUSATIVO."],
+ ["Er leidet ___ einer Krankheit.",["an"],"Dat","leiden an + DATIVO."],
+ ["Wir hoffen ___ besseres Wetter.",["auf"],"Akk","hoffen auf + ACUSATIVO."],
+ ["Sie achtet ___ ihre Gesundheit.",["auf"],"Akk","achten auf + ACUSATIVO."],
+ ["Ich verlasse mich ___ dich.",["auf"],"Akk","sich verlassen auf + ACUSATIVO."],
+ ["Er erzählt ___ seiner Reise.",["von"],"Dat","erzählen von + DATIVO."],
+ ["Wir diskutieren ___ die Politik.",["über"],"Akk","diskutieren über + ACUSATIVO."],
+ ["Ich schütze mich ___ der Sonne.",["vor"],"Dat","sich schützen vor + DATIVO."],
+ ["Sie kämpft ___ ihre Rechte.",["um"],"Akk","kämpfen um + ACUSATIVO."],
+ ["Ich bleibe hier ___ nächsten Montag.",["bis"],"Akk","bis rige ACUSATIVO."],
+ ["Wir fahren ___ einer Woche in den Urlaub.",["in"],"Dat","in + DATIVO temporal (dentro de)."],
+ ["___ dem Essen gehen wir spazieren.",["nach"],"Dat","nach + DATIVO (después de)."],
+ ["Ich wohne hier ___ drei Jahren.",["seit"],"Dat","seit + DATIVO (desde hace)."],
+ ["Das Restaurant ist ___ dem Kino (enfrente).",["gegenüber"],"Dat","gegenüber + DATIVO."],
+ ["Die Lampe hängt ___ dem Tisch (encima).",["über"],"Dat","Wechsel: Wo? → DATIVO. über dem Tisch."],
+ ["Der Hund läuft ___ das Haus (alrededor).",["um"],"Akk","um + ACUSATIVO (alrededor de)."],
+ ["Ich ärgere mich ___ den Stau.",["über"],"Akk","sich ärgern über + ACUSATIVO."],
+ ["Ich erkundige mich ___ dem Weg.",["nach"],"Dat","sich erkundigen nach + DATIVO."],
+ ["Das Team besteht ___ fünf Spielern.",["aus"],"Dat","bestehen aus + DATIVO (componerse de)."],
+ ["Er besteht ___ seiner Meinung.",["auf"],"Dat","bestehen auf + DATIVO (insistir en)."],
+ ["Es handelt sich ___ ein Missverständnis.",["um"],"Akk","sich handeln um + ACUSATIVO."],
+ ["Ich beziehe mich ___ Ihren Brief.",["auf"],"Akk","sich beziehen auf + ACUSATIVO."],
+ ["Sie zweifelt ___ seiner Ehrlichkeit.",["an"],"Dat","zweifeln an + DATIVO."],
+ ["Er leidet ___ dem Stress.",["unter"],"Dat","leiden unter + DATIVO (sufrir por)."],
+ ["Wenden Sie sich ___ den Chef.",["an"],"Akk","sich wenden an + ACUSATIVO."],
+ ["Das erinnert mich ___ meine Jugend.",["an"],"Akk","erinnern an + ACUSATIVO."],
+ ["Ich sehne mich ___ Ruhe.",["nach"],"Dat","sich sehnen nach + DATIVO."],
+ ["Er überzeugt mich ___ seinem Plan.",["von"],"Dat","überzeugen von + DATIVO."],
+ ["Ich danke dir ___ deine Hilfe.",["für"],"Akk","danken für + ACUSATIVO (la cosa); la persona va en Dativo."],
+ ["Ich gratuliere dir ___ Geburtstag.",["zum","zu"],"Dat","gratulieren zu + DATIVO."],
+ ["Es riecht ___ Kaffee.",["nach"],"Dat","riechen nach + DATIVO."],
+ ["Das schmeckt ___ Zitrone.",["nach"],"Dat","schmecken nach + DATIVO."],
+ ["Ich verabrede mich ___ Freunden.",["mit"],"Dat","sich verabreden mit + DATIVO."],
+ ["Er streitet ___ seinem Bruder.",["mit"],"Dat","sich streiten mit + DATIVO."],
+ ["Wir unterhalten uns ___ Politik.",["über"],"Akk","sich unterhalten über + ACUSATIVO."],
+ ["Ich denke ___ die Zukunft nach.",["über"],"Akk","nachdenken über + ACUSATIVO."],
+ ["Sie protestieren ___ die Regierung.",["gegen"],"Akk","protestieren gegen + ACUSATIVO."],
+ ["Ich entschuldige mich ___ die Verspätung.",["für"],"Akk","sich entschuldigen für + ACUSATIVO."],
+ ["Sie ist stolz ___ ihre Arbeit.",["auf"],"Akk","stolz sein auf + ACUSATIVO."],
+ ["Ich bin neugierig ___ das Ergebnis.",["auf"],"Akk","neugierig auf + ACUSATIVO."],
+ ["Bist du böse ___ mich?",["auf"],"Akk","böse sein auf + ACUSATIVO."],
+ ["Sie ist verheiratet ___ einem Arzt.",["mit"],"Dat","verheiratet sein mit + DATIVO."],
+ ["Ich bin zufrieden ___ dem Ergebnis.",["mit"],"Dat","zufrieden sein mit + DATIVO."],
+ ["Bist du ___ dem Plan einverstanden?",["mit"],"Dat","einverstanden sein mit + DATIVO."],
+ ["Das ist abhängig ___ dem Wetter.",["von"],"Dat","abhängig sein von + DATIVO."],
+ ["Er ist verantwortlich ___ das Projekt.",["für"],"Akk","verantwortlich sein für + ACUSATIVO."],
+ ["Das ist typisch ___ ihn.",["für"],"Akk","typisch für + ACUSATIVO."],
+ ["Obst ist reich ___ Vitaminen.",["an"],"Dat","reich an + DATIVO."],
+ ["Die Kinder spielen ___ dem Garten.",["in"],"Dat","Wechsel: Wo? → DATIVO. in dem/im Garten."],
+ ["Häng die Jacke ___ den Schrank.",["in"],"Akk","Wechsel: Wohin? → ACUSATIVO. in den Schrank."],
+ ["Das Flugzeug fliegt ___ den Wolken.",["über"],"Dat","Wechsel: Wo? → DATIVO. über den Wolken."],
+ ["Der Ball rollt ___ den Tisch (debajo).",["unter"],"Akk","Wechsel: Wohin? → ACUSATIVO. unter den Tisch."],
+ ["Das Bild hängt ___ dem Sofa und dem Fenster.",["zwischen"],"Dat","Wechsel: Wo? → DATIVO. zwischen … (entre)."],
+ ["___ einer Stunde bin ich fertig.",["in"],"Dat","in + DATIVO (dentro de una hora)."],
+ ["___ des Streiks fuhren keine Züge.",["wegen","während"],"Gen","wegen/während + GENITIVO."],
+ ["___ seiner Krankheit kam er nicht.",["wegen"],"Gen","wegen + GENITIVO (a causa de)."],
+ ["___ aller Probleme blieb er ruhig.",["trotz"],"Gen","trotz + GENITIVO (a pesar de)."],
+ ["Ich interessiere mich ___ Geschichte.",["für"],"Akk","sich interessieren für + ACUSATIVO."],
+ ["Er hofft ___ eine zweite Chance.",["auf"],"Akk","hoffen auf + ACUSATIVO."]
+];
+/* VERBOS IRREGULARES: [inf, traducción, Präteritum(er), Partizip, auxiliar, ejemplo] */
+const VERBS=[
+ ["gehen","ir","ging","gegangen","ist","Gestern ging ich ins Kino."],
+ ["essen","comer","aß","gegessen","hat","Ich habe einen Apfel gegessen."],
+ ["trinken","beber","trank","getrunken","hat","Wir haben Bier getrunken."],
+ ["sprechen","hablar","sprach","gesprochen","hat","Sie hat mit mir gesprochen."],
+ ["nehmen","coger","nahm","genommen","hat","Er hat den Bus genommen."],
+ ["geben","dar","gab","gegeben","hat","Ich habe ihm das Buch gegeben."],
+ ["sehen","ver","sah","gesehen","hat","Hast du den Film gesehen?"],
+ ["lesen","leer","las","gelesen","hat","Ich habe die Zeitung gelesen."],
+ ["schreiben","escribir","schrieb","geschrieben","hat","Er hat einen Brief geschrieben."],
+ ["fahren","ir (en coche)","fuhr","gefahren","ist","Wir sind nach Berlin gefahren."],
+ ["kommen","venir","kam","gekommen","ist","Sie ist zu spät gekommen."],
+ ["finden","encontrar","fand","gefunden","hat","Ich habe den Schlüssel gefunden."],
+ ["helfen","ayudar","half","geholfen","hat","Er hat mir geholfen."],
+ ["treffen","encontrarse con","traf","getroffen","hat","Ich habe ihn gestern getroffen."],
+ ["bringen","traer","brachte","gebracht","hat","Sie hat Kuchen gebracht."],
+ ["denken","pensar","dachte","gedacht","hat","Ich habe an dich gedacht."],
+ ["kennen","conocer","kannte","gekannt","hat","Ich habe ihn gut gekannt."],
+ ["wissen","saber","wusste","gewusst","hat","Das habe ich nicht gewusst."],
+ ["stehen","estar de pie","stand","gestanden","hat","Ich habe lange gestanden."],
+ ["liegen","estar tumbado","lag","gelegen","hat","Das Buch hat auf dem Tisch gelegen."],
+ ["sitzen","estar sentado","saß","gesessen","hat","Wir haben im Garten gesessen."],
+ ["bleiben","quedarse","blieb","geblieben","ist","Ich bin zu Hause geblieben."],
+ ["steigen","subir","stieg","gestiegen","ist","Die Preise sind gestiegen."],
+ ["fliegen","volar","flog","geflogen","ist","Wir sind nach Rom geflogen."],
+ ["ziehen","tirar / mudarse","zog","gezogen","hat","Er hat an der Tür gezogen."],
+ ["verlieren","perder","verlor","verloren","hat","Ich habe meinen Schlüssel verloren."],
+ ["schließen","cerrar","schloss","geschlossen","hat","Sie hat die Tür geschlossen."],
+ ["singen","cantar","sang","gesungen","hat","Wir haben ein Lied gesungen."],
+ ["springen","saltar","sprang","gesprungen","ist","Er ist ins Wasser gesprungen."],
+ ["beginnen","empezar","begann","begonnen","hat","Der Film hat begonnen."],
+ ["gewinnen","ganar","gewann","gewonnen","hat","Sie hat das Spiel gewonnen."],
+ ["sterben","morir","starb","gestorben","ist","Der Hund ist gestorben."],
+ ["werfen","lanzar","warf","geworfen","hat","Er hat den Ball geworfen."],
+ ["schlafen","dormir","schlief","geschlafen","hat","Ich habe gut geschlafen."],
+ ["laufen","correr","lief","gelaufen","ist","Sie ist schnell gelaufen."],
+ ["fallen","caer","fiel","gefallen","ist","Das Glas ist gefallen."],
+ ["halten","parar / sostener","hielt","gehalten","hat","Der Zug hat gehalten."],
+ ["lassen","dejar","ließ","gelassen","hat","Ich habe das Auto zu Hause gelassen."],
+ ["fangen","atrapar","fing","gefangen","hat","Die Katze hat die Maus gefangen."],
+ ["tragen","llevar","trug","getragen","hat","Sie hat ein rotes Kleid getragen."],
+ ["waschen","lavar","wusch","gewaschen","hat","Ich habe das Auto gewaschen."],
+ ["schlagen","golpear","schlug","geschlagen","hat","Er hat auf den Tisch geschlagen."],
+ ["wachsen","crecer","wuchs","gewachsen","ist","Der Baum ist schnell gewachsen."],
+ ["rufen","llamar","rief","gerufen","hat","Sie hat laut gerufen."],
+ ["heißen","llamarse","hieß","geheißen","hat","Wie hat er geheißen?"],
+ ["tun","hacer","tat","getan","hat","Das hat mir leidgetan."],
+ ["vergessen","olvidar","vergaß","vergessen","hat","Ich habe deinen Namen vergessen."],
+ ["bitten","pedir","bat","gebeten","hat","Er hat mich um Hilfe gebeten."],
+ ["nennen","nombrar","nannte","genannt","hat","Sie hat das Kind Anna genannt."],
+ ["brennen","arder","brannte","gebrannt","hat","Das Haus hat gebrannt."],
+ ["rennen","correr","rannte","gerannt","ist","Er ist nach Hause gerannt."],
+ ["leihen","prestar","lieh","geliehen","hat","Ich habe ihm Geld geliehen."],
+ ["leiden","sufrir","litt","gelitten","hat","Sie hat sehr gelitten."],
+ ["schneiden","cortar","schnitt","geschnitten","hat","Er hat das Brot geschnitten."],
+ ["streiten","discutir","stritt","gestritten","hat","Wir haben oft gestritten."],
+ ["gießen","regar/verter","goss","gegossen","hat","Ich habe die Blumen gegossen."],
+ ["riechen","oler","roch","gerochen","hat","Es hat gut gerochen."],
+ ["fließen","fluir","floss","geflossen","ist","Der Fluss ist schnell geflossen."],
+ ["biegen","doblar","bog","gebogen","hat","Er hat das Metall gebogen."],
+ ["bieten","ofrecer","bot","geboten","hat","Sie hat mir Hilfe geboten."],
+ ["binden","atar","band","gebunden","hat","Er hat die Schuhe gebunden."],
+ ["treten","pisar/entrar","trat","getreten","ist","Er ist ins Zimmer getreten."],
+ ["fressen","comer (animal)","fraß","gefressen","hat","Der Hund hat alles gefressen."],
+ ["graben","cavar","grub","gegraben","hat","Sie haben ein Loch gegraben."],
+ ["raten","aconsejar/adivinar","riet","geraten","hat","Er hat mir gut geraten."],
+ ["heben","levantar","hob","gehoben","hat","Ich habe die Kiste gehoben."],
+ ["empfehlen","recomendar","empfahl","empfohlen","hat","Sie hat mir das Buch empfohlen."],
+ ["gelingen","lograrse","gelang","gelungen","ist","Der Kuchen ist mir gelungen."],
+ ["geschehen","ocurrir","geschah","geschehen","ist","Was ist geschehen?"],
+ ["scheinen","brillar/parecer","schien","geschienen","hat","Die Sonne hat geschienen."],
+ ["verstehen","entender","verstand","verstanden","hat","Ich habe dich verstanden."],
+ ["bekommen","recibir","bekam","bekommen","hat","Ich habe ein Geschenk bekommen."],
+ ["vergleichen","comparar","verglich","verglichen","hat","Er hat die Preise verglichen."],
+ ["beweisen","demostrar","bewies","bewiesen","hat","Sie hat ihre Unschuld bewiesen."]
+];
+/* GRAMÁTICA (opción múltiple / huecos / traducción) */
+const GRAMMAR=[
+ ["mc","¿A qué pregunta responde el DATIVO?",["Wer?/Was?","Wen?/Was?","Wem?","Wessen?"],2,"Dativ = Wem? (objeto indirecto)."],
+ ["mc","«Ich helfe ___ Mann.» (helfen rige…)",["den","der","dem","des"],2,"helfen rige DATIVO → dem Mann."],
+ ["mc","Participio de «informieren» (-ieren):",["geinformiert","informiert","informieren","informierte"],1,"Verbos -ieren: SIN ge- → informiert."],
+ ["mc","«Ich ___ nach Berlin gefahren.» (movimiento)",["habe","bin","war","hatte"],1,"Movimiento A→B → sein: Ich bin gefahren."],
+ ["mc","En la subordinada con «weil», el verbo va…",["en 2ª posición","al final","tras el sujeto","al principio"],1,"Subordinada → verbo conjugado al final."],
+ ["mc","Pasado puntual, una sola vez → ",["wenn","wann","als","ob"],2,"als = cuando (pasado puntual)."],
+ ["mc","Pasiva de acción (Präsens): S + ___ + participio",["sein","haben","werden","müssen"],2,"Vorgangspassiv: werden + participio."],
+ ["mc","Konjunktiv II de «haben»:",["hatte","hätte","habe","hat"],1,"hätte (con Umlaut)."],
+ ["mc","Comparativo de «gut»:",["guter","besser","gutter","mehr gut"],1,"gut–besser–am besten (irregular)."],
+ ["mc","«deshalb» provoca…",["nada (pos. 0)","inversión (pos. 1)","verbo al final","pregunta"],1,"deshalb/trotzdem → posición 1, inversión."],
+ ["mc","«fahren» → er ___",["fahrt","fährt","fahret","fihrt"],1,"A→Ä: er fährt."],
+ ["mc","Plural de «das Buch»:",["Buchs","Bücher","Buchen","Büche"],1,"Buch → Bücher (¨-er)."],
+ ["fill","«arbeiten» → du ___ (raíz en -t intercala -e-)",["arbeitest"],"Raíz -t/-d → du arbeitest."],
+ ["fill","Participio de «schreiben»:",["geschrieben"],"ge + raíz + en → geschrieben."],
+ ["fill","Konjunktiv II de «sein» (ich): ich ___",["wäre"],"sein → wäre (Konjunktiv II)."],
+ ["trans","No puedo venir hoy.","Ich kann heute nicht kommen.","Modal conjugado + infinitivo al final."],
+ ["trans","La sopa se cocina con carne.","Die Suppe wird mit Fleisch gekocht.","Pasiva: werden + participio al final."],
+ ["trans","No voy porque estoy cansado.","Ich gehe nicht, weil ich müde bin.","weil → verbo al final (bin)."],
+ ["mc","Genitivo masc.: «das Auto ___ Mannes»",["der","den","des","dem"],2,"Genitivo masc.: des Mannes (-es, 1 sílaba)."],
+ ["mc","Plusquamperfekt se forma con…",["haben/sein presente + part.","hatte/war + participio","werden + inf.","würde + inf."],1,"hatte/war (Prät.) + participio."],
+ ["mc","Agente en pasiva (personas):",["durch + Akk","von + Dativ","mit + Dativ","für + Akk"],1,"von + Dativ (personas); durch + Akk (medio)."],
+ ["mc","Superlativo de «hoch»:",["am hochsten","am höchsten","am höher","höchst"],1,"hoch–höher–am höchsten."],
+ ["mc","«nehmen» → du ___",["nehmst","nimmst","nimst","nahmst"],1,"Irregular: du nimmst, er nimmt."],
+ ["mc","«kein» se usa para negar…",["adjetivos","verbos","sustantivos con ein/sin artículo","adverbios"],2,"kein niega indefinidos y sustantivos sin artículo; nicht el resto."],
+ ["mc","«um … zu + inf.» expresa…",["causa","finalidad (mismo sujeto)","tiempo","condición"],1,"Finalidad con el mismo sujeto."],
+ ["mc","«wenn» se usa para…",["pasado puntual","presente/futuro y pasado repetido","preguntar cuándo","duda (whether)"],1,"als = pasado puntual; wenn = presente/futuro y repetido."],
+ ["fill","Comparativo de «alt» (con Umlaut):",["älter"],"alt → älter (1 sílaba → Umlaut)."],
+ ["fill","«werden» → er ___ (presente)",["wird"],"ich werde, du wirst, er wird."],
+ ["fill","Konjunktiv II de «haben» (ich): ich ___",["hätte"],"haben → hätte (Konjunktiv II)."],
+ ["trans","Si tuviera tiempo, vendría.","Wenn ich Zeit hätte, würde ich kommen.","Irreal presente: hätte + würde + infinitivo."],
+ ["fill","«Das ist der Mann, ___ Auto kaputt ist.» (cuyo, masc.)",["dessen"],"Relativo genitivo masc./neutro = dessen (cuyo)."],
+ ["fill","«Das ist die Frau, ___ Mann Arzt ist.» (cuya, fem.)",["deren"],"Relativo genitivo fem./plural = deren (cuya/cuyos)."],
+ ["mc","«Die Kinder, ___ Eltern reich sind…» (plural)",["dessen","deren","denen","die"],1,"Plural relativo genitivo = deren."],
+ ["mc","«Die Leute, mit ___ ich arbeite…» (Dativo plural)",["dem","der","denen","deren"],2,"Dativo plural del relativo = denen."],
+ ["mc","«Der Tisch, an ___ ich sitze…» (Dativo masc.)",["den","dem","das","dessen"],1,"an + Dativo masc. → an dem."],
+ ["mc","«Das Buch, ___ ich lese…» (AKK neutro)",["dem","den","das","dessen"],2,"Relativo AKK neutro = das."],
+ ["mc","¿Cuál de estos verbos rige DATIVO?",["sehen","gefallen","kaufen","besuchen"],1,"gefallen rige Dativo (Das Bild gefällt mir)."],
+ ["fill","«Das Auto gehört ___ Mann.» (a el hombre, Dat. masc.)",["dem"],"gehören rige Dativo → dem Mann."],
+ ["fill","«Ich danke ___.» (a ti)",["dir"],"danken rige Dativo → dir."],
+ ["mc","«Ich helfe ___.» (a ella)",["sie","ihr","ihn","ihm"],1,"helfen rige Dativo; sie(ella)→ihr."],
+ ["mc","¿Cuál rige Dativo?",["fragen","gratulieren","lieben","brauchen"],1,"gratulieren, danken, helfen, gehören… → Dativo."],
+ ["fill","«Das Essen schmeckt ___.» (a mí)",["mir"],"schmecken rige Dativo → mir."],
+ ["fill","Comparativo de «teuer» (pierde la -e-):",["teurer"],"teuer → teurer (cae la e: teu(e)rer)."],
+ ["fill","Comparativo de «groß»:",["größer"],"groß → größer → am größten (irregular, sin -e en superl.)."],
+ ["mc","Comparativo de «viel»:",["vieler","mehr","viele","meist"],1,"viel → mehr → am meisten."],
+ ["mc","Superlativo de «gern»:",["am gernsten","am liebsten","am gerne","liebsten"],1,"gern → lieber → am liebsten."],
+ ["mc","Igualdad «tan rápido como»:",["so schnell als","schneller wie","so schnell wie","als schnell"],2,"Igualdad: so + adjetivo + wie."],
+ ["fill","«___ älter, desto erfahrener.» (cuanto más…)",["je"],"Je + comparativo…, desto + comparativo…"],
+ ["mc","Adjetivo de 1 sílaba en comparativo (a/o/u):",["sin cambio","toma Umlaut (ä/ö/ü)","pierde la vocal","duplica la vocal"],1,"Muchos monosílabos toman Umlaut: alt→älter, jung→jünger."],
+ ["fill","Superlativo de «nah»: am ___",["nächsten"],"nah → näher → am nächsten (irregular)."]
+];
+/* PLURALES DIFÍCILES: [art. singular, palabra, plural (sin artículo), regla] */
+const PLURALS=[
+ ["der","Apfel","Äpfel","-el/-er/-en: sin terminación, a menudo con Umlaut (a→ä)."],
+ ["der","Vogel","Vögel","-el: sin terminación + Umlaut (o→ö)."],
+ ["die","Mutter","Mütter","-er: sin terminación + Umlaut (u→ü)."],
+ ["die","Tochter","Töchter","-er: sin terminación + Umlaut (o→ö)."],
+ ["der","Vater","Väter","-er: sin terminación + Umlaut (a→ä)."],
+ ["der","Bruder","Brüder","-er: sin terminación + Umlaut (u→ü)."],
+ ["der","Mantel","Mäntel","-el: sin terminación + Umlaut (a→ä)."],
+ ["der","Garten","Gärten","-en: sin terminación + Umlaut (a→ä)."],
+ ["das","Buch","Bücher","¨-er: monosílabo neutro con Umlaut."],
+ ["das","Haus","Häuser","¨-er: Umlaut (au→äu) + -er."],
+ ["der","Mann","Männer","¨-er: Umlaut (a→ä) + -er."],
+ ["das","Land","Länder","¨-er: Umlaut (a→ä) + -er."],
+ ["das","Wort","Wörter","¨-er: Wörter = palabras sueltas (vocabulario)."],
+ ["der","Wald","Wälder","¨-er: Umlaut (a→ä) + -er."],
+ ["das","Glas","Gläser","¨-er: Umlaut (a→ä) + -er."],
+ ["das","Dorf","Dörfer","¨-er: Umlaut (o→ö) + -er."],
+ ["das","Kind","Kinder","-er sin Umlaut."],
+ ["die","Hand","Hände","¨-e: Umlaut (a→ä) + -e."],
+ ["die","Stadt","Städte","¨-e: Umlaut (a→ä) + -e."],
+ ["die","Nacht","Nächte","¨-e: Umlaut (a→ä) + -e."],
+ ["die","Wand","Wände","¨-e: Umlaut (a→ä) + -e."],
+ ["die","Kraft","Kräfte","¨-e: Umlaut (a→ä) + -e."],
+ ["die","Frucht","Früchte","¨-e: Umlaut (u→ü) + -e."],
+ ["die","Maus","Mäuse","¨-e: Umlaut (au→äu) + -e."],
+ ["der","Sohn","Söhne","¨-e: Umlaut (o→ö) + -e."],
+ ["der","Baum","Bäume","¨-e: Umlaut (au→äu) + -e."],
+ ["der","Traum","Träume","¨-e: Umlaut (au→äu) + -e."],
+ ["der","Zug","Züge","¨-e: Umlaut (u→ü) + -e."],
+ ["der","Stuhl","Stühle","¨-e: Umlaut (u→ü) + -e."],
+ ["der","Fluss","Flüsse","¨-e: Umlaut (u→ü) + -e (ss)."],
+ ["der","Kopf","Köpfe","¨-e: Umlaut (o→ö) + -e."],
+ ["der","Fuß","Füße","¨-e: Umlaut (u→ü) + -e."],
+ ["der","Arzt","Ärzte","¨-e: Umlaut (a→ä) + -e."],
+ ["der","Gast","Gäste","¨-e: Umlaut (a→ä) + -e."],
+ ["der","Ball","Bälle","¨-e: Umlaut (a→ä) + -e."],
+ ["der","Tag","Tage","-e sin Umlaut (muchos masculinos)."],
+ ["das","Jahr","Jahre","-e sin Umlaut."],
+ ["der","Mensch","Menschen","-en: masculino débil (n-Deklination)."],
+ ["der","Name","Namen","-n: masculino débil."],
+ ["der","Junge","Jungen","-n: masculino débil."],
+ ["die","Frau","Frauen","-en: femeninos (también -ung/-heit/-keit)."],
+ ["das","Auto","Autos","-s: extranjerismos y -o/-a/-i."],
+ ["das","Foto","Fotos","-s: extranjerismo en -o."],
+ ["das","Hotel","Hotels","-s: extranjerismo."],
+ ["das","Thema","Themen","Irregular: -ma → -men (Themen)."],
+ ["das","Museum","Museen","Irregular: -um → -een (Museen)."],
+ ["das","Datum","Daten","Irregular: -um → -en (Daten)."],
+ ["der","Saft","Säfte","¨-e: Umlaut (a→ä) + -e."],
+ ["der","Satz","Sätze","¨-e: Umlaut (a→ä) + -e."],
+ ["der","Platz","Plätze","¨-e: Umlaut (a→ä) + -e."],
+ ["der","Schatz","Schätze","¨-e: Umlaut (a→ä) + -e."],
+ ["der","Hut","Hüte","¨-e: Umlaut (u→ü) + -e."],
+ ["der","Gruß","Grüße","¨-e: Umlaut (u→ü) + -e."],
+ ["der","Wunsch","Wünsche","¨-e: Umlaut (u→ü) + -e."],
+ ["der","Markt","Märkte","¨-e: Umlaut (a→ä) + -e."],
+ ["der","Rock","Röcke","¨-e: Umlaut (o→ö) + -e."],
+ ["der","Stock","Stöcke","¨-e: Umlaut (o→ö) + -e."],
+ ["der","Topf","Töpfe","¨-e: Umlaut (o→ö) + -e."],
+ ["der","Sturm","Stürme","¨-e: Umlaut (u→ü) + -e."],
+ ["der","Turm","Türme","¨-e: Umlaut (u→ü) + -e."],
+ ["der","Wurm","Würmer","¨-er: Umlaut (u→ü) + -er."],
+ ["der","Mund","Münder","¨-er: Umlaut (u→ü) + -er."],
+ ["der","Rand","Ränder","¨-er: Umlaut (a→ä) + -er."],
+ ["der","Geist","Geister","-er con Umlaut (Geister)."],
+ ["der","Gott","Götter","¨-er: Umlaut (o→ö) + -er."],
+ ["der","Reichtum","Reichtümer","¨-er: -tum → -tümer."],
+ ["der","Irrtum","Irrtümer","¨-er: -tum → -tümer."],
+ ["das","Blatt","Blätter","¨-er: Umlaut (a→ä) + -er."],
+ ["das","Loch","Löcher","¨-er: Umlaut (o→ö) + -er."],
+ ["das","Dach","Dächer","¨-er: Umlaut (a→ä) + -er."],
+ ["das","Fach","Fächer","¨-er: Umlaut (a→ä) + -er."],
+ ["das","Tuch","Tücher","¨-er: Umlaut (u→ü) + -er."],
+ ["das","Schloss","Schlösser","¨-er: Umlaut (o→ö) + -er."],
+ ["das","Rad","Räder","¨-er: Umlaut (a→ä) + -er."],
+ ["das","Bad","Bäder","¨-er: Umlaut (a→ä) + -er."],
+ ["das","Grab","Gräber","¨-er: Umlaut (a→ä) + -er."],
+ ["das","Lamm","Lämmer","¨-er: Umlaut (a→ä) + -er."],
+ ["das","Volk","Völker","¨-er: Umlaut (o→ö) + -er."],
+ ["das","Ei","Eier","-er sin Umlaut (Eier)."],
+ ["das","Bild","Bilder","-er sin Umlaut."],
+ ["das","Kleid","Kleider","-er sin Umlaut."],
+ ["das","Lied","Lieder","-er sin Umlaut."],
+ ["das","Feld","Felder","-er sin Umlaut."],
+ ["die","Kuh","Kühe","¨-e: Umlaut (u→ü) + -e."],
+ ["die","Wurst","Würste","¨-e: Umlaut (u→ü) + -e."],
+ ["die","Bank","Bänke","¨-e: Bänke = bancos (asiento)."],
+ ["die","Gans","Gänse","¨-e: Umlaut (a→ä) + -e."],
+ ["die","Kunst","Künste","¨-e: Umlaut (u→ü) + -e."],
+ ["die","Macht","Mächte","¨-e: Umlaut (a→ä) + -e."],
+ ["die","Nuss","Nüsse","¨-e: Umlaut (u→ü) + -e."],
+ ["der","Herr","Herren","-en: masc. débil (plural Herren)."],
+ ["der","Student","Studenten","-en: masc. débil."],
+ ["der","Kollege","Kollegen","-n: masc. débil."],
+ ["der","Kunde","Kunden","-n: masc. débil."],
+ ["der","Nachbar","Nachbarn","-n: masc. débil."],
+ ["der","Bauer","Bauern","-n: masc. débil."],
+ ["der","Affe","Affen","-n: masc. débil."],
+ ["der","Held","Helden","-en: masc. débil."],
+ ["der","Präsident","Präsidenten","-en: masc. débil."],
+ ["der","Patient","Patienten","-en: masc. débil."],
+ ["der","Polizist","Polizisten","-en: masc. débil."],
+ ["der","See","Seen","-n (der See = lago)."],
+ ["die","Universität","Universitäten","-en (femeninos -tät)."],
+ ["die","Zeitung","Zeitungen","-en (-ung)."],
+ ["die","Meinung","Meinungen","-en (-ung)."],
+ ["die","Wohnung","Wohnungen","-en (-ung)."],
+ ["die","Rechnung","Rechnungen","-en (-ung)."],
+ ["die","Lösung","Lösungen","-en (-ung)."],
+ ["die","Freiheit","Freiheiten","-en (-heit)."],
+ ["die","Möglichkeit","Möglichkeiten","-en (-keit)."],
+ ["die","Nation","Nationen","-en (-ion)."],
+ ["die","Information","Informationen","-en (-ion)."],
+ ["die","Lehrerin","Lehrerinnen","-nen: -in → -innen."],
+ ["die","Freundin","Freundinnen","-nen: -in → -innen."],
+ ["die","Königin","Königinnen","-nen: -in → -innen."],
+ ["die","Blume","Blumen","-n (-e → -n)."],
+ ["die","Lampe","Lampen","-n (-e → -n)."],
+ ["die","Tasche","Taschen","-n (-e → -n)."],
+ ["die","Schule","Schulen","-n (-e → -n)."],
+ ["die","Straße","Straßen","-n (-e → -n)."],
+ ["die","Sprache","Sprachen","-n (-e → -n)."],
+ ["die","Stunde","Stunden","-n (-e → -n)."],
+ ["die","Woche","Wochen","-n (-e → -n)."],
+ ["die","Familie","Familien","-n (-ie → -n)."],
+ ["das","Büro","Büros","-s (extranjerismo -o)."],
+ ["das","Kino","Kinos","-s (extranjerismo -o)."],
+ ["das","Radio","Radios","-s."],
+ ["das","Sofa","Sofas","-s."],
+ ["das","Handy","Handys","-s (extranjerismo -y)."],
+ ["das","Baby","Babys","-s."],
+ ["der","Park","Parks","-s (extranjerismo)."],
+ ["der","Chef","Chefs","-s (extranjerismo)."],
+ ["die","Oma","Omas","-s."],
+ ["das","Team","Teams","-s (extranjerismo)."],
+ ["das","Praktikum","Praktika","Latín: -um → -a (Praktika)."],
+ ["das","Visum","Visa","Latín: -um → -a (Visa)."],
+ ["das","Konto","Konten","Irregular: -o → -en (Konten)."],
+ ["die","Firma","Firmen","Irregular: -a → -en (Firmen)."],
+ ["der","Kaktus","Kakteen","Irregular (Kakteen)."],
+ ["das","Lexikon","Lexika","Griego: -on → -a (Lexika)."],
+ ["das","Material","Materialien","-ien (Materialien)."],
+ ["das","Stadion","Stadien","-on → -ien (Stadien)."],
+ ["der","Onkel","Onkel","Sin terminación (-el)."],
+ ["der","Schlüssel","Schlüssel","Sin terminación (-el)."],
+ ["der","Lehrer","Lehrer","Sin terminación (-er)."],
+ ["das","Fenster","Fenster","Sin terminación (-er)."],
+ ["das","Zimmer","Zimmer","Sin terminación (-er)."],
+ ["das","Messer","Messer","Sin terminación (-er)."],
+ ["der","Wagen","Wagen","Sin terminación (-en)."],
+ ["der","Kuchen","Kuchen","Sin terminación (-en)."],
+ ["das","Mädchen","Mädchen","Sin terminación (-chen)."],
+ ["das","Brötchen","Brötchen","Sin terminación (-chen)."]
+];
+/* GENITIVO: [base (art.+nombre), forma genitiva, regla] */
+const GENITIVE=[
+ ["der Mann","des Mannes","Masc. 1 sílaba → -es: des Mannes."],
+ ["das Kind","des Kindes","Neutro 1 sílaba → -es: des Kindes."],
+ ["das Haus","des Hauses","Acaba en -s → -es: des Hauses."],
+ ["das Buch","des Buches","Neutro 1 sílaba → -es: des Buches."],
+ ["der Tag","des Tages","Masc. 1 sílaba → -es: des Tages."],
+ ["der Hund","des Hundes","Acaba en -d → -es: des Hundes."],
+ ["der Arzt","des Arztes","Acaba en -t → -es: des Arztes."],
+ ["der Fluss","des Flusses","Acaba en -ss → -es: des Flusses."],
+ ["das Fenster","des Fensters","2+ sílabas → -s: des Fensters."],
+ ["der Lehrer","des Lehrers","2+ sílabas → -s: des Lehrers."],
+ ["der Computer","des Computers","2+ sílabas → -s: des Computers."],
+ ["der Vater","des Vaters","2+ sílabas → -s: des Vaters."],
+ ["das Auto","des Autos","Extranjerismo → -s: des Autos."],
+ ["der Affe","des Affen","Masc. débil (n-Deklination) → -n: des Affen."],
+ ["der Student","des Studenten","Masc. débil → -en: des Studenten."],
+ ["der Junge","des Jungen","Masc. débil → -n: des Jungen."],
+ ["der Mensch","des Menschen","Masc. débil → -en: des Menschen."],
+ ["der Kollege","des Kollegen","Masc. débil → -n: des Kollegen."],
+ ["der Kunde","des Kunden","Masc. débil → -n: des Kunden."],
+ ["der Nachbar","des Nachbarn","Masc. débil → -n: des Nachbarn."],
+ ["der Herr","des Herrn","Masc. débil → -n (singular Herrn)."],
+ ["der Name","des Namens","Especial: -ns (des Namens)."],
+ ["das Herz","des Herzens","Especial: -ens (des Herzens)."],
+ ["die Frau","der Frau","Femenino: sin terminación, solo artículo der."],
+ ["die Mutter","der Mutter","Femenino: sin terminación: der Mutter."],
+ ["die Stadt","der Stadt","Femenino: sin terminación: der Stadt."],
+ ["die Universität","der Universität","Femenino: sin terminación: der Universität."],
+ ["die Kinder","der Kinder","Plural: artículo der, sin terminación."],
+ ["die Eltern","der Eltern","Plural: artículo der, sin terminación."],
+ ["die Bücher","der Bücher","Plural: artículo der, sin terminación."]
+];
+/* DECLINACIÓN DE ADJETIVOS: [frase con ___ (terminación), [acepta], explicación] */
+const ADJDECL=[
+ ["Das ist ein gut___ Mann. (ein, masc. NOM)",["er"],"Con ein SIN marca (masc. NOM), el adjetivo asume el marcador: -er."],
+ ["Das ist ein klein___ Kind. (ein, neutro NOM)",["es"],"Con ein SIN marca (neutro NOM/AKK), el adjetivo toma -es."],
+ ["Ich habe ein neu___ Auto. (ein, neutro AKK)",["es"],"ein neutro AKK: el adjetivo toma -es (das billige Auto → ein billiges Auto)."],
+ ["Ich kaufe einen rot___ Wagen. (einen, masc. AKK)",["en"],"einen ya marca el masc. AKK → adjetivo -en."],
+ ["Ich helfe dem alt___ Mann. (dem, Dat. masc.)",["en"],"DATIVO siempre lleva -en (tras dem/der/den)."],
+ ["Ich gebe der jung___ Frau ein Buch. (der, Dat. fem.)",["en"],"Dativo femenino: der + adjetivo -en."],
+ ["Ich helfe den alt___ Leuten. (den, Dat. plural)",["en"],"Dativo plural: den + adjetivo -en (y sustantivo +n)."],
+ ["Ich spiele mit einem groß___ Hund. (einem, Dat. masc.)",["en"],"Dativo siempre -en (también con artículo indefinido)."],
+ ["Ich fahre mit einer schnell___ Bahn. (einer, Dat. fem.)",["en"],"Dativo femenino indefinido: einer + adjetivo -en."],
+ ["Der groß___ Mann ist hier. (der, NOM masc.)",["e"],"Tras der (masc. NOM), el adjetivo lleva -e."],
+ ["Ich sehe den groß___ Mann. (den, AKK masc.)",["en"],"Tras den (masc. AKK) → adjetivo -en."],
+ ["Die schön___ Frau lacht. (die, NOM fem.)",["e"],"Tras die (fem. NOM/AKK) → adjetivo -e."],
+ ["Das klein___ Kind schläft. (das, NOM neutro)",["e"],"Tras das (neutro NOM/AKK) → adjetivo -e."],
+ ["Ich sehe das klein___ Kind. (das, AKK neutro)",["e"],"Tras das (neutro AKK) → adjetivo -e."],
+ ["Die klein___ Kinder spielen. (die, NOM plural)",["en"],"Plural con artículo (die): adjetivo -en."],
+ ["Eine schön___ Stadt. (eine, NOM fem.)",["e"],"eine (fem. NOM/AKK) → adjetivo -e."],
+ ["Ich besuche eine alt___ Stadt. (eine, AKK fem.)",["e"],"eine (fem. AKK) → adjetivo -e."],
+ ["Mein alt___ Auto ist kaputt. (mein, NOM neutro)",["es"],"Los posesivos se declinan como ein → neutro NOM -es."],
+ ["Meine gut___ Freundin kommt. (meine, NOM fem.)",["e"],"meine (fem.) → adjetivo -e."],
+ ["Das ist das Auto des alt___ Mannes. (des, GEN masc.)",["en"],"GENITIVO siempre lleva -en."],
+ ["Trotz des schlecht___ Wetters… (des, GEN neutro)",["en"],"Genitivo → adjetivo -en."],
+ ["Die Farbe der rot___ Blume. (der, GEN fem.)",["en"],"Genitivo femenino → adjetivo -en."],
+ ["Ein kalt___ Bier, bitte. (ein, neutro AKK)",["es"],"ein neutro AKK → -es (das Bier → ein kaltes Bier)."],
+ ["Er ist ein nett___ Mensch. (ein, masc. NOM)",["er"],"ein masc. NOM → adjetivo -er."],
+ ["Ich wohne in einem groß___ Haus. (einem, Dat. neutro)",["en"],"Dativo neutro indefinido → -en."],
+ ["Die intelligent___ Studenten lernen. (die, NOM plural)",["en"],"Plural con die → adjetivo -en."]
+];
+
+/* ===================== CONSTRUIR ÍTEMS ===================== */
+function buildItems(){
+  const it=[];
+  GENDERS.forEach((d,i)=>it.push({id:"g"+i,deck:"gen",type:"gen",g:d[0],w:d[1],t:d[2],r:d[3]}));
+  PREPS.forEach((d,i)=>it.push({id:"p"+i,deck:"prep",type:"prep",s:d[0],acc:d[1],c:d[2],e:d[3]}));
+  VERBS.forEach((d,i)=>it.push({id:"v"+i,deck:"verb",type:"verb",inf:d[0],m:d[1],pra:d[2],par:d[3],aux:d[4],ex:d[5]}));
+  PLURALS.forEach((d,i)=>it.push({id:"pl"+i,deck:"plural",type:"plural",art:d[0],w:d[1],pl:d[2],r:d[3]}));
+  GENITIVE.forEach((d,i)=>it.push({id:"ge"+i,deck:"genitiv",type:"genitiv",base:d[0],gen:d[1],r:d[2]}));
+  ADJDECL.forEach((d,i)=>it.push({id:"a"+i,deck:"adj",type:"adj",s:d[0],acc:d[1],e:d[2]}));
+  GRAMMAR.forEach((d,i)=>{
+    if(d[0]==="mc") it.push({id:"q"+i,deck:"gram",type:"mc",q:d[1],o:d[2],a:d[3],e:d[4]});
+    else if(d[0]==="fill") it.push({id:"q"+i,deck:"gram",type:"fill",q:d[1],acc:d[2],e:d[3]});
+    else it.push({id:"q"+i,deck:"gram",type:"trans",es:d[1],de:d[2],e:d[3]});
+  });
+  return it;
+}
+const ITEMS=buildItems();
+const BYID={}; ITEMS.forEach(x=>BYID[x.id]=x);
+const DECKS={
+  all:{emoji:"🎲",name:"Todos los temas",desc:"Mezcla de géneros, preposiciones, verbos y gramática"},
+  gen:{emoji:"🚻",name:"Géneros der/die/das",desc:"Palabras simples y complejas, con su regla"},
+  plural:{emoji:"🔢",name:"Plurales difíciles",desc:"Umlaut, -er, irregulares… escribe el plural"},
+  genitiv:{emoji:"📜",name:"Genitivo",desc:"des Mannes, des Affen… con su regla"},
+  adj:{emoji:"🧩",name:"Declinación de adjetivos",desc:"Termina el adjetivo (der/ein + caso). Con tabla de ayuda"},
+  prep:{emoji:"🧱",name:"Preposiciones",desc:"Pon la preposición + el caso, con explicación"},
+  verb:{emoji:"🔁",name:"Verbos irregulares",desc:"Präteritum, Partizip y ejemplo"},
+  gram:{emoji:"📘",name:"Gramática",desc:"Casos, pasado, pasiva, Konjunktiv, sintaxis"}
+};
+const ACHIEVEMENTS=[
+ {id:"first",ic:"🐣",name:"Erste Schritte",desc:"Responde tu primer ejercicio"},
+ {id:"xp200",ic:"💯",name:"200 XP",desc:"Alcanza 200 XP"},
+ {id:"xp1000",ic:"💎",name:"1000 XP",desc:"Alcanza 1000 XP"},
+ {id:"streak7",ic:"🔥",name:"Una semana",desc:"7 días de racha"},
+ {id:"gen50",ic:"🚻",name:"Género dominado",desc:"50 géneros acertados"},
+ {id:"fails0",ic:"🩹",name:"Sin heridas",desc:"Vacía tu lista de fallos"},
+ {id:"verb30",ic:"🔁",name:"Verbos fuertes",desc:"30 verbos irregulares acertados"},
+ {id:"mark10",ic:"📌",name:"Coleccionista",desc:"Marca 10 cosas"},
+ {id:"level8",ic:"⭐",name:"Nivel 8",desc:"Llega al nivel 8"},
+ {id:"prep40",ic:"🧱",name:"Maestro de prep.",desc:"40 preposiciones acertadas"}
+];
+
+/* ===================== ESTADO ===================== */
+const KEY="deutschQuest_v2";
+const todayStr=()=>new Date().toISOString().slice(0,10);
+let S=load();
+function load(){try{const d=JSON.parse(localStorage.getItem(KEY));if(d)return d;}catch(e){}
+  return {xp:0,streak:0,lastDay:null,stats:{},marks:{},ach:{},counts:{gen:0,prep:0,verb:0,gram:0}};}
+function save(){localStorage.setItem(KEY,JSON.stringify(S));}
+function levelFor(xp){return Math.floor(Math.sqrt(xp/40))+1;}
+function xpForLevel(l){return 40*Math.pow(l-1,2);}
+function checkDay(){const t=todayStr();if(S.lastDay===t)return;
+  if(S.lastDay){const diff=(new Date(t)-new Date(S.lastDay))/86400000;S.streak=diff===1?S.streak+1:1;}else S.streak=1;
+  S.lastDay=t;save();}
+function st(id){return S.stats[id]||(S.stats[id]={seen:0,right:0,wrong:0,streak:0});}
+function record(id,ok){const s=st(id);s.seen++;if(ok){s.right++;s.streak++;}else{s.wrong++;s.streak=0;}save();}
+/* un ítem es "fallo pendiente" si lo has fallado y no lo has acertado 2 veces seguidas desde entonces */
+function isFail(id){const s=S.stats[id];return !!s&&!s.ignored&&s.wrong>0&&s.streak<2;}
+function failList(){return ITEMS.filter(x=>isFail(x.id));}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* ===================== XP / LOGROS ===================== */
+function addXp(n){const b=levelFor(S.xp);S.xp+=n;const a=levelFor(S.xp);
+  if(a>b)toast("⭐ ¡Nivel "+a+"!");unlock();save();renderHeader();}
+function deckCorrect(deck){let c=0;for(const x of ITEMS)if(x.deck===deck&&S.stats[x.id])c+=S.stats[x.id].right>0?1:0;return c;}
+function unlock(){
+  const test={
+   first:Object.keys(S.stats).length>0,
+   xp200:S.xp>=200,xp1000:S.xp>=1000,
+   streak7:S.streak>=7,
+   gen50:deckCorrect("gen")>=50,
+   fails0:Object.keys(S.stats).length>0&&failList().length===0,
+   verb30:deckCorrect("verb")>=30,
+   mark10:Object.keys(S.marks).length>=10,
+   level8:levelFor(S.xp)>=8,
+   prep40:deckCorrect("prep")>=40
+  };
+  for(const a of ACHIEVEMENTS) if(test[a.id]&&!S.ach[a.id]){S.ach[a.id]=todayStr();setTimeout(()=>toast("🏆 "+a.name),300);}
+}
+
+/* ===================== UI ===================== */
+const app=document.getElementById("app");
+function toast(m){const t=document.getElementById("toast");t.innerHTML='<div class="toast">'+m+'</div>';setTimeout(()=>t.innerHTML="",2400);}
+function renderHeader(){
+  document.getElementById("hStreak").textContent=S.streak;
+  document.getElementById("hLevel").textContent=levelFor(S.xp);
+  document.getElementById("hXp").textContent=S.xp;
+  const l=levelFor(S.xp),cur=xpForLevel(l),nx=xpForLevel(l+1);
+  document.getElementById("hBar").style.width=Math.min(100,Math.round((S.xp-cur)/(nx-cur)*100))+"%";
+}
+function esc(s){return (s+"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+function norm(s){return (s||"").trim().toLowerCase().replace(/ß/g,"ss").replace(/\s+/g," ");}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));b.classList.add("active");routes[b.dataset.tab]();});
+const routes={home:renderHome,play:renderPlay,fails:renderFails,marks:renderMarks,ach:renderAch,data:renderData};
+
+function renderHome(){
+  const seen=Object.keys(S.stats).length, fails=failList().length;
+  app.innerHTML=`<h2>Willkommen, Carlos 👋</h2>
+   <div class="dash">
+     <div class="stat"><div class="n">${S.xp}</div><div class="l">XP</div></div>
+     <div class="stat"><div class="n">${levelFor(S.xp)}</div><div class="l">Nivel</div></div>
+     <div class="stat"><div class="n">${S.streak}🔥</div><div class="l">Racha</div></div>
+     <div class="stat"><div class="n">${fails}</div><div class="l">Fallos a repasar</div></div>
+   </div>
+   <div class="card" style="margin-bottom:14px">
+     <h3 style="margin:0 0 6px">🎯 Hoy</h3>
+     <p class="muted" style="margin:0 0 12px">Haz una ronda mixta y limpia tus fallos pendientes.</p>
+     <div class="rowbtns">
+       <button class="btn" onclick="start('all')">🎲 Ronda mixta</button>
+       <button class="btn gold" onclick="startFails()" ${fails?"":"disabled"}>🩹 Repasar fallos (${fails})</button>
+     </div>
+   </div>
+   <div class="card">
+     <h3 style="margin:0 0 8px">📦 La base de datos</h3>
+     <p class="muted" style="font-size:14px;line-height:1.6;margin:0">
+     ${GENDERS.length} géneros (con su regla, o aviso de que no hay regla) · ${PLURALS.length} plurales difíciles ·
+     ${GENITIVE.length} de Genitivo · ${ADJDECL.length} de declinación de adjetivos (con tabla) · ${PREPS.length} preposiciones (con caso y porqué) ·
+     ${VERBS.length} verbos irregulares (con ejemplo) · ${GRAMMAR.length} de gramática.
+     Lo que fallas vuelve en <b>🩹 Mis fallos</b> hasta que lo aciertes dos veces. Marca lo interesante con 📌 y lo guardas en <b>Mis cosas</b>.</p>
+   </div>`;
+}
+window.start=start; window.startFails=startFails;
+
+/* ---- PRACTICAR ---- */
+function renderPlay(){
+  app.innerHTML=`<h2>🎮 Practicar</h2><div class="grid">`+Object.entries(DECKS).map(([k,d])=>{
+    const total=k==="all"?ITEMS.length:ITEMS.filter(x=>x.deck===k).length;
+    const done=ITEMS.filter(x=>(k==="all"||x.deck===k)&&S.stats[x.id]&&S.stats[x.id].right>0).length;
+    return `<div class="card mode" onclick="start('${k}')">
+      <div class="emoji">${d.emoji}</div><h3>${d.name}</h3><p>${d.desc}</p>
+      <div class="meta"><span>${done}/${total} dominados</span><span>▶️</span></div></div>`;
+  }).join("")+`</div>`;
+}
+
+/* ---- SESIÓN ---- */
+let Q=null;
+function isMarked(id){return !!S.marks[id];}
+function pickQueue(deck,n){
+  const inDeck=x=>(deck==="all"||x.deck===deck)&&!(S.stats[x.id]&&S.stats[x.id].ignored);
+  // pool de repaso = fallos pendientes + cosas marcadas (sin duplicar)
+  const review=shuffle(ITEMS.filter(x=>inDeck(x)&&(isFail(x.id)||isMarked(x.id))));
+  const reviewIds=new Set(review.map(x=>x.id));
+  const fresh=ITEMS.filter(x=>inDeck(x)&&!reviewIds.has(x.id))
+    .sort((a,b)=>weight(b)-weight(a)+(Math.random()-.5)*0.5);
+  // como mucho ~1/3 de la ronda son fallos/marcadas; el resto, material nuevo/poco visto
+  const maxRev=Math.min(review.length,Math.max(2,Math.round(n/3)));
+  const chosen=review.slice(0,maxRev).concat(fresh.slice(0,n-maxRev));
+  return shuffle(chosen).slice(0,n);
+}
+function weight(x){const s=S.stats[x.id];if(!s)return 2;return 1-Math.min(s.right,3)*0.2;}
+function start(deck){Q={deck,queue:pickQueue(deck,12),i:0,correct:0};checkDay();renderHeader();showQ();}
+function startFails(){const f=shuffle(failList());if(!f.length){renderFails();return;}
+  Q={deck:"fails",queue:f.slice(0,12),i:0,correct:0};checkDay();showQ();}
+function startMarks(){const m=shuffle(ITEMS.filter(x=>isMarked(x.id)));if(!m.length){renderMarks();return;}
+  Q={deck:"marks",queue:m.slice(0,12),i:0,correct:0};checkDay();showQ();}
+window.startMarks=startMarks;
+
+function showQ(){
+  if(Q.i>=Q.queue.length)return finish();
+  const it=Q.queue[Q.i],n=Q.i+1,total=Q.queue.length;
+  const deckName=DECKS[it.deck]?DECKS[it.deck].name:it.deck;
+  let body="";
+  if(it.type==="gen"){
+    body=`<div class="qhint">¿der, die o das?</div>
+      <div class="qtext">___ ${esc(it.w)} <span class="trans">(${esc(it.t)})</span></div>
+      <div class="three">
+        <button class="opt" onclick="ansGen('der')">der</button>
+        <button class="opt" onclick="ansGen('die')">die</button>
+        <button class="opt" onclick="ansGen('das')">das</button></div>`;
+  } else if(it.type==="prep"){
+    body=`<div class="qhint">Escribe la preposición y elige el caso</div>
+      <div class="qtext">${esc(it.s).replace("___",'<span class="gap">_____</span>')}</div>
+      <input class="fill" id="pIn" autocomplete="off" placeholder="preposición…">
+      <label class="flbl">¿Qué caso rige?</label>
+      <div class="cases">
+        <button class="opt" data-c="Akk" onclick="pickCase(this)">Akkusativo</button>
+        <button class="opt" data-c="Dat" onclick="pickCase(this)">Dativo</button>
+        <button class="opt" data-c="Gen" onclick="pickCase(this)">Genitivo</button></div>
+      <div class="rowbtns"><button class="btn" onclick="ansPrep()">Comprobar</button></div>`;
+  } else if(it.type==="verb"){
+    body=`<div class="qhint">Conjuga el verbo irregular</div>
+      <div class="qtext">${esc(it.inf)} <span class="trans">(${esc(it.m)})</span></div>
+      <label class="flbl">Präteritum (3ª pers. sing., «er ___»)</label>
+      <input class="fill" id="vP" autocomplete="off" placeholder="z.B. ging">
+      <label class="flbl">Partizip Perfekt (sin auxiliar)</label>
+      <input class="fill" id="vT" autocomplete="off" placeholder="z.B. gegangen">
+      <div class="rowbtns"><button class="btn" onclick="ansVerb()">Comprobar</button></div>`;
+  } else if(it.type==="plural"){
+    body=`<div class="qhint">Escribe el plural</div>
+      <div class="qtext">${esc(it.art)} ${esc(it.w)} <span class="trans">→ die …?</span></div>
+      <input class="fill" id="plIn" autocomplete="off" placeholder="z.B. Äpfel" onkeydown="if(event.key==='Enter')ansPlural()">
+      <div class="rowbtns"><button class="btn" onclick="ansPlural()">Comprobar</button></div>`;
+  } else if(it.type==="genitiv"){
+    body=`<div class="qhint">Pon el caso Genitivo (artículo + nombre)</div>
+      <div class="qtext">${esc(it.base)} <span class="trans">→ Genitiv?</span></div>
+      <input class="fill" id="geIn" autocomplete="off" placeholder="z.B. des Mannes" onkeydown="if(event.key==='Enter')ansGenitiv()">
+      <div class="rowbtns"><button class="btn" onclick="ansGenitiv()">Comprobar</button>
+        <button class="btn ghost sm" onclick="showHelp('weak')">ℹ️ ¿Masc. débil?</button></div>`;
+  } else if(it.type==="adj"){
+    body=`<div class="qhint">Escribe la terminación del adjetivo</div>
+      <div class="qtext">${esc(it.s).replace("___",'<span class="gap">-?</span>')}</div>
+      <input class="fill" id="aIn" autocomplete="off" placeholder="z.B. en" onkeydown="if(event.key==='Enter')ansAdj()">
+      <div class="rowbtns"><button class="btn" onclick="ansAdj()">Comprobar</button>
+        <button class="btn ghost sm" onclick="showHelp('adj')">📋 Ver tabla</button></div>`;
+  } else if(it.type==="mc"){
+    body=`<div class="qtext">${esc(it.q)}</div>`+it.o.map((o,i)=>`<button class="opt" onclick="ansMC(${i})">${esc(o)}</button>`).join("");
+  } else if(it.type==="fill"){
+    body=`<div class="qtext">${esc(it.q)}</div>
+      <input class="fill" id="fIn" autocomplete="off" placeholder="Tu respuesta…" onkeydown="if(event.key==='Enter')ansFill()">
+      <div class="rowbtns"><button class="btn" onclick="ansFill()">Comprobar</button></div>`;
+  } else if(it.type==="trans"){
+    body=`<div class="qhint">🌍 Traduce al alemán</div><div class="qtext">${esc(it.es)}</div>
+      <button class="btn ghost" onclick="revealTrans()">Mostrar respuesta</button><div id="tr"></div>`;
+  }
+  app.innerHTML=`<div class="qwrap">
+    <div class="qcount"><span>${n}/${total}</span><span class="deckbadge">${esc(deckName)}</span></div>
+    <div class="bar" style="margin-bottom:16px"><i style="width:${(n-1)/total*100}%"></i></div>
+    ${body}<div id="exp"></div></div>`;
+  setTimeout(()=>{(document.getElementById("pIn")||document.getElementById("vP")||document.getElementById("fIn")||document.getElementById("plIn")||document.getElementById("geIn")||document.getElementById("aIn"))?.focus();},40);
+}
+let caseSel=null;
+window.pickCase=(b)=>{caseSel=b.dataset.c;document.querySelectorAll(".cases .opt").forEach(o=>o.style.borderColor="var(--line)");b.style.borderColor="var(--gold)";};
+
+function feedback(ok,html){
+  const it=Q.queue[Q.i];record(it.id,ok);if(ok)Q.correct++;
+  const marked=!!S.marks[it.id];
+  document.getElementById("exp").innerHTML=
+    `<div class="explain ${ok?"good":"bad"}">${ok?"✅ Richtig!":"❌ Fast!"} ${html}</div>
+     <div class="rowbtns">
+       <button class="btn" onclick="next()">Siguiente →</button>
+       <button class="markbtn ${marked?"on":""}" id="mk" onclick="toggleMark()">📌 ${marked?"Marcado":"Marcar"}</button>
+     </div>`;
+  addXp(ok?xpFor(it):2);
+}
+function xpFor(it){return it.type==="prep"||it.type==="verb"?9:it.type==="trans"?8:(it.type==="plural"||it.type==="genitiv"||it.type==="adj")?7:5;}
+window.ansGen=(ch)=>{const it=Q.queue[Q.i];const ok=ch===it.g;
+  document.querySelectorAll(".three .opt").forEach(o=>{o.onclick=null;if(o.textContent===it.g)o.classList.add("correct");if(o.textContent===ch&&!ok)o.classList.add("wrong");});
+  feedback(ok,`Es <b>${it.g} ${esc(it.w)}</b>.<span class="rule">📘 ${esc(it.r)}</span>`);};
+window.ansPrep=()=>{const it=Q.queue[Q.i];const v=norm(document.getElementById("pIn").value);
+  const okP=it.acc.some(a=>norm(a)===v|| (a==="—"&&(v===""||v==="-")) );const okC=caseSel===it.c;const ok=okP&&okC;
+  const caseName={Akk:"Acusativo",Dat:"Dativo",Gen:"Genitivo"}[it.c];
+  feedback(ok,`Preposición: <b>${esc(it.acc[0])}</b> · Caso: <b>${caseName}</b>.
+    <span class="rule">📘 ${esc(it.e)}</span>${ok?"":`<br><span class="muted">${okP?"":"❗ Preposición"} ${okC?"":"❗ Caso"}</span>`}`);
+  caseSel=null;};
+window.ansVerb=()=>{const it=Q.queue[Q.i];const p=norm(document.getElementById("vP").value),t=norm(document.getElementById("vT").value);
+  const okP=p===norm(it.pra),okT=t===norm(it.par);const ok=okP&&okT;
+  feedback(ok,`<b>${esc(it.inf)} – ${esc(it.pra)} – ${esc(it.aux)} ${esc(it.par)}</b>.
+    <span class="rule">📝 ${esc(it.ex)}</span>${ok?"":`<br><span class="muted">${okP?"":"❗ Präteritum"} ${okT?"":"❗ Partizip"}</span>`}`);};
+window.ansPlural=()=>{const it=Q.queue[Q.i];const v=norm(document.getElementById("plIn").value);
+  const ok=v===norm(it.pl)||v===norm("die "+it.pl);document.getElementById("plIn").disabled=true;
+  feedback(ok,`Plural: <b>die ${esc(it.pl)}</b>.<span class="rule">📘 ${esc(it.r)}</span>`);};
+window.ansGenitiv=()=>{const it=Q.queue[Q.i];const v=norm(document.getElementById("geIn").value);
+  const bare=norm(it.gen).replace(/^des /,"").replace(/^der /,"");
+  const ok=v===norm(it.gen)||v===bare;document.getElementById("geIn").disabled=true;
+  feedback(ok,`Genitiv: <b>${esc(it.gen)}</b>.<span class="rule">📘 ${esc(it.r)}</span>`);};
+window.ansAdj=()=>{const it=Q.queue[Q.i];let v=norm(document.getElementById("aIn").value).replace(/^-/,"");
+  const ok=it.acc.some(a=>norm(a)===v);document.getElementById("aIn").disabled=true;
+  const sol=esc(it.s).replace("___",'<b>-'+esc(it.acc[0])+'</b>');
+  feedback(ok,`${sol}<span class="rule">📘 ${esc(it.e)}</span>`);};
+window.ansMC=(i)=>{const it=Q.queue[Q.i];const ok=i===it.a;
+  document.querySelectorAll(".opt").forEach((o,k)=>{o.onclick=null;if(k===it.a)o.classList.add("correct");if(k===i&&!ok)o.classList.add("wrong");});
+  feedback(ok,`<span class="rule">📘 ${esc(it.e)}</span>`);};
+window.ansFill=()=>{const it=Q.queue[Q.i];const v=norm(document.getElementById("fIn").value);
+  const accepts=Array.isArray(it.acc)?it.acc:[it.acc];const ok=accepts.some(a=>v===norm(a));
+  document.getElementById("fIn").disabled=true;
+  feedback(ok,`Respuesta: <b>${esc(accepts[0])}</b>.<span class="rule">📘 ${esc(it.e)}</span>`);};
+window.revealTrans=()=>{const it=Q.queue[Q.i];
+  document.getElementById("tr").innerHTML=`<div class="explain good" style="margin-top:14px"><b>${esc(it.de)}</b>
+    <span class="rule">📘 ${esc(it.e)}</span></div>
+    <div class="qhint" style="margin-top:12px">¿Lo acertaste?</div>
+    <div class="rowbtns"><button class="btn gold" onclick="selfTrans(true)">✅ Sí</button>
+      <button class="btn ghost" onclick="selfTrans(false)">❌ No</button></div>`;};
+window.selfTrans=(ok)=>{const it=Q.queue[Q.i];record(it.id,ok);if(ok){Q.correct++;addXp(8);}else addXp(2);next();};
+window.toggleMark=()=>{const it=Q.queue[Q.i];if(S.marks[it.id])delete S.marks[it.id];else S.marks[it.id]=markText(it);
+  unlock();save();const b=document.getElementById("mk");const on=!!S.marks[it.id];b.classList.toggle("on",on);b.innerHTML="📌 "+(on?"Marcado":"Marcar");};
+function markText(it){
+  if(it.type==="gen")return {h:`${it.g} ${it.w}`,d:`${it.t} — ${it.r}`};
+  if(it.type==="prep")return {h:it.s.replace("___","["+it.acc[0]+"]"),d:it.e};
+  if(it.type==="verb")return {h:`${it.inf} – ${it.pra} – ${it.aux} ${it.par}`,d:`${it.m}. ${it.ex}`};
+  if(it.type==="plural")return {h:`${it.art} ${it.w} → die ${it.pl}`,d:it.r};
+  if(it.type==="genitiv")return {h:`${it.base} → ${it.gen}`,d:it.r};
+  if(it.type==="adj")return {h:it.s.replace("___","-"+it.acc[0]),d:it.e};
+  if(it.type==="trans")return {h:it.de,d:it.es+" — "+it.e};
+  if(it.type==="mc")return {h:it.q,d:it.o[it.a]+" — "+it.e};
+  return {h:it.q,d:(Array.isArray(it.acc)?it.acc[0]:it.acc)+" — "+it.e};
+}
+window.next=()=>{Q.i++;showQ();};
+function finish(){const score=Math.round(Q.correct/Q.queue.length*100);
+  app.innerHTML=`<div class="qwrap center card">
+    <div class="big">${score===100?"🎉":score>=60?"👏":"💪"}</div>
+    <h2>Ronda terminada</h2><div class="big" style="color:var(--gold)">${score}%</div>
+    <p>${Q.correct}/${Q.queue.length} aciertos</p>
+    <p class="muted">Fallos pendientes ahora: ${failList().length}</p>
+    <div class="rowbtns" style="justify-content:center">
+      <button class="btn" onclick="renderPlay()">Otra ronda</button>
+      <button class="btn gold" onclick="startFails()" ${failList().length?"":"disabled"}>Repasar fallos</button></div></div>`;
+}
+
+/* ---- MIS FALLOS ---- */
+function renderFails(){const f=failList();
+  app.innerHTML=`<h2>🩹 Mis fallos (${f.length})</h2>
+   <div class="card"><p class="muted" style="margin:0 0 12px">Aquí están los ítems que has fallado. Salen en este modo
+   hasta que los aciertes <b>dos veces seguidas</b>; entonces se consideran aprendidos y desaparecen.</p>
+   <button class="btn" ${f.length?"":"disabled"} onclick="startFails()">${f.length?"Repasar mis fallos":"¡Nada que repasar! ✅"}</button></div>`+
+   (f.length?`<div style="margin-top:14px">`+f.map(it=>{const s=S.stats[it.id];const m=markText(it);
+     return `<div class="markrow"><div><b>${esc(m.h)}</b><br><small class="muted">${esc(m.d)}</small></div>
+       <div style="margin-left:auto;text-align:right;display:flex;align-items:center;gap:10px">
+         <small class="muted">✅${s.right} ❌${s.wrong}<br>racha ${s.streak}/2</small>
+         <button class="btn ghost sm" title="No volver a preguntar" onclick="forgetFail('${it.id}')">✔️ Ya lo sé</button>
+       </div></div>`;}).join("")+`</div>`:"");
+}
+window.forgetFail=(id)=>{const s=st(id);s.ignored=true;save();unlock();renderFails();toast("Quitado de tus fallos");};
+
+/* ---- MIS COSAS ---- */
+function renderMarks(){const ks=Object.keys(S.marks);
+  app.innerHTML=`<h2>📌 Mis cosas (${ks.length})</h2>`+
+   (ks.length?`<div class="card" style="margin-bottom:14px"><p class="muted" style="margin:0 0 10px">
+     Lo que marcas también te lo voy preguntando en las rondas normales, hasta que lo quites de aquí.</p>
+     <button class="btn gold" onclick="startMarks()">🎯 Repasar solo las marcadas</button></div>`:"")+
+   (ks.length?ks.map(id=>{const m=S.marks[id];return `<div class="markrow">
+     <div><b>${esc(m.h)}</b><br><small class="muted">${esc(m.d)}</small></div>
+     <button class="btn ghost sm" style="margin-left:auto" onclick="unmark('${id}')">Quitar</button></div>`;}).join("")
+   :`<div class="card"><p class="muted" style="margin:0">Aún no has marcado nada. Durante los ejercicios, pulsa <b>📌 Marcar</b> en lo que quieras recordar.</p></div>`);
+}
+window.unmark=(id)=>{delete S.marks[id];save();renderMarks();};
+
+/* ---- LOGROS ---- */
+function renderAch(){unlock();
+  app.innerHTML=`<h2>🏆 Logros (${Object.keys(S.ach).length}/${ACHIEVEMENTS.length})</h2>`+
+   ACHIEVEMENTS.map(a=>{const g=S.ach[a.id];return `<div class="ach ${g?"":"locked"}"><div class="ic">${a.ic}</div>
+     <div><b>${a.name}</b><br><small class="muted">${a.desc}${g?" · "+g:""}</small></div>
+     <div style="margin-left:auto">${g?"✅":"🔒"}</div></div>`;}).join("");
+}
+
+/* ---- PROGRESO ---- */
+function renderData(){
+  app.innerHTML=`<h2>⚙️ Tu progreso</h2>
+   <div class="card"><p class="muted">Se guarda solo en este navegador. Expórtalo para respaldarlo o pasarlo a otro dispositivo.</p>
+   <div class="rowbtns">
+     <button class="btn gold" onclick="exportData()">⬇️ Exportar</button>
+     <label class="btn ghost" style="cursor:pointer">⬆️ Importar<input type="file" accept="application/json" style="display:none" onchange="importData(event)"></label>
+     <button class="btn ghost" onclick="resetData()">🗑️ Reiniciar</button></div></div>
+   <div class="card" style="margin-top:14px"><h3 style="margin:0 0 6px">Resumen</h3>
+   <p class="muted" style="margin:0">XP <b>${S.xp}</b> · Nivel <b>${levelFor(S.xp)}</b> · Racha <b>${S.streak}</b> días<br>
+   Géneros <b>${deckCorrect("gen")}/${GENDERS.length}</b> · Plurales <b>${deckCorrect("plural")}/${PLURALS.length}</b> ·
+   Genitivo <b>${deckCorrect("genitiv")}/${GENITIVE.length}</b> · Adjetivos <b>${deckCorrect("adj")}/${ADJDECL.length}</b> · Preposiciones <b>${deckCorrect("prep")}/${PREPS.length}</b> ·
+   Verbos <b>${deckCorrect("verb")}/${VERBS.length}</b> · Gramática <b>${deckCorrect("gram")}/${GRAMMAR.length}</b><br>
+   Fallos pendientes <b>${failList().length}</b> · Cosas marcadas <b>${Object.keys(S.marks).length}</b> · Logros <b>${Object.keys(S.ach).length}</b></p></div>`;
+}
+window.exportData=()=>{const b=new Blob([JSON.stringify(S,null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="deutschquest-progreso.json";a.click();};
+window.importData=(ev)=>{const f=ev.target.files[0];if(!f)return;const r=new FileReader();
+  r.onload=()=>{try{S=JSON.parse(r.result);save();renderHeader();toast("✅ Importado");renderData();}catch(e){toast("❌ Archivo no válido");}};r.readAsText(f);};
+window.resetData=()=>{if(confirm("¿Borrar todo tu progreso?")){localStorage.removeItem(KEY);S=load();renderHeader();renderData();toast("Reiniciado");}};
+
+/* ---- AYUDA (tabla de adjetivos / masc. débil) ---- */
+const HELP={
+ adj:`<button class="closex" onclick="closeHelp()">✕</button>
+   <h3>🧩 Declinación del artículo + adjetivo</h3>
+   <p class="muted">El adjetivo <b>atributivo</b> (delante del sustantivo) se declina; el <b>predicativo</b> (tras el verbo) no:
+   <i>Das billige Auto ist rot.</i></p>
+   <table class="decl">
+     <tr><th>Caso</th><th>Masc.</th><th>Fem.</th><th>Neutro</th><th>Plural</th></tr>
+     <tr class="nom"><td>NOM</td><td>der / ein <b>-er</b></td><td>die / eine <b>-e</b></td><td>das / ein <b>-es</b></td><td>die <b>-en</b></td></tr>
+     <tr class="akk"><td>AKK</td><td>den / einen <b>-en</b></td><td>die / eine <b>-e</b></td><td>das / ein <b>-es</b></td><td>die <b>-en</b></td></tr>
+     <tr class="dat"><td>DAT</td><td>dem / einem <b>-en</b></td><td>der / einer <b>-en</b></td><td>dem / einem <b>-en</b></td><td>den <b>-en</b> (+ -n)</td></tr>
+     <tr class="gen"><td>GEN</td><td>des / eines <b>-en</b></td><td>der / einer <b>-en</b></td><td>des / eines <b>-en</b></td><td>der <b>-en</b></td></tr>
+   </table>
+   <p class="muted">Cuando <b>ein</b> no lleva terminación, el adjetivo asume el marcador del género: <b>-er</b> (masc. NOM)
+   y <b>-es</b> (neutro NOM/AKK). Recuerda: <b>Dativo y Genitivo → siempre -en</b>; el plural con artículo → siempre -en.</p>`,
+ weak:`<button class="closex" onclick="closeHelp()">✕</button>
+   <h3>📜 ¿Qué es un masculino "débil" (n-Deklination)?</h3>
+   <p>Es un grupo de sustantivos <b>masculinos</b> que añaden <b>-n / -en</b> en <b>todos los casos excepto el nominativo singular</b>
+   (no solo en el genitivo). Por eso "del estudiante" es <i>des Studenten</i> y no "des Students".</p>
+   <p class="muted">Suelen ser: seres animados acabados en <b>-e</b> (der Junge, der Kollege, der Affe, der Kunde) y palabras en
+   <b>-ent, -ant, -ist, -at</b> referidas a personas (der Student, der Präsident, der Polizist).</p>
+   <table class="decl">
+     <tr><th>Caso</th><th>der Student</th><th>der Junge</th></tr>
+     <tr class="nom"><td>NOM</td><td>der Student</td><td>der Junge</td></tr>
+     <tr class="akk"><td>AKK</td><td>den Student<b>en</b></td><td>den Jung<b>en</b></td></tr>
+     <tr class="dat"><td>DAT</td><td>dem Student<b>en</b></td><td>dem Jung<b>en</b></td></tr>
+     <tr class="gen"><td>GEN</td><td>des Student<b>en</b></td><td>des Jung<b>en</b></td></tr>
+   </table>
+   <p class="muted">Casos especiales: <i>der Name → des Namens</i>, <i>das Herz → des Herzens</i> (añaden -ns/-ens).</p>`
+};
+window.showHelp=(k)=>{const h=document.getElementById("help");h.innerHTML='<div class="help-box">'+HELP[k]+'</div>';h.style.display="flex";};
+window.closeHelp=()=>{document.getElementById("help").style.display="none";};
+
+/* ---- INIT ---- */
+checkDay();renderHeader();renderHome();
+</script>
+</body>
+</html>
