@@ -1,8 +1,8 @@
 # Base de datos · Deutsch Quest
 
-Contenido completo de la app (se genera a partir de DeutschQuest.html). Total: 916 ítems.
+Contenido completo de la app (se genera a partir de DeutschQuest.html). Total: 1314 ítems.
 
-## Géneros (475)
+## Géneros (573)
 
 | Art. | Palabra | Traducción | Regla |
 | --- | --- | --- | --- |
@@ -481,343 +481,641 @@ Contenido completo de la app (se genera a partir de DeutschQuest.html). Total: 9
 | das | Kostüm | disfraz/traje | Sin regla clara; memorízalo. |
 | das | Juwel | joya | Sin regla clara; memorízalo. |
 | das | Zelt | tienda de campaña | Sin regla clara; memorízalo. |
+| der | Lohn | salario | Sin regla clara; memorízalo. |
+| der | Kunde | cliente | Masc. débil (n-Deklination); memorízalo. |
+| der | Nachbar | vecino | Masc. débil; memorízalo. |
+| der | Kollege | colega | Masc. débil; memorízalo. |
+| der | Experte | experto | Masc. débil; memorízalo. |
+| der | Kandidat | candidato | Termina en -at (masc. débil) → der. |
+| der | Zeuge | testigo | Masc. débil; memorízalo. |
+| der | Verkäufer | vendedor | Termina en -er (persona) → der. |
+| der | Rentner | jubilado | Termina en -er (persona) → der. |
+| der | Vorschlag | propuesta/sugerencia | Sin regla clara; memorízalo. |
+| der | Empfang | recepción | Sin regla clara; memorízalo. |
+| der | Abschied | despedida | Sin regla clara; memorízalo. |
+| der | Unfall | accidente | Sin regla clara; memorízalo. |
+| der | Zufall | casualidad | Sin regla clara; memorízalo. |
+| der | Schluss | final/conclusión | Sin regla clara; memorízalo. |
+| der | Grund | motivo/razón | Sin regla clara; memorízalo. |
+| der | Sinn | sentido | Sin regla clara; memorízalo. |
+| der | Wille | voluntad | Masc. débil (des Willens); memorízalo. |
+| der | Schritt | paso | Sin regla clara; memorízalo. |
+| der | Versuch | intento | Sin regla clara; memorízalo. |
+| der | Vergleich | comparación | Sin regla clara; memorízalo. |
+| der | Bereich | ámbito/área | Sin regla clara; memorízalo. |
+| der | Ursprung | origen | Sin regla clara; memorízalo. |
+| der | Zeitpunkt | momento | Sin regla clara; memorízalo. |
+| der | Standpunkt | punto de vista | Sin regla clara; memorízalo. |
+| der | Überblick | visión general | Sin regla clara; memorízalo. |
+| der | Bewohner | habitante | Termina en -er (persona) → der. |
+| der | Teilnehmer | participante | Termina en -er → der. |
+| der | Anfänger | principiante | Termina en -er → der. |
+| der | Vortrag | conferencia/ponencia | Sin regla clara; memorízalo. |
+| der | Abschnitt | apartado/tramo | Sin regla clara; memorízalo. |
+| der | Fehler | error/fallo | Termina en -er → der. |
+| der | Schaden | daño | Termina en -en → der. |
+| der | Vorfall | incidente | Sin regla clara; memorízalo. |
+| die | Umfrage | encuesta | Termina en -e → die. |
+| die | Anfrage | consulta/solicitud | Termina en -e → die. |
+| die | Ausrede | excusa | Termina en -e → die. |
+| die | Absage | cancelación/negativa | Termina en -e → die. |
+| die | Zusage | confirmación/aceptación | Termina en -e → die. |
+| die | Grenze | frontera/límite | Termina en -e → die. |
+| die | Menge | cantidad/multitud | Termina en -e → die. |
+| die | Folge | consecuencia/episodio | Termina en -e → die. |
+| die | Sorge | preocupación | Termina en -e → die. |
+| die | Pause | pausa/descanso | Termina en -e → die. |
+| die | Rede | discurso | Termina en -e → die. |
+| die | Regel | regla | EXCEPCIÓN: -el femenino; memorízalo. |
+| die | Formel | fórmula | EXCEPCIÓN: -el femenino; memorízalo. |
+| die | Tabelle | tabla | Termina en -e → die. |
+| die | Rolle | papel/rol | Termina en -e → die. |
+| die | Reihe | fila/serie | Termina en -e → die. |
+| die | Ecke | esquina | Termina en -e → die. |
+| die | Grippe | gripe | Termina en -e → die. |
+| die | Wunde | herida | Termina en -e → die. |
+| die | Kette | cadena | Termina en -e → die. |
+| die | Verbindung | conexión/enlace | Termina en -ung → die. |
+| die | Erwartung | expectativa | Termina en -ung → die. |
+| die | Erhöhung | aumento/subida | Termina en -ung → die. |
+| die | Entdeckung | descubrimiento | Termina en -ung → die. |
+| die | Untersuchung | examen/investigación | Termina en -ung → die. |
+| die | Bewerbung | candidatura/solicitud | Termina en -ung → die. |
+| die | Erfindung | invento | Termina en -ung → die. |
+| die | Ausbildung | formación | Termina en -ung → die. |
+| die | Schwäche | debilidad | Termina en -e → die. |
+| die | Stärke | fuerza/punto fuerte | Termina en -e → die. |
+| die | Wärme | calor | Termina en -e → die. |
+| die | Kälte | frío | Termina en -e → die. |
+| die | Größe | tamaño | Termina en -e → die. |
+| die | Länge | longitud | Termina en -e → die. |
+| das | Verzeichnis | índice/registro | Termina en -nis → das. |
+| das | Zeugnis | certificado/boletín | Termina en -nis → das. |
+| das | Hindernis | obstáculo | Termina en -nis → das. |
+| das | Gefängnis | cárcel | Termina en -nis → das. |
+| das | Abenteuer | aventura | EXCEPCIÓN: -er neutro; memorízalo. |
+| das | Muster | patrón/muestra | EXCEPCIÓN: -er neutro; memorízalo. |
+| das | Interesse | interés | EXCEPCIÓN: -e neutro; memorízalo. |
+| das | Ende | final | EXCEPCIÓN: -e neutro (das Ende); memorízalo. |
+| das | Angebot | oferta | Sin regla clara; memorízalo. |
+| das | Verbot | prohibición | Sin regla clara; memorízalo. |
+| das | Gebot | mandamiento/precepto | Sin regla clara; memorízalo. |
+| das | Gebiet | territorio/campo | Empieza por Ge- → das. |
+| das | Gebäck | bollería | Empieza por Ge- → das. |
+| das | Gehalt | sueldo | Empieza por Ge- → das (das Gehalt = sueldo). |
+| das | Gewürz | especia | Empieza por Ge- → das. |
+| das | Getreide | cereal | Empieza por Ge- → das. |
+| das | Gelächter | risas/carcajada | Empieza por Ge- → das. |
+| das | Merkmal | rasgo/característica | Termina en -mal → das. |
+| das | Denkmal | monumento | Termina en -mal → das. |
+| das | Formular | formulario | Sin regla clara; memorízalo (-ar → das). |
+| das | Quadrat | cuadrado | Sin regla clara; memorízalo. |
+| das | Symbol | símbolo | Sin regla clara; memorízalo. |
+| das | Modell | modelo | Sin regla clara; memorízalo. |
+| das | Detail | detalle | Sin regla clara; memorízalo. |
+| das | Niveau | nivel | Extranjerismo (francés) → das. |
+| das | Ideal | ideal | Sin regla clara; memorízalo. |
+| das | Genie | genio | Sin regla clara; memorízalo. |
+| das | Talent | talento | Sin regla clara; memorízalo. |
+| das | Instrument | instrumento | Termina en -ment → das. |
+| das | Kapital | capital (dinero) | Sin regla clara; memorízalo. |
 
-## Plurales difíciles (152)
+## Plurales difíciles (252)
 
-| Sing. | Palabra | Plural | Regla |
-| --- | --- | --- | --- |
-| der | Apfel | die Äpfel | -el/-er/-en: sin terminación, a menudo con Umlaut (a→ä). |
-| der | Vogel | die Vögel | -el: sin terminación + Umlaut (o→ö). |
-| die | Mutter | die Mütter | -er: sin terminación + Umlaut (u→ü). |
-| die | Tochter | die Töchter | -er: sin terminación + Umlaut (o→ö). |
-| der | Vater | die Väter | -er: sin terminación + Umlaut (a→ä). |
-| der | Bruder | die Brüder | -er: sin terminación + Umlaut (u→ü). |
-| der | Mantel | die Mäntel | -el: sin terminación + Umlaut (a→ä). |
-| der | Garten | die Gärten | -en: sin terminación + Umlaut (a→ä). |
-| das | Buch | die Bücher | ¨-er: monosílabo neutro con Umlaut. |
-| das | Haus | die Häuser | ¨-er: Umlaut (au→äu) + -er. |
-| der | Mann | die Männer | ¨-er: Umlaut (a→ä) + -er. |
-| das | Land | die Länder | ¨-er: Umlaut (a→ä) + -er. |
-| das | Wort | die Wörter | ¨-er: Wörter = palabras sueltas (vocabulario). |
-| der | Wald | die Wälder | ¨-er: Umlaut (a→ä) + -er. |
-| das | Glas | die Gläser | ¨-er: Umlaut (a→ä) + -er. |
-| das | Dorf | die Dörfer | ¨-er: Umlaut (o→ö) + -er. |
-| das | Kind | die Kinder | -er sin Umlaut. |
-| die | Hand | die Hände | ¨-e: Umlaut (a→ä) + -e. |
-| die | Stadt | die Städte | ¨-e: Umlaut (a→ä) + -e. |
-| die | Nacht | die Nächte | ¨-e: Umlaut (a→ä) + -e. |
-| die | Wand | die Wände | ¨-e: Umlaut (a→ä) + -e. |
-| die | Kraft | die Kräfte | ¨-e: Umlaut (a→ä) + -e. |
-| die | Frucht | die Früchte | ¨-e: Umlaut (u→ü) + -e. |
-| die | Maus | die Mäuse | ¨-e: Umlaut (au→äu) + -e. |
-| der | Sohn | die Söhne | ¨-e: Umlaut (o→ö) + -e. |
-| der | Baum | die Bäume | ¨-e: Umlaut (au→äu) + -e. |
-| der | Traum | die Träume | ¨-e: Umlaut (au→äu) + -e. |
-| der | Zug | die Züge | ¨-e: Umlaut (u→ü) + -e. |
-| der | Stuhl | die Stühle | ¨-e: Umlaut (u→ü) + -e. |
-| der | Fluss | die Flüsse | ¨-e: Umlaut (u→ü) + -e (ss). |
-| der | Kopf | die Köpfe | ¨-e: Umlaut (o→ö) + -e. |
-| der | Fuß | die Füße | ¨-e: Umlaut (u→ü) + -e. |
-| der | Arzt | die Ärzte | ¨-e: Umlaut (a→ä) + -e. |
-| der | Gast | die Gäste | ¨-e: Umlaut (a→ä) + -e. |
-| der | Ball | die Bälle | ¨-e: Umlaut (a→ä) + -e. |
-| der | Tag | die Tage | -e sin Umlaut (muchos masculinos). |
-| das | Jahr | die Jahre | -e sin Umlaut. |
-| der | Mensch | die Menschen | -en: masculino débil (n-Deklination). |
-| der | Name | die Namen | -n: masculino débil. |
-| der | Junge | die Jungen | -n: masculino débil. |
-| die | Frau | die Frauen | -en: femeninos (también -ung/-heit/-keit). |
-| das | Auto | die Autos | -s: extranjerismos y -o/-a/-i. |
-| das | Foto | die Fotos | -s: extranjerismo en -o. |
-| das | Hotel | die Hotels | -s: extranjerismo. |
-| das | Thema | die Themen | Irregular: -ma → -men (Themen). |
-| das | Museum | die Museen | Irregular: -um → -een (Museen). |
-| das | Datum | die Daten | Irregular: -um → -en (Daten). |
-| der | Saft | die Säfte | ¨-e: Umlaut (a→ä) + -e. |
-| der | Satz | die Sätze | ¨-e: Umlaut (a→ä) + -e. |
-| der | Platz | die Plätze | ¨-e: Umlaut (a→ä) + -e. |
-| der | Schatz | die Schätze | ¨-e: Umlaut (a→ä) + -e. |
-| der | Hut | die Hüte | ¨-e: Umlaut (u→ü) + -e. |
-| der | Gruß | die Grüße | ¨-e: Umlaut (u→ü) + -e. |
-| der | Wunsch | die Wünsche | ¨-e: Umlaut (u→ü) + -e. |
-| der | Markt | die Märkte | ¨-e: Umlaut (a→ä) + -e. |
-| der | Rock | die Röcke | ¨-e: Umlaut (o→ö) + -e. |
-| der | Stock | die Stöcke | ¨-e: Umlaut (o→ö) + -e. |
-| der | Topf | die Töpfe | ¨-e: Umlaut (o→ö) + -e. |
-| der | Sturm | die Stürme | ¨-e: Umlaut (u→ü) + -e. |
-| der | Turm | die Türme | ¨-e: Umlaut (u→ü) + -e. |
-| der | Wurm | die Würmer | ¨-er: Umlaut (u→ü) + -er. |
-| der | Mund | die Münder | ¨-er: Umlaut (u→ü) + -er. |
-| der | Rand | die Ränder | ¨-er: Umlaut (a→ä) + -er. |
-| der | Geist | die Geister | -er con Umlaut (Geister). |
-| der | Gott | die Götter | ¨-er: Umlaut (o→ö) + -er. |
-| der | Reichtum | die Reichtümer | ¨-er: -tum → -tümer. |
-| der | Irrtum | die Irrtümer | ¨-er: -tum → -tümer. |
-| das | Blatt | die Blätter | ¨-er: Umlaut (a→ä) + -er. |
-| das | Loch | die Löcher | ¨-er: Umlaut (o→ö) + -er. |
-| das | Dach | die Dächer | ¨-er: Umlaut (a→ä) + -er. |
-| das | Fach | die Fächer | ¨-er: Umlaut (a→ä) + -er. |
-| das | Tuch | die Tücher | ¨-er: Umlaut (u→ü) + -er. |
-| das | Schloss | die Schlösser | ¨-er: Umlaut (o→ö) + -er. |
-| das | Rad | die Räder | ¨-er: Umlaut (a→ä) + -er. |
-| das | Bad | die Bäder | ¨-er: Umlaut (a→ä) + -er. |
-| das | Grab | die Gräber | ¨-er: Umlaut (a→ä) + -er. |
-| das | Lamm | die Lämmer | ¨-er: Umlaut (a→ä) + -er. |
-| das | Volk | die Völker | ¨-er: Umlaut (o→ö) + -er. |
-| das | Ei | die Eier | -er sin Umlaut (Eier). |
-| das | Bild | die Bilder | -er sin Umlaut. |
-| das | Kleid | die Kleider | -er sin Umlaut. |
-| das | Lied | die Lieder | -er sin Umlaut. |
-| das | Feld | die Felder | -er sin Umlaut. |
-| die | Kuh | die Kühe | ¨-e: Umlaut (u→ü) + -e. |
-| die | Wurst | die Würste | ¨-e: Umlaut (u→ü) + -e. |
-| die | Bank | die Bänke | ¨-e: Bänke = bancos (asiento). |
-| die | Gans | die Gänse | ¨-e: Umlaut (a→ä) + -e. |
-| die | Kunst | die Künste | ¨-e: Umlaut (u→ü) + -e. |
-| die | Macht | die Mächte | ¨-e: Umlaut (a→ä) + -e. |
-| die | Nuss | die Nüsse | ¨-e: Umlaut (u→ü) + -e. |
-| der | Herr | die Herren | -en: masc. débil (plural Herren). |
-| der | Student | die Studenten | -en: masc. débil. |
-| der | Kollege | die Kollegen | -n: masc. débil. |
-| der | Kunde | die Kunden | -n: masc. débil. |
-| der | Nachbar | die Nachbarn | -n: masc. débil. |
-| der | Bauer | die Bauern | -n: masc. débil. |
-| der | Affe | die Affen | -n: masc. débil. |
-| der | Held | die Helden | -en: masc. débil. |
-| der | Präsident | die Präsidenten | -en: masc. débil. |
-| der | Patient | die Patienten | -en: masc. débil. |
-| der | Polizist | die Polizisten | -en: masc. débil. |
-| der | See | die Seen | -n (der See = lago). |
-| die | Universität | die Universitäten | -en (femeninos -tät). |
-| die | Zeitung | die Zeitungen | -en (-ung). |
-| die | Meinung | die Meinungen | -en (-ung). |
-| die | Wohnung | die Wohnungen | -en (-ung). |
-| die | Rechnung | die Rechnungen | -en (-ung). |
-| die | Lösung | die Lösungen | -en (-ung). |
-| die | Freiheit | die Freiheiten | -en (-heit). |
-| die | Möglichkeit | die Möglichkeiten | -en (-keit). |
-| die | Nation | die Nationen | -en (-ion). |
-| die | Information | die Informationen | -en (-ion). |
-| die | Lehrerin | die Lehrerinnen | -nen: -in → -innen. |
-| die | Freundin | die Freundinnen | -nen: -in → -innen. |
-| die | Königin | die Königinnen | -nen: -in → -innen. |
-| die | Blume | die Blumen | -n (-e → -n). |
-| die | Lampe | die Lampen | -n (-e → -n). |
-| die | Tasche | die Taschen | -n (-e → -n). |
-| die | Schule | die Schulen | -n (-e → -n). |
-| die | Straße | die Straßen | -n (-e → -n). |
-| die | Sprache | die Sprachen | -n (-e → -n). |
-| die | Stunde | die Stunden | -n (-e → -n). |
-| die | Woche | die Wochen | -n (-e → -n). |
-| die | Familie | die Familien | -n (-ie → -n). |
-| das | Büro | die Büros | -s (extranjerismo -o). |
-| das | Kino | die Kinos | -s (extranjerismo -o). |
-| das | Radio | die Radios | -s. |
-| das | Sofa | die Sofas | -s. |
-| das | Handy | die Handys | -s (extranjerismo -y). |
-| das | Baby | die Babys | -s. |
-| der | Park | die Parks | -s (extranjerismo). |
-| der | Chef | die Chefs | -s (extranjerismo). |
-| die | Oma | die Omas | -s. |
-| das | Team | die Teams | -s (extranjerismo). |
-| das | Praktikum | die Praktika | Latín: -um → -a (Praktika). |
-| das | Visum | die Visa | Latín: -um → -a (Visa). |
-| das | Konto | die Konten | Irregular: -o → -en (Konten). |
-| die | Firma | die Firmen | Irregular: -a → -en (Firmen). |
-| der | Kaktus | die Kakteen | Irregular (Kakteen). |
-| das | Lexikon | die Lexika | Griego: -on → -a (Lexika). |
-| das | Material | die Materialien | -ien (Materialien). |
-| das | Stadion | die Stadien | -on → -ien (Stadien). |
-| der | Onkel | die Onkel | Sin terminación (-el). |
-| der | Schlüssel | die Schlüssel | Sin terminación (-el). |
-| der | Lehrer | die Lehrer | Sin terminación (-er). |
-| das | Fenster | die Fenster | Sin terminación (-er). |
-| das | Zimmer | die Zimmer | Sin terminación (-er). |
-| das | Messer | die Messer | Sin terminación (-er). |
-| der | Wagen | die Wagen | Sin terminación (-en). |
-| der | Kuchen | die Kuchen | Sin terminación (-en). |
-| das | Mädchen | die Mädchen | Sin terminación (-chen). |
-| das | Brötchen | die Brötchen | Sin terminación (-chen). |
+| Sing. | Palabra | Traducción | Plural | Regla |
+| --- | --- | --- | --- | --- |
+| der | Apfel | manzana |  die Äpfel | -el/-er/-en: sin terminación, a menudo con Umlaut (a→ä). |
+| der | Vogel | pájaro |  die Vögel | -el: sin terminación + Umlaut (o→ö). |
+| die | Mutter | madre |  die Mütter | -er: sin terminación + Umlaut (u→ü). |
+| die | Tochter | hija |  die Töchter | -er: sin terminación + Umlaut (o→ö). |
+| der | Vater | padre |  die Väter | -er: sin terminación + Umlaut (a→ä). |
+| der | Bruder | hermano |  die Brüder | -er: sin terminación + Umlaut (u→ü). |
+| der | Mantel | abrigo |  die Mäntel | -el: sin terminación + Umlaut (a→ä). |
+| der | Garten | jardín |  die Gärten | -en: sin terminación + Umlaut (a→ä). |
+| das | Buch | libro |  die Bücher | ¨-er: monosílabo neutro con Umlaut. |
+| das | Haus | casa |  die Häuser | ¨-er: Umlaut (au→äu) + -er. |
+| der | Mann | hombre |  die Männer | ¨-er: Umlaut (a→ä) + -er. |
+| das | Land | país/tierra |  die Länder | ¨-er: Umlaut (a→ä) + -er. |
+| das | Wort | palabra |  die Wörter | ¨-er: Wörter = palabras sueltas (vocabulario). |
+| der | Wald | bosque |  die Wälder | ¨-er: Umlaut (a→ä) + -er. |
+| das | Glas | vidrio |  die Gläser | ¨-er: Umlaut (a→ä) + -er. |
+| das | Dorf | pueblo |  die Dörfer | ¨-er: Umlaut (o→ö) + -er. |
+| das | Kind | niño |  die Kinder | -er sin Umlaut. |
+| die | Hand | mano |  die Hände | ¨-e: Umlaut (a→ä) + -e. |
+| die | Stadt | ciudad |  die Städte | ¨-e: Umlaut (a→ä) + -e. |
+| die | Nacht | noche |  die Nächte | ¨-e: Umlaut (a→ä) + -e. |
+| die | Wand | pared |  die Wände | ¨-e: Umlaut (a→ä) + -e. |
+| die | Kraft | fuerza |  die Kräfte | ¨-e: Umlaut (a→ä) + -e. |
+| die | Frucht | fruta |  die Früchte | ¨-e: Umlaut (u→ü) + -e. |
+| die | Maus | ratón |  die Mäuse | ¨-e: Umlaut (au→äu) + -e. |
+| der | Sohn | hijo |  die Söhne | ¨-e: Umlaut (o→ö) + -e. |
+| der | Baum | árbol |  die Bäume | ¨-e: Umlaut (au→äu) + -e. |
+| der | Traum | sueño |  die Träume | ¨-e: Umlaut (au→äu) + -e. |
+| der | Zug | tren |  die Züge | ¨-e: Umlaut (u→ü) + -e. |
+| der | Stuhl | silla |  die Stühle | ¨-e: Umlaut (u→ü) + -e. |
+| der | Fluss | río |  die Flüsse | ¨-e: Umlaut (u→ü) + -e (ss). |
+| der | Kopf | cabeza |  die Köpfe | ¨-e: Umlaut (o→ö) + -e. |
+| der | Fuß | pie |  die Füße | ¨-e: Umlaut (u→ü) + -e. |
+| der | Arzt | médico |  die Ärzte | ¨-e: Umlaut (a→ä) + -e. |
+| der | Gast | invitado/huésped |  die Gäste | ¨-e: Umlaut (a→ä) + -e. |
+| der | Ball | pelota/balón |  die Bälle | ¨-e: Umlaut (a→ä) + -e. |
+| der | Tag | día |  die Tage | -e sin Umlaut (muchos masculinos). |
+| das | Jahr | año |  die Jahre | -e sin Umlaut. |
+| der | Mensch | persona/ser humano |  die Menschen | -en: masculino débil (n-Deklination). |
+| der | Name | nombre |  die Namen | -n: masculino débil. |
+| der | Junge | chico |  die Jungen | -n: masculino débil. |
+| die | Frau | mujer |  die Frauen | -en: femeninos (también -ung/-heit/-keit). |
+| das | Auto | coche |  die Autos | -s: extranjerismos y -o/-a/-i. |
+| das | Foto | foto |  die Fotos | -s: extranjerismo en -o. |
+| das | Hotel | hotel |  die Hotels | -s: extranjerismo. |
+| das | Thema | tema |  die Themen | Irregular: -ma → -men (Themen). |
+| das | Museum | museo |  die Museen | Irregular: -um → -een (Museen). |
+| das | Datum | fecha |  die Daten | Irregular: -um → -en (Daten). |
+| der | Saft | zumo |  die Säfte | ¨-e: Umlaut (a→ä) + -e. |
+| der | Satz | frase |  die Sätze | ¨-e: Umlaut (a→ä) + -e. |
+| der | Platz | plaza/sitio |  die Plätze | ¨-e: Umlaut (a→ä) + -e. |
+| der | Schatz | tesoro |  die Schätze | ¨-e: Umlaut (a→ä) + -e. |
+| der | Hut | sombrero |  die Hüte | ¨-e: Umlaut (u→ü) + -e. |
+| der | Gruß | saludo |  die Grüße | ¨-e: Umlaut (u→ü) + -e. |
+| der | Wunsch | deseo |  die Wünsche | ¨-e: Umlaut (u→ü) + -e. |
+| der | Markt | mercado |  die Märkte | ¨-e: Umlaut (a→ä) + -e. |
+| der | Rock | falda |  die Röcke | ¨-e: Umlaut (o→ö) + -e. |
+| der | Stock | bastón/piso |  die Stöcke | ¨-e: Umlaut (o→ö) + -e. |
+| der | Topf | olla |  die Töpfe | ¨-e: Umlaut (o→ö) + -e. |
+| der | Sturm | tormenta |  die Stürme | ¨-e: Umlaut (u→ü) + -e. |
+| der | Turm | torre |  die Türme | ¨-e: Umlaut (u→ü) + -e. |
+| der | Wurm | gusano |  die Würmer | ¨-er: Umlaut (u→ü) + -er. |
+| der | Mund | boca |  die Münder | ¨-er: Umlaut (u→ü) + -er. |
+| der | Rand | borde |  die Ränder | ¨-er: Umlaut (a→ä) + -er. |
+| der | Geist | espíritu |  die Geister | -er con Umlaut (Geister). |
+| der | Gott | dios |  die Götter | ¨-er: Umlaut (o→ö) + -er. |
+| der | Reichtum | riqueza |  die Reichtümer | ¨-er: -tum → -tümer. |
+| der | Irrtum | error |  die Irrtümer | ¨-er: -tum → -tümer. |
+| das | Blatt | hoja |  die Blätter | ¨-er: Umlaut (a→ä) + -er. |
+| das | Loch | agujero |  die Löcher | ¨-er: Umlaut (o→ö) + -er. |
+| das | Dach | tejado |  die Dächer | ¨-er: Umlaut (a→ä) + -er. |
+| das | Fach | asignatura/compartimento |  die Fächer | ¨-er: Umlaut (a→ä) + -er. |
+| das | Tuch | paño/tela |  die Tücher | ¨-er: Umlaut (u→ü) + -er. |
+| das | Schloss | castillo/cerradura |  die Schlösser | ¨-er: Umlaut (o→ö) + -er. |
+| das | Rad | rueda/bici |  die Räder | ¨-er: Umlaut (a→ä) + -er. |
+| das | Bad | baño |  die Bäder | ¨-er: Umlaut (a→ä) + -er. |
+| das | Grab | tumba |  die Gräber | ¨-er: Umlaut (a→ä) + -er. |
+| das | Lamm | cordero |  die Lämmer | ¨-er: Umlaut (a→ä) + -er. |
+| das | Volk | pueblo (nación) |  die Völker | ¨-er: Umlaut (o→ö) + -er. |
+| das | Ei | huevo |  die Eier | -er sin Umlaut (Eier). |
+| das | Bild | cuadro/imagen |  die Bilder | -er sin Umlaut. |
+| das | Kleid | vestido |  die Kleider | -er sin Umlaut. |
+| das | Lied | canción |  die Lieder | -er sin Umlaut. |
+| das | Feld | campo |  die Felder | -er sin Umlaut. |
+| die | Kuh | vaca |  die Kühe | ¨-e: Umlaut (u→ü) + -e. |
+| die | Wurst | salchicha |  die Würste | ¨-e: Umlaut (u→ü) + -e. |
+| die | Bank | banco |  die Bänke | ¨-e: Bänke = bancos (asiento). |
+| die | Gans | ganso/oca |  die Gänse | ¨-e: Umlaut (a→ä) + -e. |
+| die | Kunst | arte |  die Künste | ¨-e: Umlaut (u→ü) + -e. |
+| die | Macht | poder |  die Mächte | ¨-e: Umlaut (a→ä) + -e. |
+| die | Nuss | nuez |  die Nüsse | ¨-e: Umlaut (u→ü) + -e. |
+| der | Herr | señor |  die Herren | -en: masc. débil (plural Herren). |
+| der | Student | estudiante |  die Studenten | -en: masc. débil. |
+| der | Kollege | colega |  die Kollegen | -n: masc. débil. |
+| der | Kunde | cliente |  die Kunden | -n: masc. débil. |
+| der | Nachbar | vecino |  die Nachbarn | -n: masc. débil. |
+| der | Bauer | campesino/agricultor |  die Bauern | -n: masc. débil. |
+| der | Affe | mono |  die Affen | -n: masc. débil. |
+| der | Held | héroe |  die Helden | -en: masc. débil. |
+| der | Präsident | presidente |  die Präsidenten | -en: masc. débil. |
+| der | Patient | paciente |  die Patienten | -en: masc. débil. |
+| der | Polizist | policía |  die Polizisten | -en: masc. débil. |
+| der | See | lago |  die Seen | -n (der See = lago). |
+| die | Universität | universidad |  die Universitäten | -en (femeninos -tät). |
+| die | Zeitung | periódico |  die Zeitungen | -en (-ung). |
+| die | Meinung | opinión |  die Meinungen | -en (-ung). |
+| die | Wohnung | vivienda |  die Wohnungen | -en (-ung). |
+| die | Rechnung | cuenta/factura |  die Rechnungen | -en (-ung). |
+| die | Lösung | solución |  die Lösungen | -en (-ung). |
+| die | Freiheit | libertad |  die Freiheiten | -en (-heit). |
+| die | Möglichkeit | posibilidad |  die Möglichkeiten | -en (-keit). |
+| die | Nation | nación |  die Nationen | -en (-ion). |
+| die | Information | información |  die Informationen | -en (-ion). |
+| die | Lehrerin | profesora |  die Lehrerinnen | -nen: -in → -innen. |
+| die | Freundin | amiga/novia |  die Freundinnen | -nen: -in → -innen. |
+| die | Königin | reina |  die Königinnen | -nen: -in → -innen. |
+| die | Blume | flor |  die Blumen | -n (-e → -n). |
+| die | Lampe | lámpara |  die Lampen | -n (-e → -n). |
+| die | Tasche | bolso |  die Taschen | -n (-e → -n). |
+| die | Schule | escuela |  die Schulen | -n (-e → -n). |
+| die | Straße | calle |  die Straßen | -n (-e → -n). |
+| die | Sprache | idioma |  die Sprachen | -n (-e → -n). |
+| die | Stunde | hora |  die Stunden | -n (-e → -n). |
+| die | Woche | semana |  die Wochen | -n (-e → -n). |
+| die | Familie | familia |  die Familien | -n (-ie → -n). |
+| das | Büro | oficina |  die Büros | -s (extranjerismo -o). |
+| das | Kino | cine |  die Kinos | -s (extranjerismo -o). |
+| das | Radio | radio |  die Radios | -s. |
+| das | Sofa | sofá |  die Sofas | -s. |
+| das | Handy | móvil |  die Handys | -s (extranjerismo -y). |
+| das | Baby | bebé |  die Babys | -s. |
+| der | Park | parque |  die Parks | -s (extranjerismo). |
+| der | Chef | jefe |  die Chefs | -s (extranjerismo). |
+| die | Oma | abuela |  die Omas | -s. |
+| das | Team | equipo |  die Teams | -s (extranjerismo). |
+| das | Praktikum | prácticas |  die Praktika | Latín: -um → -a (Praktika). |
+| das | Visum | visado |  die Visa | Latín: -um → -a (Visa). |
+| das | Konto | cuenta (bancaria) |  die Konten | Irregular: -o → -en (Konten). |
+| die | Firma | empresa |  die Firmen | Irregular: -a → -en (Firmen). |
+| der | Kaktus | cactus |  die Kakteen | Irregular (Kakteen). |
+| das | Lexikon | enciclopedia |  die Lexika | Griego: -on → -a (Lexika). |
+| das | Material | material |  die Materialien | -ien (Materialien). |
+| das | Stadion | estadio |  die Stadien | -on → -ien (Stadien). |
+| der | Onkel | tío |  die Onkel | Sin terminación (-el). |
+| der | Schlüssel | llave |  die Schlüssel | Sin terminación (-el). |
+| der | Lehrer | profesor |  die Lehrer | Sin terminación (-er). |
+| das | Fenster | ventana |  die Fenster | Sin terminación (-er). |
+| das | Zimmer | habitación |  die Zimmer | Sin terminación (-er). |
+| das | Messer | cuchillo |  die Messer | Sin terminación (-er). |
+| der | Wagen | coche/vagón |  die Wagen | Sin terminación (-en). |
+| der | Kuchen | pastel/tarta |  die Kuchen | Sin terminación (-en). |
+| das | Mädchen | chica |  die Mädchen | Sin terminación (-chen). |
+| das | Brötchen | panecillo |  die Brötchen | Sin terminación (-chen). |
+| der | Arm | brazo |  die Arme | -e (masculino). |
+| der | Zahn | diente |  die Zähne | ¨-e: Umlaut (a→ä) + -e. |
+| der | Hals | cuello/garganta |  die Hälse | ¨-e: Umlaut (a→ä) + -e. |
+| der | Bauch | barriga/vientre |  die Bäuche | ¨-e: Umlaut (au→äu) + -e. |
+| der | Knopf | botón |  die Knöpfe | ¨-e: Umlaut (o→ö) + -e. |
+| der | Finger | dedo |  die Finger | Sin terminación (-er). |
+| der | Muskel | músculo |  die Muskeln | -n (-el → -n). |
+| der | Teller | plato |  die Teller | Sin terminación (-er). |
+| der | Löffel | cuchara |  die Löffel | Sin terminación (-el). |
+| der | Gürtel | cinturón |  die Gürtel | Sin terminación (-el). |
+| der | Hügel | colina |  die Hügel | Sin terminación (-el). |
+| der | Gipfel | cima |  die Gipfel | Sin terminación (-el). |
+| der | Stern | estrella |  die Sterne | -e (masculino). |
+| der | Planet | planeta |  die Planeten | -en: masc. débil. |
+| der | Hafen | puerto |  die Häfen | ¨ (Umlaut, sin terminación). |
+| der | Anzug | traje |  die Anzüge | ¨-e: Umlaut (u→ü) + -e. |
+| der | Ring | anillo |  die Ringe | -e (masculino). |
+| der | Berg | montaña |  die Berge | -e (masculino). |
+| der | Hund | perro |  die Hunde | -e (masculino). |
+| der | Tisch | mesa |  die Tische | -e (masculino). |
+| der | Brief | carta |  die Briefe | -e (masculino). |
+| der | Stein | piedra |  die Steine | -e (masculino). |
+| der | Beruf | profesión |  die Berufe | -e (masculino). |
+| der | Freund | amigo |  die Freunde | -e (masculino). |
+| der | König | rey |  die Könige | -e (masculino). |
+| der | Vertrag | contrato |  die Verträge | ¨-e: Umlaut (a→ä) + -e. |
+| der | Unfall | accidente |  die Unfälle | ¨-e: Umlaut (a→ä) + -e. |
+| der | Fehler | error/fallo |  die Fehler | Sin terminación (-er). |
+| der | Schritt | paso |  die Schritte | -e (masculino). |
+| der | Versuch | intento |  die Versuche | -e (masculino). |
+| der | Grund | motivo/razón |  die Gründe | ¨-e: Umlaut (u→ü) + -e. |
+| der | Preis | precio |  die Preise | -e (masculino). |
+| der | Kreis | círculo |  die Kreise | -e (masculino). |
+| der | Krieg | guerra |  die Kriege | -e (masculino). |
+| die | Nase | nariz |  die Nasen | -n (-e → -n). |
+| die | Lippe | labio |  die Lippen | -n (-e → -n). |
+| die | Zunge | lengua (órgano) |  die Zungen | -n (-e → -n). |
+| die | Schulter | hombro |  die Schultern | -n (-er → -n). |
+| die | Wange | mejilla |  die Wangen | -n (-e → -n). |
+| die | Treppe | escalera |  die Treppen | -n (-e → -n). |
+| die | Decke | techo/manta |  die Decken | -n (-e → -n). |
+| die | Wiese | prado |  die Wiesen | -n (-e → -n). |
+| die | Quelle | fuente/manantial |  die Quellen | -n (-e → -n). |
+| die | Höhle | cueva |  die Höhlen | -n (-e → -n). |
+| die | Küste | costa |  die Küsten | -n (-e → -n). |
+| die | Wüste | desierto |  die Wüsten | -n (-e → -n). |
+| die | Ratte | rata |  die Ratten | -n (-e → -n). |
+| die | Schlange | serpiente/cola |  die Schlangen | -n (-e → -n). |
+| die | Biene | abeja |  die Bienen | -n (-e → -n). |
+| die | Spinne | araña |  die Spinnen | -n (-e → -n). |
+| die | Jacke | chaqueta |  die Jacken | -n (-e → -n). |
+| die | Hose | pantalón |  die Hosen | -n (-e → -n). |
+| die | Mütze | gorro |  die Mützen | -n (-e → -n). |
+| die | Brille | gafas |  die Brillen | -n (-e → -n). |
+| die | Grenze | frontera/límite |  die Grenzen | -n (-e → -n). |
+| die | Menge | cantidad/multitud |  die Mengen | -n (-e → -n). |
+| die | Folge | consecuencia/episodio |  die Folgen | -n (-e → -n). |
+| die | Sorge | preocupación |  die Sorgen | -n (-e → -n). |
+| die | Pause | pausa/descanso |  die Pausen | -n (-e → -n). |
+| die | Rede | discurso |  die Reden | -n (-e → -n). |
+| die | Regel | regla |  die Regeln | -n (-el → -n). |
+| die | Rolle | papel/rol |  die Rollen | -n (-e → -n). |
+| die | Reihe | fila/serie |  die Reihen | -n (-e → -n). |
+| die | Ecke | esquina |  die Ecken | -n (-e → -n). |
+| die | Kette | cadena |  die Ketten | -n (-e → -n). |
+| die | Angst | miedo |  die Ängste | ¨-e: Umlaut (a→ä) + -e. |
+| die | Uhr | reloj |  die Uhren | -en (femenino). |
+| die | Tür | puerta |  die Türen | -en (femenino). |
+| das | Bein | pierna |  die Beine | -e (neutro). |
+| das | Knie | rodilla |  die Knie | Sin terminación. |
+| das | Ohr | oreja |  die Ohren | -en (neutro). |
+| das | Auge | ojo |  die Augen | -n (-e → -n). |
+| das | Herz | corazón |  die Herzen | -en (irregular, das Herz). |
+| das | Hemd | camisa |  die Hemden | -en (neutro). |
+| das | Zelt | tienda de campaña |  die Zelte | -e (neutro). |
+| das | Regal | estantería |  die Regale | -e (neutro). |
+| das | Kissen | cojín/almohada |  die Kissen | Sin terminación (-en). |
+| das | Werkzeug | herramienta |  die Werkzeuge | -e (neutro). |
+| das | Meer | mar |  die Meere | -e (neutro). |
+| das | Ziel | meta/objetivo |  die Ziele | -e (neutro). |
+| das | Beispiel | ejemplo |  die Beispiele | -e (neutro). |
+| das | Gesetz | ley |  die Gesetze | -e (neutro). |
+| das | Recht | derecho |  die Rechte | -e (neutro). |
+| das | Problem | problema |  die Probleme | -e (neutro). |
+| das | System | sistema |  die Systeme | -e (neutro). |
+| das | Modell | modelo |  die Modelle | -e (neutro). |
+| das | Symbol | símbolo |  die Symbole | -e (neutro). |
+| das | Ende | final |  die Enden | -n (-e → -n). |
+| das | Angebot | oferta |  die Angebote | -e (neutro). |
+| das | Verbot | prohibición |  die Verbote | -e (neutro). |
+| das | Gebiet | territorio/campo |  die Gebiete | -e (neutro). |
+| das | Getränk | bebida |  die Getränke | -e (neutro). |
+| das | Gedicht | poema |  die Gedichte | -e (neutro). |
+| das | Instrument | instrumento |  die Instrumente | -e (neutro). |
+| das | Dokument | documento |  die Dokumente | -e (neutro). |
+| das | Argument | argumento |  die Argumente | -e (neutro). |
+| das | Ergebnis | resultado |  die Ergebnisse | -se (-nis → -nisse). |
+| das | Geheimnis | secreto |  die Geheimnisse | -se (-nis → -nisse). |
+| das | Ereignis | acontecimiento |  die Ereignisse | -se (-nis → -nisse). |
+| das | Detail | detalle |  die Details | -s (extranjerismo). |
 
 ## Genitivo (30)
 
-| Base | Genitivo | Regla |
-| --- | --- | --- |
-| der Mann | des Mannes | Masc. 1 sílaba → -es: des Mannes. |
-| das Kind | des Kindes | Neutro 1 sílaba → -es: des Kindes. |
-| das Haus | des Hauses | Acaba en -s → -es: des Hauses. |
-| das Buch | des Buches | Neutro 1 sílaba → -es: des Buches. |
-| der Tag | des Tages | Masc. 1 sílaba → -es: des Tages. |
-| der Hund | des Hundes | Acaba en -d → -es: des Hundes. |
-| der Arzt | des Arztes | Acaba en -t → -es: des Arztes. |
-| der Fluss | des Flusses | Acaba en -ss → -es: des Flusses. |
-| das Fenster | des Fensters | 2+ sílabas → -s: des Fensters. |
-| der Lehrer | des Lehrers | 2+ sílabas → -s: des Lehrers. |
-| der Computer | des Computers | 2+ sílabas → -s: des Computers. |
-| der Vater | des Vaters | 2+ sílabas → -s: des Vaters. |
-| das Auto | des Autos | Extranjerismo → -s: des Autos. |
-| der Affe | des Affen | Masc. débil (n-Deklination) → -n: des Affen. |
-| der Student | des Studenten | Masc. débil → -en: des Studenten. |
-| der Junge | des Jungen | Masc. débil → -n: des Jungen. |
-| der Mensch | des Menschen | Masc. débil → -en: des Menschen. |
-| der Kollege | des Kollegen | Masc. débil → -n: des Kollegen. |
-| der Kunde | des Kunden | Masc. débil → -n: des Kunden. |
-| der Nachbar | des Nachbarn | Masc. débil → -n: des Nachbarn. |
-| der Herr | des Herrn | Masc. débil → -n (singular Herrn). |
-| der Name | des Namens | Especial: -ns (des Namens). |
-| das Herz | des Herzens | Especial: -ens (des Herzens). |
-| die Frau | der Frau | Femenino: sin terminación, solo artículo der. |
-| die Mutter | der Mutter | Femenino: sin terminación: der Mutter. |
-| die Stadt | der Stadt | Femenino: sin terminación: der Stadt. |
-| die Universität | der Universität | Femenino: sin terminación: der Universität. |
-| die Kinder | der Kinder | Plural: artículo der, sin terminación. |
-| die Eltern | der Eltern | Plural: artículo der, sin terminación. |
-| die Bücher | der Bücher | Plural: artículo der, sin terminación. |
+| Base | Traducción | Genitivo | Regla |
+| --- | --- | --- | --- |
+| der Mann | hombre | des Mannes | Masc. 1 sílaba → -es: des Mannes. |
+| das Kind | niño | des Kindes | Neutro 1 sílaba → -es: des Kindes. |
+| das Haus | casa | des Hauses | Acaba en -s → -es: des Hauses. |
+| das Buch | libro | des Buches | Neutro 1 sílaba → -es: des Buches. |
+| der Tag | día | des Tages | Masc. 1 sílaba → -es: des Tages. |
+| der Hund | perro | des Hundes | Acaba en -d → -es: des Hundes. |
+| der Arzt | médico | des Arztes | Acaba en -t → -es: des Arztes. |
+| der Fluss | río | des Flusses | Acaba en -ss → -es: des Flusses. |
+| das Fenster | ventana | des Fensters | 2+ sílabas → -s: des Fensters. |
+| der Lehrer | profesor | des Lehrers | 2+ sílabas → -s: des Lehrers. |
+| der Computer | ordenador | des Computers | 2+ sílabas → -s: des Computers. |
+| der Vater | padre | des Vaters | 2+ sílabas → -s: des Vaters. |
+| das Auto | coche | des Autos | Extranjerismo → -s: des Autos. |
+| der Affe | mono | des Affen | Masc. débil (n-Deklination) → -n: des Affen. |
+| der Student | estudiante | des Studenten | Masc. débil → -en: des Studenten. |
+| der Junge | chico | des Jungen | Masc. débil → -n: des Jungen. |
+| der Mensch | persona/ser humano | des Menschen | Masc. débil → -en: des Menschen. |
+| der Kollege | colega | des Kollegen | Masc. débil → -n: des Kollegen. |
+| der Kunde | cliente | des Kunden | Masc. débil → -n: des Kunden. |
+| der Nachbar | vecino | des Nachbarn | Masc. débil → -n: des Nachbarn. |
+| der Herr | señor | des Herrn | Masc. débil → -n (singular Herrn). |
+| der Name | nombre | des Namens | Especial: -ns (des Namens). |
+| das Herz | corazón | des Herzens | Especial: -ens (des Herzens). |
+| die Frau | mujer | der Frau | Femenino: sin terminación, solo artículo der. |
+| die Mutter | madre | der Mutter | Femenino: sin terminación: der Mutter. |
+| die Stadt | ciudad | der Stadt | Femenino: sin terminación: der Stadt. |
+| die Universität | universidad | der Universität | Femenino: sin terminación: der Universität. |
+| die Kinder | niños | der Kinder | Plural: artículo der, sin terminación. |
+| die Eltern | padres | der Eltern | Plural: artículo der, sin terminación. |
+| die Bücher | libros | der Bücher | Plural: artículo der, sin terminación. |
 
-## Declinación de adjetivos (26)
+## Declinación de adjetivos (126)
 
-| Frase | Termin. | Explicación |
-| --- | --- | --- |
-| Das ist ein gut-? Mann. (ein, masc. NOM) | -er | Con ein SIN marca (masc. NOM), el adjetivo asume el marcador: -er. |
-| Das ist ein klein-? Kind. (ein, neutro NOM) | -es | Con ein SIN marca (neutro NOM/AKK), el adjetivo toma -es. |
-| Ich habe ein neu-? Auto. (ein, neutro AKK) | -es | ein neutro AKK: el adjetivo toma -es (das billige Auto → ein billiges Auto). |
-| Ich kaufe einen rot-? Wagen. (einen, masc. AKK) | -en | einen ya marca el masc. AKK → adjetivo -en. |
-| Ich helfe dem alt-? Mann. (dem, Dat. masc.) | -en | DATIVO siempre lleva -en (tras dem/der/den). |
-| Ich gebe der jung-? Frau ein Buch. (der, Dat. fem.) | -en | Dativo femenino: der + adjetivo -en. |
-| Ich helfe den alt-? Leuten. (den, Dat. plural) | -en | Dativo plural: den + adjetivo -en (y sustantivo +n). |
-| Ich spiele mit einem groß-? Hund. (einem, Dat. masc.) | -en | Dativo siempre -en (también con artículo indefinido). |
-| Ich fahre mit einer schnell-? Bahn. (einer, Dat. fem.) | -en | Dativo femenino indefinido: einer + adjetivo -en. |
-| Der groß-? Mann ist hier. (der, NOM masc.) | -e | Tras der (masc. NOM), el adjetivo lleva -e. |
-| Ich sehe den groß-? Mann. (den, AKK masc.) | -en | Tras den (masc. AKK) → adjetivo -en. |
-| Die schön-? Frau lacht. (die, NOM fem.) | -e | Tras die (fem. NOM/AKK) → adjetivo -e. |
-| Das klein-? Kind schläft. (das, NOM neutro) | -e | Tras das (neutro NOM/AKK) → adjetivo -e. |
-| Ich sehe das klein-? Kind. (das, AKK neutro) | -e | Tras das (neutro AKK) → adjetivo -e. |
-| Die klein-? Kinder spielen. (die, NOM plural) | -en | Plural con artículo (die): adjetivo -en. |
-| Eine schön-? Stadt. (eine, NOM fem.) | -e | eine (fem. NOM/AKK) → adjetivo -e. |
-| Ich besuche eine alt-? Stadt. (eine, AKK fem.) | -e | eine (fem. AKK) → adjetivo -e. |
-| Mein alt-? Auto ist kaputt. (mein, NOM neutro) | -es | Los posesivos se declinan como ein → neutro NOM -es. |
-| Meine gut-? Freundin kommt. (meine, NOM fem.) | -e | meine (fem.) → adjetivo -e. |
-| Das ist das Auto des alt-? Mannes. (des, GEN masc.) | -en | GENITIVO siempre lleva -en. |
-| Trotz des schlecht-? Wetters… (des, GEN neutro) | -en | Genitivo → adjetivo -en. |
-| Die Farbe der rot-? Blume. (der, GEN fem.) | -en | Genitivo femenino → adjetivo -en. |
-| Ein kalt-? Bier, bitte. (ein, neutro AKK) | -es | ein neutro AKK → -es (das Bier → ein kaltes Bier). |
-| Er ist ein nett-? Mensch. (ein, masc. NOM) | -er | ein masc. NOM → adjetivo -er. |
-| Ich wohne in einem groß-? Haus. (einem, Dat. neutro) | -en | Dativo neutro indefinido → -en. |
-| Die intelligent-? Studenten lernen. (die, NOM plural) | -en | Plural con die → adjetivo -en. |
+| Frase | Traducción | Termin. | Explicación |
+| --- | --- | --- | --- |
+| Das ist ein gut-? Mann. (ein, masc. NOM) | Es un buen hombre. | -er | Con ein SIN marca (masc. NOM), el adjetivo asume el marcador: -er. |
+| Das ist ein klein-? Kind. (ein, neutro NOM) | Es un niño pequeño. | -es | Con ein SIN marca (neutro NOM/AKK), el adjetivo toma -es. |
+| Ich habe ein neu-? Auto. (ein, neutro AKK) | Tengo un coche nuevo. | -es | ein neutro AKK: el adjetivo toma -es (das billige Auto → ein billiges Auto). |
+| Ich kaufe einen rot-? Wagen. (einen, masc. AKK) | Compro un coche rojo. | -en | einen ya marca el masc. AKK → adjetivo -en. |
+| Ich helfe dem alt-? Mann. (dem, Dat. masc.) | Ayudo al hombre mayor. | -en | DATIVO siempre lleva -en (tras dem/der/den). |
+| Ich gebe der jung-? Frau ein Buch. (der, Dat. fem.) | Le doy un libro a la mujer joven. | -en | Dativo femenino: der + adjetivo -en. |
+| Ich helfe den alt-? Leuten. (den, Dat. plural) | Ayudo a la gente mayor. | -en | Dativo plural: den + adjetivo -en (y sustantivo +n). |
+| Ich spiele mit einem groß-? Hund. (einem, Dat. masc.) | Juego con un perro grande. | -en | Dativo siempre -en (también con artículo indefinido). |
+| Ich fahre mit einer schnell-? Bahn. (einer, Dat. fem.) | Voy en un tren rápido. | -en | Dativo femenino indefinido: einer + adjetivo -en. |
+| Der groß-? Mann ist hier. (der, NOM masc.) | El hombre alto está aquí. | -e | Tras der (masc. NOM), el adjetivo lleva -e. |
+| Ich sehe den groß-? Mann. (den, AKK masc.) | Veo al hombre alto. | -en | Tras den (masc. AKK) → adjetivo -en. |
+| Die schön-? Frau lacht. (die, NOM fem.) | La mujer guapa ríe. | -e | Tras die (fem. NOM/AKK) → adjetivo -e. |
+| Das klein-? Kind schläft. (das, NOM neutro) | El niño pequeño duerme. | -e | Tras das (neutro NOM/AKK) → adjetivo -e. |
+| Ich sehe das klein-? Kind. (das, AKK neutro) | Veo al niño pequeño. | -e | Tras das (neutro AKK) → adjetivo -e. |
+| Die klein-? Kinder spielen. (die, NOM plural) | Los niños pequeños juegan. | -en | Plural con artículo (die): adjetivo -en. |
+| Eine schön-? Stadt. (eine, NOM fem.) | Una ciudad bonita. | -e | eine (fem. NOM/AKK) → adjetivo -e. |
+| Ich besuche eine alt-? Stadt. (eine, AKK fem.) | Visito una ciudad antigua. | -e | eine (fem. AKK) → adjetivo -e. |
+| Mein alt-? Auto ist kaputt. (mein, NOM neutro) | Mi coche viejo está estropeado. | -es | Los posesivos se declinan como ein → neutro NOM -es. |
+| Meine gut-? Freundin kommt. (meine, NOM fem.) | Mi buena amiga viene. | -e | meine (fem.) → adjetivo -e. |
+| Das ist das Auto des alt-? Mannes. (des, GEN masc.) | Es el coche del hombre mayor. | -en | GENITIVO siempre lleva -en. |
+| Trotz des schlecht-? Wetters… (des, GEN neutro) | A pesar del mal tiempo… | -en | Genitivo → adjetivo -en. |
+| Die Farbe der rot-? Blume. (der, GEN fem.) | El color de la flor roja. | -en | Genitivo femenino → adjetivo -en. |
+| Ein kalt-? Bier, bitte. (ein, neutro AKK) | Una cerveza fría, por favor. | -es | ein neutro AKK → -es (das Bier → ein kaltes Bier). |
+| Er ist ein nett-? Mensch. (ein, masc. NOM) | Es una persona amable. | -er | ein masc. NOM → adjetivo -er. |
+| Ich wohne in einem groß-? Haus. (einem, Dat. neutro) | Vivo en una casa grande. | -en | Dativo neutro indefinido → -en. |
+| Die intelligent-? Studenten lernen. (die, NOM plural) | Los estudiantes inteligentes estudian. | -en | Plural con die → adjetivo -en. |
+| Der schnell-? Zug kommt. (der, NOM masc.) | El tren rápido llega. | -e | Tras der (NOM masc.) → -e. |
+| Ich nehme den schnell-? Zug. (den, AKK masc.) | Cojo el tren rápido. | -en | Tras den (AKK masc.) → -en. |
+| Ich fahre mit dem schnell-? Zug. (dem, DAT masc.) | Voy en el tren rápido. | -en | Dativo → siempre -en. |
+| Der Fahrplan des schnell-? Zuges. (des, GEN masc.) | El horario del tren rápido. | -en | Genitivo → siempre -en. |
+| Die rot-? Blume blüht. (die, NOM fem.) | La flor roja florece. | -e | Tras die (NOM/AKK fem.) → -e. |
+| Ich sehe die rot-? Blume. (die, AKK fem.) | Veo la flor roja. | -e | AKK fem. → -e. |
+| Mit der rot-? Blume. (der, DAT fem.) | Con la flor roja. | -en | Dativo → -en. |
+| Die Farbe der rot-? Blume. (der, GEN fem.) | El color de la flor roja. | -en | Genitivo → -en. |
+| Das alt-? Haus steht leer. (das, NOM neutro) | La casa vieja está vacía. | -e | Tras das (NOM/AKK neutro) → -e. |
+| Ich kaufe das alt-? Haus. (das, AKK neutro) | Compro la casa vieja. | -e | AKK neutro → -e. |
+| In dem alt-? Haus. (dem, DAT neutro) | En la casa vieja. | -en | Dativo → -en. |
+| Die Tür des alt-? Hauses. (des, GEN neutro) | La puerta de la casa vieja. | -en | Genitivo → -en. |
+| Die klein-? Kinder spielen. (die, NOM plural) | Los niños pequeños juegan. | -en | Plural con artículo → -en. |
+| Ich sehe die klein-? Kinder. (die, AKK plural) | Veo a los niños pequeños. | -en | Plural con artículo → -en. |
+| Mit den klein-? Kindern. (den, DAT plural) | Con los niños pequeños. | -en | Dativo plural → -en. |
+| Die Spielsachen der klein-? Kinder. (der, GEN plural) | Los juguetes de los niños pequeños. | -en | Genitivo plural → -en. |
+| Ein groß-? Mann steht dort. (ein, NOM masc.) | Un hombre alto está allí. | -er | ein (NOM masc.): el adjetivo asume -er. |
+| Ich sehe einen groß-? Mann. (einen, AKK masc.) | Veo a un hombre alto. | -en | einen (AKK masc.) → -en. |
+| Mit einem groß-? Mann. (einem, DAT masc.) | Con un hombre alto. | -en | Dativo → -en. |
+| Das Auto eines groß-? Mannes. (eines, GEN masc.) | El coche de un hombre alto. | -en | Genitivo → -en. |
+| Eine nett-? Frau hilft. (eine, NOM fem.) | Una mujer amable ayuda. | -e | eine (NOM/AKK fem.) → -e. |
+| Ich kenne eine nett-? Frau. (eine, AKK fem.) | Conozco a una mujer amable. | -e | AKK fem. → -e. |
+| Mit einer nett-? Frau. (einer, DAT fem.) | Con una mujer amable. | -en | Dativo → -en. |
+| Die Hilfe einer nett-? Frau. (einer, GEN fem.) | La ayuda de una mujer amable. | -en | Genitivo → -en. |
+| Ein klein-? Kind weint. (ein, NOM neutro) | Un niño pequeño llora. | -es | ein (NOM/AKK neutro) → -es. |
+| Ich habe ein klein-? Kind. (ein, AKK neutro) | Tengo un niño pequeño. | -es | AKK neutro → -es. |
+| Mit einem klein-? Kind. (einem, DAT neutro) | Con un niño pequeño. | -en | Dativo → -en. |
+| Die Stimme eines klein-? Kindes. (eines, GEN neutro) | La voz de un niño pequeño. | -en | Genitivo → -en. |
+| Meine gut-? Freunde kommen. (meine, NOM plural) | Mis buenos amigos vienen. | -en | Posesivo plural → -en. |
+| Ich habe keine gut-? Idee. (keine, AKK fem.) | No tengo ninguna buena idea. | -e | keine (AKK fem.) → -e. |
+| Kein groß-? Problem. (kein, NOM neutro) | Ningún problema grande. | -es | kein (NOM/AKK neutro) → -es. |
+| Mein neu-? Auto ist rot. (mein, NOM neutro) | Mi coche nuevo es rojo. | -es | Posesivo (NOM neutro) → -es. |
+| Sein alt-? Fahrrad. (sein, NOM neutro) | Su vieja bicicleta. | -es | Posesivo (NOM neutro) → -es. |
+| Unser neu-? Lehrer. (unser, NOM masc.) | Nuestro nuevo profesor. | -er | Posesivo (NOM masc.) → -er. |
+| Ihre lang-? Haare. (ihre, NOM plural) | Su pelo largo. | -en | Posesivo plural → -en. |
+| Kalt-? Wasser ist gesund. (sin art., NOM neutro) | El agua fría es sana. | -es | Sin artículo (NOM neutro) → -es (declinación fuerte). |
+| Ich trinke kalt-? Wasser. (sin art., AKK neutro) | Bebo agua fría. | -es | Sin artículo (AKK neutro) → -es. |
+| Mit kalt-? Wasser. (sin art., DAT neutro) | Con agua fría. | -em | Sin artículo, Dativo neutro → -em. |
+| Frisch-? Milch schmeckt gut. (sin art., NOM fem.) | La leche fresca sabe bien. | -e | Sin artículo (NOM fem.) → -e. |
+| Ich kaufe frisch-? Milch. (sin art., AKK fem.) | Compro leche fresca. | -e | Sin artículo (AKK fem.) → -e. |
+| Mit frisch-? Milch. (sin art., DAT fem.) | Con leche fresca. | -er | Sin artículo, Dativo fem. → -er. |
+| Stark-? Kaffee hilft. (sin art., NOM masc.) | El café fuerte ayuda. | -er | Sin artículo (NOM masc.) → -er. |
+| Ich trinke stark-? Kaffee. (sin art., AKK masc.) | Bebo café fuerte. | -en | Sin artículo (AKK masc.) → -en. |
+| Mit stark-? Kaffee. (sin art., DAT masc.) | Con café fuerte. | -em | Sin artículo, Dativo masc. → -em. |
+| Klein-? Kinder brauchen Schlaf. (sin art., NOM plural) | Los niños pequeños necesitan dormir. | -e | Sin artículo, plural NOM/AKK → -e. |
+| Ich mag klein-? Hunde. (sin art., AKK plural) | Me gustan los perros pequeños. | -e | Sin artículo, plural → -e. |
+| Mit klein-? Kindern. (sin art., DAT plural) | Con niños pequeños. | -en | Dativo plural → -en. |
+| Guter Wein zu gut-? Essen. (sin art., DAT neutro) | Buen vino con buena comida. | -em | Sin artículo, Dativo neutro → -em. |
+| Bei schön-? Wetter. (sin art., DAT neutro) | Con buen tiempo. | -em | Sin artículo, Dativo neutro → -em. |
+| Trotz stark-? Regens. (sin art., GEN masc.) | A pesar de la fuerte lluvia. | -en | Sin artículo, Genitivo masc. → -en. |
+| Ich möchte einen heiß-? Tee. (einen, AKK masc.) | Quiero un té caliente. | -en | einen (AKK masc.) → -en. |
+| Sie trägt eine schwarz-? Jacke. (eine, AKK fem.) | Lleva una chaqueta negra. | -e | eine (AKK fem.) → -e. |
+| Er wohnt in einem modern-? Haus. (einem, DAT neutro) | Vive en una casa moderna. | -en | Dativo → -en. |
+| Das ist ein interessant-? Buch. (ein, NOM neutro) | Es un libro interesante. | -es | ein (NOM neutro) → -es. |
+| Ich sehe einen bekannt-? Schauspieler. (einen, AKK masc.) | Veo a un actor conocido. | -en | einen (AKK masc.) → -en. |
+| Sie hat lange blond-? Haare. (sin art., AKK plural) | Tiene el pelo largo y rubio. | -e | Sin artículo, plural → -e. |
+| Wir suchen eine günstig-? Wohnung. (eine, AKK fem.) | Buscamos un piso barato. | -e | eine (AKK fem.) → -e. |
+| Der berühmt-? Sänger singt. (der, NOM masc.) | El cantante famoso canta. | -e | Tras der (NOM masc.) → -e. |
+| Ich glaube dem alt-? Mann. (dem, DAT masc.) | Le creo al hombre mayor. | -en | Dativo → -en (glauben rige dativo). |
+| Die Meinung des jung-? Mannes. (des, GEN masc.) | La opinión del hombre joven. | -en | Genitivo → -en. |
+| Sie ist eine gut-? Ärztin. (eine, NOM fem.) | Es una buena médica. | -e | eine (NOM fem.) → -e. |
+| Wir haben frisch-? Brot gekauft. (sin art., AKK neutro) | Hemos comprado pan fresco. | -es | Sin artículo (AKK neutro) → -es. |
+| In der groß-? Stadt. (der, DAT fem.) | En la gran ciudad. | -en | Dativo → -en. |
+| Die Fenster der modern-? Häuser. (der, GEN plural) | Las ventanas de las casas modernas. | -en | Genitivo plural → -en. |
+| Mein best-? Freund kommt. (mein, NOM masc.) | Mi mejor amigo viene. | -er | Posesivo (NOM masc.) → -er (superlativo bester). |
+| Ich helfe meiner klein-? Schwester. (meiner, DAT fem.) | Ayudo a mi hermana pequeña. | -en | Dativo → -en. |
+| Er fährt ein teur-? Auto. (ein, AKK neutro) | Conduce un coche caro. | -es | ein (AKK neutro) → -es (teuer→teures). |
+| Einen schön-? Tag noch! (einen, AKK masc.) | ¡Que tengas un buen día! | -en | einen (AKK masc.) → -en. |
+| Sie kauft rot-? Äpfel. (sin art., AKK plural) | Compra manzanas rojas. | -e | Sin artículo, plural → -e. |
+| Das Kleid der jung-? Frau. (der, GEN fem.) | El vestido de la mujer joven. | -en | Genitivo → -en. |
+| Wir sitzen an einem rund-? Tisch. (einem, DAT masc.) | Estamos sentados en una mesa redonda. | -en | Dativo → -en. |
+| Ich trinke ein kalt-? Bier. (ein, AKK neutro) | Bebo una cerveza fría. | -es | ein (AKK neutro) → -es. |
+| Der neu-? Kollege ist nett. (der, NOM masc.) | El nuevo compañero es simpático. | -e | Tras der (NOM masc.) → -e. |
+| Ich kenne die neu-? Kollegin. (die, AKK fem.) | Conozco a la nueva compañera. | -e | AKK fem. → -e. |
+| Mit gut-? Freunden. (sin art., DAT plural) | Con buenos amigos. | -en | Dativo plural → -en. |
+| Das war ein lang-? Tag. (ein, NOM masc.) | Fue un día largo. | -er | ein (NOM masc.) → -er. |
+| Ich suche einen ruhig-? Platz. (einen, AKK masc.) | Busco un sitio tranquilo. | -en | einen (AKK masc.) → -en. |
+| Sie wohnt in einer klein-? Stadt. (einer, DAT fem.) | Vive en una ciudad pequeña. | -en | Dativo → -en. |
+| Das ist die best-? Lösung. (die, NOM fem., superlativo) | Es la mejor solución. | -e | Superlativo declinado: die beste → -e. |
+| Ich habe einen älter-? Bruder. (einen, AKK masc., comparativo) | Tengo un hermano mayor. | -en | Comparativo declinado: einen älteren → -en. |
+| Wir brauchen mehr frisch-? Luft. (sin art., AKK fem.) | Necesitamos más aire fresco. | -e | Sin artículo (AKK fem.) → -e. |
+| Der Geschmack frisch-? Erdbeeren. (sin art., GEN plural) | El sabor de las fresas frescas. | -er | Sin artículo, Genitivo plural → -er. |
+| Bei gut-? Laune. (sin art., DAT fem.) | De buen humor. | -er | Sin artículo, Dativo fem. → -er. |
+| Ein Glas warm-? Milch. (sin art., GEN fem.) | Un vaso de leche caliente. | -er | Sin artículo, Genitivo fem. → -er (warmer Milch). |
+| Trotz schlecht-? Wetters. (sin art., GEN neutro) | A pesar del mal tiempo. | -en | Sin artículo, Genitivo neutro → -en. |
+| Ich mag heiß-? Schokolade. (sin art., AKK fem.) | Me gusta el chocolate caliente. | -e | Sin artículo (AKK fem.) → -e. |
+| Der Duft frisch-? Kaffees. (sin art., GEN masc.) | El aroma del café recién hecho. | -en | Sin artículo, Genitivo masc. → -en. |
+| Mit freundlich-? Grüßen. (sin art., DAT plural) | Saludos cordiales. | -en | Dativo plural → -en (fórmula de despedida). |
+| Ein schön-? Wochenende! (ein, AKK neutro) | ¡Buen fin de semana! | -es | ein (AKK neutro) → -es. |
+| Ich wünsche dir gut-? Besserung. (sin art., AKK fem.) | Que te mejores. | -e | Sin artículo (AKK fem.) → -e. |
+| Sie ist die jüngst-? Tochter. (die, NOM fem., superlativo) | Es la hija menor. | -e | Superlativo: die jüngste → -e. |
+| Ich habe eine besser-? Idee. (eine, AKK fem., comparativo) | Tengo una idea mejor. | -e | Comparativo: eine bessere → -e. |
+| In den letzt-? Jahren. (den, DAT plural) | En los últimos años. | -en | Dativo plural → -en. |
+| Am nächst-? Tag. (dem, DAT masc.) | Al día siguiente. | -en | am (an+dem) → Dativo -en. |
+| Die deutsch-? Sprache ist schön. (die, NOM fem.) | La lengua alemana es bonita. | -e | Tras die (NOM fem.) → -e. |
+| Er spricht gut-? Deutsch. (sin art., AKK neutro) | Habla buen alemán. | -es | Sin artículo (AKK neutro) → -es. |
+| Ein Mann mit grau-? Haaren. (sin art., DAT plural) | Un hombre de pelo canoso. | -en | Dativo plural → -en. |
+| Wir hatten schön-? Wetter. (sin art., AKK neutro) | Tuvimos buen tiempo. | -es | Sin artículo (AKK neutro) → -es. |
+| Das Zimmer hat ein groß-? Fenster. (ein, AKK neutro) | La habitación tiene una ventana grande. | -es | ein (AKK neutro) → -es. |
+| Ich sitze auf einem bequem-? Stuhl. (einem, DAT masc.) | Estoy sentado en una silla cómoda. | -en | Dativo → -en. |
 
 ## Preposiciones (109)
 
-| Frase | Prep. | Caso | Explicación |
-| --- | --- | --- | --- |
-| Ich fahre ___ dem Bus zur Arbeit. | mit | Dativo | mit rige siempre DATIVO (medio/compañía). |
-| Wir gehen ___ die Schule. | in | Acusativo | Wechsel: Wohin? (dirección) → ACUSATIVO. in die Schule. |
-| Das Buch liegt ___ dem Tisch. | auf | Dativo | Wechsel: Wo? (ubicación) → DATIVO. auf dem Tisch. |
-| Ich hänge das Bild ___ die Wand. | an | Acusativo | Wechsel: Wohin? → ACUSATIVO. an die Wand. |
-| Das Bild hängt ___ der Wand. | an | Dativo | Wechsel: Wo? → DATIVO. an der Wand. |
-| Die Katze sitzt ___ dem Tisch (debajo). | unter | Dativo | Wechsel: Wo? → DATIVO. unter dem Tisch. |
-| Ich warte ___ den Bus. | auf | Acusativo | Verbo con prep.: warten auf + ACUSATIVO (esperar algo). |
-| Sie interessiert sich ___ Musik. | für | Acusativo | sich interessieren für + ACUSATIVO. |
-| Das Geschenk ist ___ dich. | für | Acusativo | für rige siempre ACUSATIVO. |
-| Ich denke oft ___ dich. | an | Acusativo | denken an + ACUSATIVO. |
-| Er hat Angst ___ Hunden. | vor | Dativo | Angst haben vor + DATIVO. |
-| Wir sprechen ___ das Wetter. | über | Acusativo | sprechen über + ACUSATIVO. |
-| Ich erinnere mich ___ meine Kindheit. | an | Acusativo | sich erinnern an + ACUSATIVO. |
-| Sie träumt ___ einem großen Haus. | von | Dativo | träumen von + DATIVO. |
-| Wir nehmen ___ dem Kurs teil. | an | Dativo | teilnehmen an + DATIVO. |
-| Der Preis hängt ___ der Qualität ab. | von | Dativo | abhängen von + DATIVO. |
-| Ich bitte dich ___ Hilfe. | um | Acusativo | bitten um + ACUSATIVO. |
-| Sie kümmert sich ___ die Kinder. | um | Acusativo | sich kümmern um + ACUSATIVO. |
-| Ich freue mich ___ das Wochenende (futuro). | auf | Acusativo | sich freuen auf + ACUSATIVO (algo futuro). |
-| Ich freue mich ___ dein Geschenk (ya recibido). | über | Acusativo | sich freuen über + ACUSATIVO (presente/pasado). |
-| Er glaubt ___ Gott. | an | Acusativo | glauben an + ACUSATIVO. |
-| Ich beschäftige mich ___ dem Thema. | mit | Dativo | sich beschäftigen mit + DATIVO. |
-| Sie hat sich ___ ihn verliebt. | in | Acusativo | sich verlieben in + ACUSATIVO. |
-| Wir entscheiden uns ___ das rote Auto. | für | Acusativo | sich entscheiden für + ACUSATIVO. |
-| Er bewirbt sich ___ die Stelle. | um | Acusativo | sich bewerben um + ACUSATIVO. |
-| Ich frage ___ dem Weg. | nach | Dativo | fragen nach + DATIVO. |
-| Das Buch gehört ___ meiner Schwester. | — / kein | Dativo | gehören + DATIVO (sin preposición); rige caso dativo. |
-| Ich komme ___ Spanien. | aus | Dativo | Origen (Woher) con países → aus + DATIVO. |
-| Ich wohne ___ meinen Eltern. | bei | Dativo | bei rige DATIVO (en casa de). |
-| Wir fahren ___ Berlin. | nach | Dativo | nach + ciudad/país sin artículo (Wohin); rige DATIVO. |
-| Ich bin ___ Spanien. | in | Dativo | Wo? países sin artículo → in + DATIVO. |
-| Ich gehe ohne ___ Geld aus dem Haus. | — / das | Acusativo | ohne rige siempre ACUSATIVO (ohne Geld). |
-| Wir laufen ___ den Park. | durch | Acusativo | durch rige siempre ACUSATIVO. |
-| Ich habe nichts ___ dich. | gegen | Acusativo | gegen rige siempre ACUSATIVO. |
-| Wir treffen uns ___ 8 Uhr. | um | Acusativo | um rige ACUSATIVO (hora exacta). |
-| ___ des Regens blieben wir zu Hause. | trotz / wegen | Genitivo | trotz / wegen rigen GENITIVO. |
-| ___ des Konzerts haben wir getanzt. | während | Genitivo | während rige GENITIVO (durante). |
-| Wir wohnen ___ der Stadt. | außerhalb / innerhalb | Genitivo | außerhalb/innerhalb rigen GENITIVO. |
-| ___ des schlechten Wetters gehen wir spazieren. | trotz | Genitivo | trotz + GENITIVO (a pesar de). |
-| Ich arbeite hier ___ 2020. | seit | Dativo | seit rige DATIVO (desde hace). |
-| Das ist ein Geschenk ___ meiner Oma. | von | Dativo | von rige DATIVO (de / procedencia). |
-| Ich gehe ___ Hause (a casa). | nach | Dativo | Expresión fija: nach Hause; nach rige DATIVO. |
-| Setz dich ___ mich (al lado). | neben | Acusativo | Wechsel: Wohin? → ACUSATIVO. neben mich. |
-| Das Auto steht ___ dem Haus (delante). | vor | Dativo | Wechsel: Wo? → DATIVO. vor dem Haus. |
-| Wir sind ___ Freitag ins Kino gegangen. | am | Dativo | am (an+dem) para días → DATIVO. |
-| ___ Sommer fahren wir ans Meer. | im | Dativo | im (in+dem) para estaciones/meses → DATIVO. |
-| Ich arbeite ___ Montag bis Freitag. | von | Dativo | von … bis; von rige DATIVO. |
-| Ich gewöhne mich ___ das Klima. | an | Acusativo | sich gewöhnen an + ACUSATIVO. |
-| Er beschwert sich ___ den Lärm. | über | Acusativo | sich beschweren über + ACUSATIVO. |
-| Sie sorgt ___ ihre Kinder. | für | Acusativo | sorgen für + ACUSATIVO. |
-| Ich bedanke mich ___ das Geschenk. | für | Acusativo | sich bedanken für + ACUSATIVO. |
-| Er leidet ___ einer Krankheit. | an | Dativo | leiden an + DATIVO. |
-| Wir hoffen ___ besseres Wetter. | auf | Acusativo | hoffen auf + ACUSATIVO. |
-| Sie achtet ___ ihre Gesundheit. | auf | Acusativo | achten auf + ACUSATIVO. |
-| Ich verlasse mich ___ dich. | auf | Acusativo | sich verlassen auf + ACUSATIVO. |
-| Er erzählt ___ seiner Reise. | von | Dativo | erzählen von + DATIVO. |
-| Wir diskutieren ___ die Politik. | über | Acusativo | diskutieren über + ACUSATIVO. |
-| Ich schütze mich ___ der Sonne. | vor | Dativo | sich schützen vor + DATIVO. |
-| Sie kämpft ___ ihre Rechte. | um | Acusativo | kämpfen um + ACUSATIVO. |
-| Ich bleibe hier ___ nächsten Montag. | bis | Acusativo | bis rige ACUSATIVO. |
-| Wir fahren ___ einer Woche in den Urlaub. | in | Dativo | in + DATIVO temporal (dentro de). |
-| ___ dem Essen gehen wir spazieren. | nach | Dativo | nach + DATIVO (después de). |
-| Ich wohne hier ___ drei Jahren. | seit | Dativo | seit + DATIVO (desde hace). |
-| Das Restaurant ist ___ dem Kino (enfrente). | gegenüber | Dativo | gegenüber + DATIVO. |
-| Die Lampe hängt ___ dem Tisch (encima). | über | Dativo | Wechsel: Wo? → DATIVO. über dem Tisch. |
-| Der Hund läuft ___ das Haus (alrededor). | um | Acusativo | um + ACUSATIVO (alrededor de). |
-| Ich ärgere mich ___ den Stau. | über | Acusativo | sich ärgern über + ACUSATIVO. |
-| Ich erkundige mich ___ dem Weg. | nach | Dativo | sich erkundigen nach + DATIVO. |
-| Das Team besteht ___ fünf Spielern. | aus | Dativo | bestehen aus + DATIVO (componerse de). |
-| Er besteht ___ seiner Meinung. | auf | Dativo | bestehen auf + DATIVO (insistir en). |
-| Es handelt sich ___ ein Missverständnis. | um | Acusativo | sich handeln um + ACUSATIVO. |
-| Ich beziehe mich ___ Ihren Brief. | auf | Acusativo | sich beziehen auf + ACUSATIVO. |
-| Sie zweifelt ___ seiner Ehrlichkeit. | an | Dativo | zweifeln an + DATIVO. |
-| Er leidet ___ dem Stress. | unter | Dativo | leiden unter + DATIVO (sufrir por). |
-| Wenden Sie sich ___ den Chef. | an | Acusativo | sich wenden an + ACUSATIVO. |
-| Das erinnert mich ___ meine Jugend. | an | Acusativo | erinnern an + ACUSATIVO. |
-| Ich sehne mich ___ Ruhe. | nach | Dativo | sich sehnen nach + DATIVO. |
-| Er überzeugt mich ___ seinem Plan. | von | Dativo | überzeugen von + DATIVO. |
-| Ich danke dir ___ deine Hilfe. | für | Acusativo | danken für + ACUSATIVO (la cosa); la persona va en Dativo. |
-| Ich gratuliere dir ___ Geburtstag. | zum / zu | Dativo | gratulieren zu + DATIVO. |
-| Es riecht ___ Kaffee. | nach | Dativo | riechen nach + DATIVO. |
-| Das schmeckt ___ Zitrone. | nach | Dativo | schmecken nach + DATIVO. |
-| Ich verabrede mich ___ Freunden. | mit | Dativo | sich verabreden mit + DATIVO. |
-| Er streitet ___ seinem Bruder. | mit | Dativo | sich streiten mit + DATIVO. |
-| Wir unterhalten uns ___ Politik. | über | Acusativo | sich unterhalten über + ACUSATIVO. |
-| Ich denke ___ die Zukunft nach. | über | Acusativo | nachdenken über + ACUSATIVO. |
-| Sie protestieren ___ die Regierung. | gegen | Acusativo | protestieren gegen + ACUSATIVO. |
-| Ich entschuldige mich ___ die Verspätung. | für | Acusativo | sich entschuldigen für + ACUSATIVO. |
-| Sie ist stolz ___ ihre Arbeit. | auf | Acusativo | stolz sein auf + ACUSATIVO. |
-| Ich bin neugierig ___ das Ergebnis. | auf | Acusativo | neugierig auf + ACUSATIVO. |
-| Bist du böse ___ mich? | auf | Acusativo | böse sein auf + ACUSATIVO. |
-| Sie ist verheiratet ___ einem Arzt. | mit | Dativo | verheiratet sein mit + DATIVO. |
-| Ich bin zufrieden ___ dem Ergebnis. | mit | Dativo | zufrieden sein mit + DATIVO. |
-| Bist du ___ dem Plan einverstanden? | mit | Dativo | einverstanden sein mit + DATIVO. |
-| Das ist abhängig ___ dem Wetter. | von | Dativo | abhängig sein von + DATIVO. |
-| Er ist verantwortlich ___ das Projekt. | für | Acusativo | verantwortlich sein für + ACUSATIVO. |
-| Das ist typisch ___ ihn. | für | Acusativo | typisch für + ACUSATIVO. |
-| Obst ist reich ___ Vitaminen. | an | Dativo | reich an + DATIVO. |
-| Die Kinder spielen ___ dem Garten. | in | Dativo | Wechsel: Wo? → DATIVO. in dem/im Garten. |
-| Häng die Jacke ___ den Schrank. | in | Acusativo | Wechsel: Wohin? → ACUSATIVO. in den Schrank. |
-| Das Flugzeug fliegt ___ den Wolken. | über | Dativo | Wechsel: Wo? → DATIVO. über den Wolken. |
-| Der Ball rollt ___ den Tisch (debajo). | unter | Acusativo | Wechsel: Wohin? → ACUSATIVO. unter den Tisch. |
-| Das Bild hängt ___ dem Sofa und dem Fenster. | zwischen | Dativo | Wechsel: Wo? → DATIVO. zwischen … (entre). |
-| ___ einer Stunde bin ich fertig. | in | Dativo | in + DATIVO (dentro de una hora). |
-| ___ des Streiks fuhren keine Züge. | wegen / während | Genitivo | wegen/während + GENITIVO. |
-| ___ seiner Krankheit kam er nicht. | wegen | Genitivo | wegen + GENITIVO (a causa de). |
-| ___ aller Probleme blieb er ruhig. | trotz | Genitivo | trotz + GENITIVO (a pesar de). |
-| Ich interessiere mich ___ Geschichte. | für | Acusativo | sich interessieren für + ACUSATIVO. |
-| Er hofft ___ eine zweite Chance. | auf | Acusativo | hoffen auf + ACUSATIVO. |
+| Frase | Traducción | Prep. | Caso | Explicación |
+| --- | --- | --- | --- | --- |
+| Ich fahre ___ dem Bus zur Arbeit. | Voy al trabajo en autobús. | mit | Dativo | mit rige siempre DATIVO (medio/compañía). |
+| Wir gehen ___ die Schule. | Vamos a la escuela. | in | Acusativo | Wechsel: Wohin? (dirección) → ACUSATIVO. in die Schule. |
+| Das Buch liegt ___ dem Tisch. | El libro está sobre la mesa. | auf | Dativo | Wechsel: Wo? (ubicación) → DATIVO. auf dem Tisch. |
+| Ich hänge das Bild ___ die Wand. | Cuelgo el cuadro en la pared. | an | Acusativo | Wechsel: Wohin? → ACUSATIVO. an die Wand. |
+| Das Bild hängt ___ der Wand. | El cuadro cuelga de la pared. | an | Dativo | Wechsel: Wo? → DATIVO. an der Wand. |
+| Die Katze sitzt ___ dem Tisch (debajo). | El gato está debajo de la mesa. | unter | Dativo | Wechsel: Wo? → DATIVO. unter dem Tisch. |
+| Ich warte ___ den Bus. | Espero el autobús. | auf | Acusativo | Verbo con prep.: warten auf + ACUSATIVO (esperar algo). |
+| Sie interessiert sich ___ Musik. | Se interesa por la música. | für | Acusativo | sich interessieren für + ACUSATIVO. |
+| Das Geschenk ist ___ dich. | El regalo es para ti. | für | Acusativo | für rige siempre ACUSATIVO. |
+| Ich denke oft ___ dich. | Pienso a menudo en ti. | an | Acusativo | denken an + ACUSATIVO. |
+| Er hat Angst ___ Hunden. | Tiene miedo de los perros. | vor | Dativo | Angst haben vor + DATIVO. |
+| Wir sprechen ___ das Wetter. | Hablamos sobre el tiempo (clima). | über | Acusativo | sprechen über + ACUSATIVO. |
+| Ich erinnere mich ___ meine Kindheit. | Me acuerdo de mi infancia. | an | Acusativo | sich erinnern an + ACUSATIVO. |
+| Sie träumt ___ einem großen Haus. | Sueña con una casa grande. | von | Dativo | träumen von + DATIVO. |
+| Wir nehmen ___ dem Kurs teil. | Participamos en el curso. | an | Dativo | teilnehmen an + DATIVO. |
+| Der Preis hängt ___ der Qualität ab. | El precio depende de la calidad. | von | Dativo | abhängen von + DATIVO. |
+| Ich bitte dich ___ Hilfe. | Te pido ayuda. | um | Acusativo | bitten um + ACUSATIVO. |
+| Sie kümmert sich ___ die Kinder. | Se ocupa de los niños. | um | Acusativo | sich kümmern um + ACUSATIVO. |
+| Ich freue mich ___ das Wochenende (futuro). | Me hace ilusión el fin de semana. | auf | Acusativo | sich freuen auf + ACUSATIVO (algo futuro). |
+| Ich freue mich ___ dein Geschenk (ya recibido). | Me alegro por tu regalo. | über | Acusativo | sich freuen über + ACUSATIVO (presente/pasado). |
+| Er glaubt ___ Gott. | Cree en Dios. | an | Acusativo | glauben an + ACUSATIVO. |
+| Ich beschäftige mich ___ dem Thema. | Me ocupo del tema. | mit | Dativo | sich beschäftigen mit + DATIVO. |
+| Sie hat sich ___ ihn verliebt. | Se ha enamorado de él. | in | Acusativo | sich verlieben in + ACUSATIVO. |
+| Wir entscheiden uns ___ das rote Auto. | Nos decidimos por el coche rojo. | für | Acusativo | sich entscheiden für + ACUSATIVO. |
+| Er bewirbt sich ___ die Stelle. | Se presenta para el puesto. | um | Acusativo | sich bewerben um + ACUSATIVO. |
+| Ich frage ___ dem Weg. | Pregunto por el camino. | nach | Dativo | fragen nach + DATIVO. |
+| Das Buch gehört ___ meiner Schwester. | El libro pertenece a mi hermana. | — / kein | Dativo | gehören + DATIVO (sin preposición); rige caso dativo. |
+| Ich komme ___ Spanien. | Vengo de España. | aus | Dativo | Origen (Woher) con países → aus + DATIVO. |
+| Ich wohne ___ meinen Eltern. | Vivo con mis padres. | bei | Dativo | bei rige DATIVO (en casa de). |
+| Wir fahren ___ Berlin. | Vamos a Berlín. | nach | Dativo | nach + ciudad/país sin artículo (Wohin); rige DATIVO. |
+| Ich bin ___ Spanien. | Estoy en España. | in | Dativo | Wo? países sin artículo → in + DATIVO. |
+| Ich gehe ohne ___ Geld aus dem Haus. | Salgo de casa sin dinero. | — / das | Acusativo | ohne rige siempre ACUSATIVO (ohne Geld). |
+| Wir laufen ___ den Park. | Corremos por el parque. | durch | Acusativo | durch rige siempre ACUSATIVO. |
+| Ich habe nichts ___ dich. | No tengo nada en tu contra. | gegen | Acusativo | gegen rige siempre ACUSATIVO. |
+| Wir treffen uns ___ 8 Uhr. | Nos vemos a las 8. | um | Acusativo | um rige ACUSATIVO (hora exacta). |
+| ___ des Regens blieben wir zu Hause. | A pesar de la lluvia nos quedamos en casa. | trotz / wegen | Genitivo | trotz / wegen rigen GENITIVO. |
+| ___ des Konzerts haben wir getanzt. | Durante el concierto bailamos. | während | Genitivo | während rige GENITIVO (durante). |
+| Wir wohnen ___ der Stadt. | Vivimos fuera de la ciudad. | außerhalb / innerhalb | Genitivo | außerhalb/innerhalb rigen GENITIVO. |
+| ___ des schlechten Wetters gehen wir spazieren. | A pesar del mal tiempo salimos a pasear. | trotz | Genitivo | trotz + GENITIVO (a pesar de). |
+| Ich arbeite hier ___ 2020. | Trabajo aquí desde 2020. | seit | Dativo | seit rige DATIVO (desde hace). |
+| Das ist ein Geschenk ___ meiner Oma. | Es un regalo de mi abuela. | von | Dativo | von rige DATIVO (de / procedencia). |
+| Ich gehe ___ Hause (a casa). | Voy a casa. | nach | Dativo | Expresión fija: nach Hause; nach rige DATIVO. |
+| Setz dich ___ mich (al lado). | Siéntate a mi lado. | neben | Acusativo | Wechsel: Wohin? → ACUSATIVO. neben mich. |
+| Das Auto steht ___ dem Haus (delante). | El coche está delante de la casa. | vor | Dativo | Wechsel: Wo? → DATIVO. vor dem Haus. |
+| Wir sind ___ Freitag ins Kino gegangen. | El viernes fuimos al cine. | am | Dativo | am (an+dem) para días → DATIVO. |
+| ___ Sommer fahren wir ans Meer. | En verano vamos al mar. | im | Dativo | im (in+dem) para estaciones/meses → DATIVO. |
+| Ich arbeite ___ Montag bis Freitag. | Trabajo de lunes a viernes. | von | Dativo | von … bis; von rige DATIVO. |
+| Ich gewöhne mich ___ das Klima. | Me acostumbro al clima. | an | Acusativo | sich gewöhnen an + ACUSATIVO. |
+| Er beschwert sich ___ den Lärm. | Se queja del ruido. | über | Acusativo | sich beschweren über + ACUSATIVO. |
+| Sie sorgt ___ ihre Kinder. | Cuida de sus hijos. | für | Acusativo | sorgen für + ACUSATIVO. |
+| Ich bedanke mich ___ das Geschenk. | Doy las gracias por el regalo. | für | Acusativo | sich bedanken für + ACUSATIVO. |
+| Er leidet ___ einer Krankheit. | Sufre de una enfermedad. | an | Dativo | leiden an + DATIVO. |
+| Wir hoffen ___ besseres Wetter. | Esperamos mejor tiempo. | auf | Acusativo | hoffen auf + ACUSATIVO. |
+| Sie achtet ___ ihre Gesundheit. | Cuida de su salud. | auf | Acusativo | achten auf + ACUSATIVO. |
+| Ich verlasse mich ___ dich. | Cuento contigo / me fío de ti. | auf | Acusativo | sich verlassen auf + ACUSATIVO. |
+| Er erzählt ___ seiner Reise. | Cuenta lo de su viaje. | von | Dativo | erzählen von + DATIVO. |
+| Wir diskutieren ___ die Politik. | Discutimos sobre la política. | über | Acusativo | diskutieren über + ACUSATIVO. |
+| Ich schütze mich ___ der Sonne. | Me protejo del sol. | vor | Dativo | sich schützen vor + DATIVO. |
+| Sie kämpft ___ ihre Rechte. | Lucha por sus derechos. | um | Acusativo | kämpfen um + ACUSATIVO. |
+| Ich bleibe hier ___ nächsten Montag. | Me quedo aquí hasta el próximo lunes. | bis | Acusativo | bis rige ACUSATIVO. |
+| Wir fahren ___ einer Woche in den Urlaub. | Nos vamos de vacaciones dentro de una semana. | in | Dativo | in + DATIVO temporal (dentro de). |
+| ___ dem Essen gehen wir spazieren. | Después de comer salimos a pasear. | nach | Dativo | nach + DATIVO (después de). |
+| Ich wohne hier ___ drei Jahren. | Vivo aquí desde hace tres años. | seit | Dativo | seit + DATIVO (desde hace). |
+| Das Restaurant ist ___ dem Kino (enfrente). | El restaurante está enfrente del cine. | gegenüber | Dativo | gegenüber + DATIVO. |
+| Die Lampe hängt ___ dem Tisch (encima). | La lámpara cuelga encima de la mesa. | über | Dativo | Wechsel: Wo? → DATIVO. über dem Tisch. |
+| Der Hund läuft ___ das Haus (alrededor). | El perro corre alrededor de la casa. | um | Acusativo | um + ACUSATIVO (alrededor de). |
+| Ich ärgere mich ___ den Stau. | Me enfado por el atasco. | über | Acusativo | sich ärgern über + ACUSATIVO. |
+| Ich erkundige mich ___ dem Weg. | Me informo del camino. | nach | Dativo | sich erkundigen nach + DATIVO. |
+| Das Team besteht ___ fünf Spielern. | El equipo se compone de cinco jugadores. | aus | Dativo | bestehen aus + DATIVO (componerse de). |
+| Er besteht ___ seiner Meinung. | Insiste en su opinión. | auf | Dativo | bestehen auf + DATIVO (insistir en). |
+| Es handelt sich ___ ein Missverständnis. | Se trata de un malentendido. | um | Acusativo | sich handeln um + ACUSATIVO. |
+| Ich beziehe mich ___ Ihren Brief. | Me refiero a su carta. | auf | Acusativo | sich beziehen auf + ACUSATIVO. |
+| Sie zweifelt ___ seiner Ehrlichkeit. | Duda de su honestidad. | an | Dativo | zweifeln an + DATIVO. |
+| Er leidet ___ dem Stress. | Sufre por el estrés. | unter | Dativo | leiden unter + DATIVO (sufrir por). |
+| Wenden Sie sich ___ den Chef. | Diríjase al jefe. | an | Acusativo | sich wenden an + ACUSATIVO. |
+| Das erinnert mich ___ meine Jugend. | Eso me recuerda a mi juventud. | an | Acusativo | erinnern an + ACUSATIVO. |
+| Ich sehne mich ___ Ruhe. | Añoro la calma. | nach | Dativo | sich sehnen nach + DATIVO. |
+| Er überzeugt mich ___ seinem Plan. | Me convence de su plan. | von | Dativo | überzeugen von + DATIVO. |
+| Ich danke dir ___ deine Hilfe. | Te doy las gracias por tu ayuda. | für | Acusativo | danken für + ACUSATIVO (la cosa); la persona va en Dativo. |
+| Ich gratuliere dir ___ Geburtstag. | Te felicito por tu cumpleaños. | zum / zu | Dativo | gratulieren zu + DATIVO. |
+| Es riecht ___ Kaffee. | Huele a café. | nach | Dativo | riechen nach + DATIVO. |
+| Das schmeckt ___ Zitrone. | Sabe a limón. | nach | Dativo | schmecken nach + DATIVO. |
+| Ich verabrede mich ___ Freunden. | Quedo con amigos. | mit | Dativo | sich verabreden mit + DATIVO. |
+| Er streitet ___ seinem Bruder. | Discute con su hermano. | mit | Dativo | sich streiten mit + DATIVO. |
+| Wir unterhalten uns ___ Politik. | Charlamos sobre política. | über | Acusativo | sich unterhalten über + ACUSATIVO. |
+| Ich denke ___ die Zukunft nach. | Reflexiono sobre el futuro. | über | Acusativo | nachdenken über + ACUSATIVO. |
+| Sie protestieren ___ die Regierung. | Protestan contra el gobierno. | gegen | Acusativo | protestieren gegen + ACUSATIVO. |
+| Ich entschuldige mich ___ die Verspätung. | Me disculpo por el retraso. | für | Acusativo | sich entschuldigen für + ACUSATIVO. |
+| Sie ist stolz ___ ihre Arbeit. | Está orgullosa de su trabajo. | auf | Acusativo | stolz sein auf + ACUSATIVO. |
+| Ich bin neugierig ___ das Ergebnis. | Tengo curiosidad por el resultado. | auf | Acusativo | neugierig auf + ACUSATIVO. |
+| Bist du böse ___ mich? | ¿Estás enfadado conmigo? | auf | Acusativo | böse sein auf + ACUSATIVO. |
+| Sie ist verheiratet ___ einem Arzt. | Está casada con un médico. | mit | Dativo | verheiratet sein mit + DATIVO. |
+| Ich bin zufrieden ___ dem Ergebnis. | Estoy satisfecho con el resultado. | mit | Dativo | zufrieden sein mit + DATIVO. |
+| Bist du ___ dem Plan einverstanden? | ¿Estás de acuerdo con el plan? | mit | Dativo | einverstanden sein mit + DATIVO. |
+| Das ist abhängig ___ dem Wetter. | Eso depende del tiempo (clima). | von | Dativo | abhängig sein von + DATIVO. |
+| Er ist verantwortlich ___ das Projekt. | Es responsable del proyecto. | für | Acusativo | verantwortlich sein für + ACUSATIVO. |
+| Das ist typisch ___ ihn. | Eso es típico de él. | für | Acusativo | typisch für + ACUSATIVO. |
+| Obst ist reich ___ Vitaminen. | La fruta es rica en vitaminas. | an | Dativo | reich an + DATIVO. |
+| Die Kinder spielen ___ dem Garten. | Los niños juegan en el jardín. | in | Dativo | Wechsel: Wo? → DATIVO. in dem/im Garten. |
+| Häng die Jacke ___ den Schrank. | Cuelga la chaqueta en el armario. | in | Acusativo | Wechsel: Wohin? → ACUSATIVO. in den Schrank. |
+| Das Flugzeug fliegt ___ den Wolken. | El avión vuela por encima de las nubes. | über | Dativo | Wechsel: Wo? → DATIVO. über den Wolken. |
+| Der Ball rollt ___ den Tisch (debajo). | La pelota rueda debajo de la mesa. | unter | Acusativo | Wechsel: Wohin? → ACUSATIVO. unter den Tisch. |
+| Das Bild hängt ___ dem Sofa und dem Fenster. | El cuadro cuelga entre el sofá y la ventana. | zwischen | Dativo | Wechsel: Wo? → DATIVO. zwischen … (entre). |
+| ___ einer Stunde bin ich fertig. | Dentro de una hora estoy listo. | in | Dativo | in + DATIVO (dentro de una hora). |
+| ___ des Streiks fuhren keine Züge. | Durante la huelga no circularon trenes. | wegen / während | Genitivo | wegen/während + GENITIVO. |
+| ___ seiner Krankheit kam er nicht. | A causa de su enfermedad no vino. | wegen | Genitivo | wegen + GENITIVO (a causa de). |
+| ___ aller Probleme blieb er ruhig. | A pesar de todos los problemas se mantuvo tranquilo. | trotz | Genitivo | trotz + GENITIVO (a pesar de). |
+| Ich interessiere mich ___ Geschichte. | Me interesa la historia. | für | Acusativo | sich interessieren für + ACUSATIVO. |
+| Er hofft ___ eine zweite Chance. | Espera una segunda oportunidad. | auf | Acusativo | hoffen auf + ACUSATIVO. |
 
 ## Verbos irregulares (74)
 
@@ -897,6 +1195,116 @@ Contenido completo de la app (se genera a partir de DeutschQuest.html). Total: 9
 | bekommen | recibir | bekam | bekommen | hat | Ich habe ein Geschenk bekommen. |
 | vergleichen | comparar | verglich | verglichen | hat | Er hat die Preise verglichen. |
 | beweisen | demostrar | bewies | bewiesen | hat | Sie hat ihre Unschuld bewiesen. |
+
+## Palabras del día a día (50)
+
+| Expresión | Significado | Cuándo se usa | Ejemplo | Origen |
+| --- | --- | --- | --- | --- |
+| genau | exacto / eso es | Para confirmar con énfasis lo que dice el otro. Muy frecuente. | – Wir treffen uns um acht. – Genau, bis dann! | Una de las palabras de asentimiento más usadas del alemán. |
+| doch | sí (contradiciendo) / ¡que sí! | Responde afirmativo a una pregunta negativa: «Kommst du nicht?» – «Doch!». También refuerza órdenes: «Komm doch!». | – Magst du keinen Kaffee? – Doch, sehr gern! | doch reactiva una afirmación negada; no tiene equivalente directo en español. |
+| tja | en fin / qué le vamos a hacer | Interjección de resignación o duda, a menudo antes de dar una noticia regular. | – Hast du bestanden? – Tja, leider nicht. | tja es onomatopéyica: imita el chasquido de duda o resignación. |
+| na ja | bueno… / psché | Duda o matización de algo que no está del todo bien. | – Wie war der Film? – Na ja, ging so. | na ja combina la partícula na con ja; típico relleno oral. |
+| immerhin | al menos / algo es algo | Resalta un aspecto positivo pese a lo demás. | Wir haben verloren, aber immerhin war das Wetter schön. | immerhin = immer (siempre) + hin; resalta lo que queda pese a todo. |
+| super | genial / estupendo | Aprobación entusiasta (a veces irónica). | – Ich habe bestanden! – Super, gratuliere! | super, del latín super (por encima); préstamo internacional. |
+| logo | claro / obvio | Versión muy coloquial de «klar / natürlich». | – Kommst du mit? – Logo! | logo: acortamiento juguetón de logisch (lógico). |
+| stabil | brutal / muy top | Jerga juvenil: algo impresionante. «Stabil, Brüder!» = ¡brutal, hermanos! | – Schau mal mein neues Auto. – Stabil, Alter! | stabil (estable) pasó en jerga juvenil a «sólido, genial». |
+| wallah / walla | te lo juro | Jerga juvenil (del árabe) para enfatizar que dices la verdad. | – Ich schwöre, das war ich nicht. – Wallah? – Wallah! | wallah viene del árabe «wa-llāh» (por Alá); entró por la jerga juvenil multicultural. |
+| ja (partícula) | ya sabes / pues | Como partícula modal suaviza y apela a lo evidente: «Das ist ja klar». | Das ist ja klar, das weiß doch jeder. | ja como partícula apela a algo ya sabido por ambos. |
+| halt | simplemente / es lo que hay | Expresa resignación: «Das ist halt so». | – Warum ist das so? – Das ist halt so. | halt y eben expresan resignación; muy típicos del alemán hablado. |
+| mal | un momento / a ver | Suaviza los imperativos: «Komm mal her» = ven un momento. | – Komm mal her und hilf mir. | mal es acortamiento de einmal (una vez); suaviza órdenes. |
+| schon | ya / desde luego | Concede algo antes de matizar: «Das stimmt schon, aber…». | – Das stimmt schon, aber es ist teuer. | schon (ya) como partícula concede algo antes de objetar. |
+| wohl | seguramente / supongo | Expresa suposición: «Er ist wohl krank». | – Wo ist Tom? – Er ist wohl schon zu Hause. | wohl (bien) como partícula pasó a marcar probabilidad. |
+| denn | pues / entonces | En preguntas, muestra interés: «Was machst du denn?». | – Was machst du denn hier? | denn en preguntas añade interés o sorpresa; sin traducción literal. |
+| eh / sowieso | de todas formas | Algo que pasa igualmente: «Ich gehe eh dahin». | – Soll ich dich mitnehmen? – Nein, ich gehe eh dahin. | eh es coloquial del sur y Austria por «de todas formas». |
+| echt | ¿en serio? / de verdad | Sorpresa o énfasis: «Echt?». | – Ich habe im Lotto gewonnen. – Echt?! | echt (auténtico) se volvió marca de sorpresa en la lengua hablada. |
+| krass | flipante / bestial | Jerga: algo extremo, bueno o malo. | – Das Konzert war der Wahnsinn. – Krass! | krass, del latín crassus (grueso, denso); hoy = extremo o impactante. |
+| geil | guay / genial | Coloquial informal, muy positivo (literal vulgar, pero de uso común). | – Neue Kopfhörer, mega Sound. – Voll geil! | geil antiguamente «fértil, exuberante»; hoy coloquial = genial. |
+| cool | guay | Anglicismo de aprobación. | – Alles cool bei dir? – Ja, alles cool. | cool, anglicismo adoptado en los años 50–60. |
+| Alter | ¡tío! / ¡colega! | Muletilla para enfatizar o dirigirse a alguien. | – Alter, hast du das gesehen?! | Alter = «viejo»; apelativo entre jóvenes, como «tío». |
+| Digga | tío / bro | Jerga (norte de Alemania) para dirigirse a un amigo. | – Was geht, Digga? – Alles gut, und bei dir? | Digga viene de Dicker («gordito»), apelativo cariñoso del norte (Hamburgo). |
+| na | ¿qué tal? / ¿y bien? | Saludo o para animar a hablar: «Na, wie geht's?». | – Na, wie war dein Tag? | na es una interjección germánica muy antigua para abrir conversación. |
+| ach so | ah, vale / ya entiendo | Al comprender algo de repente. | – Der Zug fährt erst um neun. – Ach so, dann haben wir Zeit. | ach so combina ach (¡ah!) y so (así): comprensión repentina. |
+| Quatsch | ¡tonterías! / ¡qué va! | Rechazar algo como absurdo. | – Du hast bestimmt Angst. – Quatsch, überhaupt nicht. | Quatsch es onomatopeya de algo blando o sin sentido. |
+| klar | claro / por supuesto | Confirmación. | – Kannst du mir helfen? – Klar! | klar = claro (como el agua clara → evidente). |
+| na klar | ¡claro que sí! | Confirmación enfática. | – Kommst du zur Party? – Na klar! | na klar refuerza klar con la partícula na. |
+| jein | sí y no | Mezcla de ja + nein; respuesta ambigua. | – Hat es dir gefallen? – Jein, teils teils. | jein: fusión lúdica de ja + nein, del s. XX. |
+| moin | hola / buenas | Saludo del norte, a cualquier hora del día. | – Moin! – Moin, moin! | moin, del bajo alemán/frisón «moi» (bonito, bueno); no es solo «Morgen». |
+| servus | hola / adiós | Saludo informal del sur y Austria. | – Servus! Wie geht's? – Servus, gut! | servus, del latín servus («soy tu servidor»); saludo de Austria y Baviera. |
+| tschüss | adiós / chao | Despedida informal. | – Ich muss los. – Okay, tschüss! | tschüss viene del español «adiós» → valón «adjuus» → alemán. |
+| Prost | ¡salud! | Al brindar. | – Auf dein Wohl! – Prost! | Prost, del latín «prosit» = «que sea provechoso». |
+| Mahlzeit | ¡que aproveche! | Saludo a la hora de comer (también algo sarcástico). | (mittags im Büro) – Mahlzeit! – Mahlzeit! | Mahlzeit acorta «(gesegnete) Mahlzeit» = «(bendita) comida». |
+| Gesundheit | ¡salud! / ¡Jesús! | Se dice cuando alguien estornuda. | – Hatschi! – Gesundheit! – Danke. | Gesundheit = «salud»; deseo al estornudar por antiguas creencias. |
+| Feierabend | fin de la jornada | «Ich habe Feierabend» = he terminado de trabajar. | – Arbeitest du noch? – Nein, ich habe Feierabend. | Feierabend: literalmente «tarde de fiesta», el descanso tras el trabajo. |
+| Bock haben | tener ganas | «Ich hab Bock» = me apetece; «keinen Bock» = ninguna gana. | – Wollen wir ins Kino? – Klar, ich hab voll Bock. | Bock (macho cabrío) en jerga = ganas; del romaní «bokh» (hambre). |
+| passt | vale / está bien | Aceptar algo: «Passt!». | – Treffen wir uns um sechs? – Passt! | passt de passen (encajar); «encaja» → «vale». |
+| läuft | va bien / todo en orden | «Läuft bei dir!» = te va genial (a veces irónico). | – Und, wie ist der neue Job? – Läuft! | läuft de laufen (funcionar); «funciona» → «va bien». |
+| safe | seguro / fijo | Jerga: confirmar con seguridad. «Kommst du?» – «Safe!». | – Kommst du morgen? – Safe! | safe, anglicismo («seguro») de la jerga juvenil. |
+| wild | una locura | Jerga: algo increíble o caótico. | – Die Party gestern war wild! | wild («salvaje») en jerga = intenso, increíble. |
+| hart | duro / fuerte | Jerga: enfatiza intensidad, positiva o negativa. | – Ich habe drei Stunden gewartet. – Ey, das ist hart. | hart («duro») como intensificador coloquial. |
+| eben | justo / precisamente | Confirma exactitud (parecido a genau). | – Er hat angefangen! – Eben, deshalb sage ich das. | eben («justo, liso») confirma exactitud; pariente de genau. |
+| ruhig (partícula) | tranquilamente / sin problema | «Frag ruhig» = pregunta sin problema. | – Darf ich fragen? – Frag ruhig. | ruhig («tranquilo») como partícula da permiso relajado. |
+| etwa | ¿acaso? | Pregunta con matiz de sorpresa o temor: «Bist du etwa krank?». | – Bist du etwa krank? – Nein, mir geht's gut. | etwa («aproximadamente») en preguntas marca sospecha o temor. |
+| ne? / oder? | ¿no? / ¿verdad? | Coletilla para buscar confirmación: «Schön, ne?». | – Schönes Wetter heute, ne? – Ja, echt schön. | ne? es reducción de nicht wahr? («¿no es verdad?»). |
+| mega | súper / genial | Intensificador de jerga: «mega gut». | – Wie war der Urlaub? – Mega! | mega, del griego mégas (grande); prefijo vuelto intensificador. |
+| voll | totalmente / super | Intensificador coloquial: «voll cool». | – Das Essen ist voll lecker. | voll («lleno») coloquialmente = totalmente. |
+| nö / nee | nah / no | Negación relajada e informal. | – Kommst du mit? – Nö, keine Lust. | nö/nee son variantes relajadas de nein. |
+| jo / joa | sí / ajá | Afirmación relajada e informal. | – Alles klar? – Jo, passt schon. | jo/joa son variantes relajadas de ja. |
+| Alter Schwede | ¡madre mía! / ¡caramba! | Exclamación de sorpresa (literal: «viejo sueco»). | – Ich habe 500 Euro gefunden! – Alter Schwede! | Alter Schwede: de la Guerra de los 30 Años; los veteranos suecos que instruían al ejército prusiano eran tan buenos que «viejo sueco» pasó a exclamación de asombro. |
+
+## Frases hechas (50)
+
+| Expresión | Significado | Contexto | Ejemplo | Origen |
+| --- | --- | --- | --- | --- |
+| Alles hat ein Ende, nur die Wurst hat zwei. | Todo tiene un final. | Dicho humorístico: todo se acaba (la salchicha tiene dos). | – Schade, die Ferien sind vorbei. – Tja, alles hat ein Ende, nur die Wurst hat zwei. | Dicho popular; humor: la salchicha, con dos puntas, «tiene dos finales». |
+| Das bringt mich auf die Palme. | Me saca de quicio. | Cuando algo te enfada muchísimo (lit. «me sube por la palmera»). | Wenn er zu spät kommt, bringt mich das auf die Palme! | Imagen de trepar por una palmera de rabia; documentado en el s. XX. |
+| Ich verstehe nur Bahnhof. | No entiendo nada. | Cuando no te enteras de nada (lit. «solo entiendo estación»). | – Verstehst du die Aufgabe? – Ehrlich? Ich verstehe nur Bahnhof. | De la 1ª Guerra Mundial: los soldados agotados solo querían oír «Bahnhof» (estación = volver a casa). |
+| Da liegt der Hund begraben. | Ahí está el problema / el quid. | Al señalar la causa real de algo. | – Warum geht das nicht? – Da liegt der Hund begraben: das Kabel ist kaputt. | «Hund» era en dialecto un tesoro escondido; donde estaba enterrado, estaba lo importante. |
+| Tomaten auf den Augen haben. | No ver lo evidente. | Cuando alguien no ve algo obvio. | – Deine Schlüssel liegen doch da! – Oh, ich hatte Tomaten auf den Augen. | Los ojos rojos o cerrados de sueño se comparan con tomates maduros. |
+| Die Daumen drücken. | Cruzar los dedos. | Desear suerte a alguien (lit. «apretar los pulgares»). | – Morgen ist meine Prüfung. – Ich drücke dir die Daumen! | Creencia antigua: encerrar el pulgar somete a los malos espíritus y da suerte. |
+| Ich glaube, ich spinne. | No me lo puedo creer. | Sorpresa o incredulidad (lit. «creo que deliro»). | – Es hat mitten im Sommer geschneit! – Ich glaube, ich spinne. | spinnen = hilar; se asociaba a la locura (dar vueltas como la rueca). |
+| Das ist mir Wurst. | Me da igual. | Total indiferencia (lit. «eso me es salchicha»). | – Tee oder Kaffee? – Das ist mir Wurst. | A la salchicha «le da igual» de qué carne esté hecha: indiferencia. |
+| Jetzt haben wir den Salat. | Ahora sí que la hemos liado. | Cuando algo ha salido mal tras un aviso. | – Ich hab's dir gesagt… – Ja, jetzt haben wir den Salat. | «Salat» (ensalada) como imagen de lío y desorden. |
+| Die Kirche im Dorf lassen. | No exagerar. | Pedir moderación (lit. «dejar la iglesia en el pueblo»). | – Das ist eine Katastrophe! – Lass mal die Kirche im Dorf, so schlimm ist es nicht. | En procesiones, sacar la iglesia del pueblo era exagerar: pide moderación. |
+| Aus einer Mücke einen Elefanten machen. | Hacer una montaña de un grano de arena. | Exagerar un problema pequeño. | – Ein kleiner Kratzer und er regt sich so auf. – Er macht aus einer Mücke einen Elefanten. | Contraste cómico entre el mosquito diminuto y el elefante enorme. |
+| Schwein haben. | Tener (mucha) suerte. | Cuando algo te sale bien de chiripa. | – Der Bus kam genau im richtigen Moment. – Da hast du Schwein gehabt! | En concursos medievales el último premio era un cerdo: ganar «cerdo» = suerte inesperada. |
+| Ins Gras beißen. | Palmarla / morir. | Registro coloquial para morir (lit. «morder la hierba»). | – Am Ende des Films beißt der Held ins Gras. | Imagen del caído en batalla que muerde la hierba del suelo. |
+| Den Nagel auf den Kopf treffen. | Dar en el clavo. | Acertar de pleno con lo que dices. | – Das Problem ist der Preis. – Genau, du hast den Nagel auf den Kopf getroffen. | Imagen del carpintero que golpea justo la cabeza del clavo. |
+| Die Nase voll haben. | Estar harto. | Cuando ya no aguantas más algo. | – Noch eine Überstunde? – Nein, ich habe die Nase voll! | «Tener la nariz llena» de algo hasta no aguantar más. |
+| Jemandem auf den Keks gehen. | Sacar de quicio a alguien. | Cuando alguien te molesta (lit. «ir sobre la galleta»). | – Hör auf zu pfeifen, du gehst mir auf den Keks! | «Keks» (galleta) por la cabeza: molestar «en la cabeza». |
+| Da steppt der Bär. | Ahí hay mucha marcha. | Una fiesta o sitio muy animado. | – Wie war die Party? – Der Wahnsinn, da steppte der Bär! | Alude a ferias antiguas donde se hacía bailar a un oso: mucho ambiente. |
+| Das ist nicht mein Bier. | No es asunto mío. | Cuando algo no te incumbe. | – Kümmerst du dich darum? – Nein, das ist nicht mein Bier. | «No es mi cerveza» = no es de mi incumbencia; muy usado en el oeste. |
+| Hals- und Beinbruch! | ¡Mucha mierda! / ¡suerte! | Se desea antes de un examen o actuación. | – Morgen ist mein Konzert. – Hals- und Beinbruch! | Deformación del yidis «hatslokhe un brokhe» (suerte y bendición); se desea «lo malo» por superstición. |
+| Lügen haben kurze Beine. | Las mentiras se pillan pronto. | Advertencia moral sobre mentir. | – Er sagt, er war krank. – Lügen haben kurze Beine… | Las piernas cortas no llegan lejos: la mentira no dura. |
+| Morgenstund hat Gold im Mund. | A quien madruga, Dios le ayuda. | Elogio de madrugar. | – Ich stehe um fünf auf. – Morgenstund hat Gold im Mund. | Refrán: la mañana «trae oro en la boca»; elogio de madrugar. |
+| Übung macht den Meister. | La práctica hace al maestro. | Ánimo para seguir practicando. | – Ich kann das nicht. – Übung macht den Meister, mach weiter! | Refrán clásico sobre la constancia. |
+| Der Apfel fällt nicht weit vom Stamm. | De tal palo, tal astilla. | Los hijos se parecen a los padres. | – Der Sohn kocht so gut wie der Vater. – Der Apfel fällt nicht weit vom Stamm. | La manzana cae junto al tronco: los hijos se parecen a los padres. |
+| Kleinvieh macht auch Mist. | Los pequeños detalles también cuentan. | Sobre ahorros o esfuerzos pequeños que suman. | – Nur 2 Euro Rabatt? – Kleinvieh macht auch Mist. | «Kleinvieh» (ganado menor) también produce estiércol: lo pequeño suma. |
+| Da wird der Hund in der Pfanne verrückt. | ¡Es el colmo / increíble! | Exclamación de asombro. | – Er hat im Lotto gewonnen! – Da wird ja der Hund in der Pfanne verrückt! | Exageración absurda (un perro enloqueciendo en la sartén) para el asombro. |
+| Jemandem einen Bären aufbinden. | Contarle una trola a alguien. | Hacer creer algo falso a alguien. | – Er kennt angeblich den Kanzler. – Der will dir einen Bären aufbinden. | «Bär» (oso) como carga pesada de mentiras que se «ata» a alguien. |
+| Das A und O. | Lo esencial. | Lo más importante de algo. | – Pünktlichkeit ist beim Zug das A und O. | Del alfa (A) y la omega (O) griegas: principio y fin, lo esencial. |
+| Öl ins Feuer gießen. | Echar leña al fuego. | Empeorar una situación tensa. | – Sag ihr das jetzt nicht, das gießt nur Öl ins Feuer. | Echar aceite al fuego lo aviva: empeora el conflicto. |
+| Die Katze im Sack kaufen. | Comprar a ciegas. | Comprar algo sin verlo/comprobarlo. | – Kauf das Auto nicht ungesehen, sonst kaufst du die Katze im Sack. | Antiguamente se vendían gatos por liebres metidos en un saco cerrado. |
+| Alles in Butter. | Todo va bien. | Que todo está en orden. | – Ist alles geregelt? – Ja, alles in Butter. | Los objetos delicados se transportaban en mantequilla para protegerlos: todo bien. |
+| Über den Daumen peilen. | Calcular a ojo. | Estimar de forma aproximada. | – Wie viele kommen? – So über den Daumen fünfzig. | «Peilen» (medir) con el pulgar: cálculo aproximado a ojo. |
+| Auf dem Holzweg sein. | Estar equivocado. | Ir por mal camino en un razonamiento. | – Ich glaube, die Antwort ist B. – Da bist du auf dem Holzweg. | «Holzweg» era un camino maderero que no llevaba a ningún sitio: ir errado. |
+| Beide Augen zudrücken. | Hacer la vista gorda. | Pasar por alto un fallo a propósito. | – Er kam zu spät, aber der Chef drückte beide Augen zu. | Cerrar ambos ojos para no ver la falta: tolerancia deliberada. |
+| Das kannst du vergessen. | Olvídate / imposible. | Descartar algo tajantemente. | – Kann ich das noch retten? – Das kannst du vergessen. | Coloquial moderno: descartar algo por imposible. |
+| Butter bei die Fische! | ¡Al grano! / ¡habla claro! | Pedir que vayan al asunto (norte de Alemania). | – Nun sag schon, was los ist! – Butter bei die Fische! | Del norte: poner la mantequilla junto al pescado = ir al grano. |
+| Es ist noch kein Meister vom Himmel gefallen. | Nadie nace sabiendo. | Ánimo ante los errores de principiante. | – Ich mache so viele Fehler. – Es ist noch kein Meister vom Himmel gefallen. | Ningún maestro nace hecho: ánimo ante los errores de aprendiz. |
+| Da ist Hopfen und Malz verloren. | Es un caso perdido. | Cuando ya no hay nada que hacer con algo o alguien. | – Er hört einfach nicht zu. – Bei ihm ist Hopfen und Malz verloren. | De la cerveza: si se pierden el lúpulo y la malta, ya no hay remedio. |
+| Jemandem ein Ohr abkauen. | Comerle la oreja a alguien. | Hablar tanto que agotas al que escucha. | – Wie war das Treffen mit Oma? – Lang! Sie hat mir ein Ohr abgekaut. | Hablar tanto que «masticas» la oreja del que escucha. |
+| Das ist ein Katzensprung. | Está a un paso / muy cerca. | Para distancias muy cortas. | – Ist der Bahnhof weit? – Nein, das ist ein Katzensprung. | Distancia tan corta como el salto de un gato. |
+| Die Kuh vom Eis holen. | Resolver una situación difícil. | Cuando se salva un asunto complicado a tiempo. | – Wir müssen das Projekt retten. – Ja, holen wir die Kuh vom Eis. | Imagen rural: sacar la vaca del hielo antes de que resbale = resolver el apuro. |
+| Jemandem reinen Wein einschenken. | Decirle la verdad a alguien. | Ser sincero, aunque duela. | – Sag mir ehrlich, wie es steht. – Okay, ich schenke dir reinen Wein ein. | Servir el vino sin aguar era honrado: hablar con franqueza. |
+| Sich zum Affen machen. | Hacer el ridículo. | Cuando alguien queda en ridículo ante los demás. | – Ich habe den Text vergessen, vor allen. – Da hast du dich zum Affen gemacht. | Hacer de mono ante el público: quedar en ridículo. |
+| Alte Zöpfe abschneiden. | Romper con lo viejo. | Dejar atrás costumbres anticuadas. | – Wir arbeiten noch mit Papier. – Zeit, alte Zöpfe abzuschneiden. | Las viejas coletas (moda del s. XVIII) simbolizan lo anticuado; cortarlas = renovarse. |
+| Den Faden verlieren. | Perder el hilo. | Cuando te despistas hablando o razonando. | – Und dann… äh… worüber sprach ich? – Du hast den Faden verloren. | Del hilado: perder el hilo de la lana o del discurso. |
+| Ein Auge auf jemanden werfen. | Echarle el ojo a alguien. | Fijarse en alguien con interés. | – Er schaut die Neue oft an. – Er hat ein Auge auf sie geworfen. | «Echar el ojo» sobre algo o alguien que interesa. |
+| Jemandem auf die Nerven gehen. | Poner de los nervios. | Cuando algo o alguien te irrita mucho. | – Hör auf zu trommeln, du gehst mir auf die Nerven! | Ir «sobre los nervios» de alguien: irritarle. |
+| Das Handtuch werfen. | Tirar la toalla. | Rendirse ante algo difícil. | – Nach drei Absagen wollte er das Handtuch werfen. | Del boxeo: el entrenador lanza la toalla para rendir al púgil. |
+| Die erste Geige spielen. | Llevar la voz cantante. | Ser quien manda o destaca en un grupo. | – Im Team spielt sie eindeutig die erste Geige. | En la orquesta barroca el primer violín dirigía: llevar el mando. |
+| Etwas durch die Blume sagen. | Decir algo con rodeos. | Insinuar algo con delicadeza, sin decirlo directo. | – Er hat es nicht direkt gesagt, sondern durch die Blume. | Decirlo «a través de la flor», con delicadeza (lenguaje cortés antiguo). |
+| Jemandem Honig um den Mund schmieren. | Hacerle la pelota a alguien. | Adular a alguien para conseguir algo. | – Er lobt den Chef ständig. – Er schmiert ihm Honig um den Mund. | Untar miel alrededor de la boca: adular para conseguir algo. |
 
 ## Gramática (50)
 
